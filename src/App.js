@@ -1,11 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 import Footer from './layouts/Footer';
+import Header from './layouts/Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Header></Header>
+      <Footer></Footer>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -20,7 +22,7 @@ function App() {
         </a>
       </header>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <Footer></Footer>
+       */}
     </div>
   );
 }
