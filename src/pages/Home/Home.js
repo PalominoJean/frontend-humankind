@@ -1,20 +1,22 @@
-import homeImage from './../../assets/images/wallhaven-579rx1.png';
-import playImage from './../../assets/images/wallhaven-3zpw5y.jpg';
+import homeTopImage from './../../assets/images/62d1b8e2c048c969e47514c7_hero-top-p-1600.webp';
+import homeBottomImage from './../../assets/images/62d1b8e32e16f6b524514c60_hero-bottom-p-1600.webp';
+import playImage from './../../assets/images/646fb24a3ad2f2ac41afd67b_herokind-adventure-lores-p-800.png';
 
 function Home() {
   return (
     <div>
-      <div className="w-10/12 m-auto pt-10 pb-3">
-        <img src={homeImage} className="w-10/12 m-auto" alt="homeImage" />
+      <div className="w-11/12 m-auto pt-24 pb-3">
+        <img src={homeTopImage} className="" alt="homeTopImage" />
+        <img src={homeBottomImage} className="-mt-60" alt="homeBottomImage" />
         <p className="text-2xl mt-4">
           Creating a magical world for the kid in all of us.
         </p>
         <div className="flex justify-center gap-2 mt-8">
           <button className="py-4 px-6 rounded-full font-bold border-4 border-black hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
-            O Get a Lunchbox
+            🎁 Get a Lunchbox
           </button>
           <button className="bg-black text-white py-4 px-6 rounded-full font-bold border-4 border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
-            O Play now!
+            ⚔️ Play now!
           </button>
         </div>
         <p className="mt-4 ">Lunchbox burn starts on Dec 13th, 2022</p>
@@ -38,7 +40,7 @@ function Home() {
                 events are unpredictable and can change at any time.
               </p>
               <button className="  mt-8 bg-yellow-300 text-black py-4 px-6 rounded-full font-bold border-4  border-yellow-300 hover:border-lime-300 hover:bg-lime-300 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
-                O Play now!
+                ⚔️ Play now!
               </button>
             </div>
           </div>
