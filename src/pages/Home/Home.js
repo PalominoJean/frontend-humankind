@@ -39,7 +39,7 @@ function Home() {
                 Skull Volcano, and Cloud Island, where the environment and
                 events are unpredictable and can change at any time.
               </p>
-              <button className="  mt-8 bg-yellow-300 text-black py-4 px-6 rounded-full font-bold border-4  border-yellow-300 hover:border-lime-300 hover:bg-lime-300 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+              <button className="mt-8 bg-yellow-300 text-black py-4 px-6 rounded-full font-bold border-4  border-yellow-300 hover:border-lime-300 hover:bg-lime-300 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
                 ⚔️ Play now!
               </button>
             </div>
