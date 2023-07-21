@@ -1,0 +1,93 @@
+/* TTCommonsPro */
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: 100;
+  src: local('TT Commons'),
+    url('../../../fonts/TT-Commons/TTCommonsThin.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: 200;
+  src: local('TT Commons'),
+    url('../../../fonts/TT-Commons/TTCommonsExtraLight.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: 300;
+  src: local('TT Commons'),
+    url('../../../fonts/TT-Commons/TTCommonsLight.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: 400;
+  src: local('TT Commons'),
+    url('../../../fonts/TT-Commons/TTCommonsRegular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: 500;
+  src: local('TT Commons'),
+    url('../../../fonts/TT-Commons/TTCommonsMedium.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: 600;
+  src: local('TT Commons'),
+    url('../../../fonts/TT-Commons/TTCommonsDemiBold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: 700;
+  src: local('TT Commons'),
+    url('../../../fonts/TT-Commons/TTCommonsBold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: 800;
+  src: local('TT Commons'),
+    url('../../../fonts/TT-Commons/TTCommonsExtraBold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  font-weight: 900;
+  src: local('TT Commons'),
+    url('../../../fonts/TT-Commons/TTCommonsBlack.otf') format('truetype');
+}
+
+/* Lora */
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: 400;
+  src: local('Lora'),
+    url('../../../fonts/Lora/LoraRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: 500;
+  src: local('Lora'),
+    url('../../../fonts/Lora/LoraMedium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: 600;
+  src: local('Lora'),
+    url('../../../fonts/Lora/LoraSemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: 700;
+  src: local('Lora'), url('../../../fonts/Lora/LoraBold.ttf') format('truetype');
+}
