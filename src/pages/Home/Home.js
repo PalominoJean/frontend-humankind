@@ -1,13 +1,11 @@
+//data
+import sectionData from './../../data/section';
+//component
+import Section from './components/Section';
+//images
 import homeTopImage from './../../assets/images/62d1b8e2c048c969e47514c7_hero-top-p-1600.webp';
 import homeBottomImage from './../../assets/images/62d1b8e32e16f6b524514c60_hero-bottom-p-1600.webp';
-import playImage from './../../assets/images/646fb24a3ad2f2ac41afd67b_herokind-adventure-lores-p-800.png';
-import bringImage from './../../assets/images/63e09ea82ae9b06d12ea9b91_028-band-playing-p-800.webp';
-import grabImage from './../../assets/images/63765b76de5f1356947d9d23_Lunchboxes.gif';
-
 import nftImage from './../../assets/images/62d0eba9fd0791f1321f3463_hk-8.webp';
-import Section from './components/Section';
-// import
-import sectionData from './../../data/section';
 
 function Home() {
   return (
@@ -41,51 +39,13 @@ function Home() {
           <div className="p-16  border-black rounded-3xl transition bg-black text-white">
             <div className="w-2/3 w-3/4 m-auto text-center">
               <div className="flex items-center -mt-28 ml-7 max-w-3xl flex-wrap justify-center">
-                <img
-                  src={nftImage}
-                  alt="nftImage"
-                  className="rounded-full border-4 border-black w-40 -mt-7 -ml-7 hover:scale-110 transition relative"
-                />
-                <img
-                  src={nftImage}
-                  alt="nftImage"
-                  className="rounded-full border-4 border-black w-40 -mt-7 -ml-7 hover:scale-110 transition relative"
-                />
-                <img
-                  src={nftImage}
-                  alt="nftImage"
-                  className="rounded-full border-4 border-black w-40 -mt-7 -ml-7 hover:scale-110 transition relative"
-                />
-                <img
-                  src={nftImage}
-                  alt="nftImage"
-                  className="rounded-full border-4 border-black w-40 -mt-7 -ml-7 hover:scale-110 transition relative"
-                />
-                <img
-                  src={nftImage}
-                  alt="nftImage"
-                  className="rounded-full border-4 border-black w-40 -mt-7 -ml-7 hover:scale-110 transition relative"
-                />
-                <img
-                  src={nftImage}
-                  alt="nftImage"
-                  className="rounded-full border-4 border-black w-40 -mt-7 -ml-7 hover:scale-110 transition relative"
-                />
-                <img
-                  src={nftImage}
-                  alt="nftImage"
-                  className="rounded-full border-4 border-black w-40 -mt-7 -ml-7 hover:scale-110 transition relative"
-                />
-                <img
-                  src={nftImage}
-                  alt="nftImage"
-                  className="rounded-full border-4 border-black w-40 -mt-7 -ml-7 hover:scale-110 transition relative"
-                />
-                <img
-                  src={nftImage}
-                  alt="nftImage"
-                  className="rounded-full border-4 border-black w-40 -mt-7 -ml-7 hover:scale-110 transition relative"
-                />
+                {[...Array(9)].map((item, index) => (
+                  <img
+                    src={nftImage}
+                    alt="nftImage"
+                    className="rounded-full border-4 border-black w-40 -mt-7 -ml-7 hover:scale-110 transition relative"
+                  />
+                ))}
               </div>
               <p className="text-5xl font-bold mt-4">Humankind Collectibles</p>
               <p className="text-xl mt-6 font-lora">

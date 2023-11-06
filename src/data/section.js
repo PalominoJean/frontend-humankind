@@ -71,7 +71,7 @@ const section = {
       },
       {
         text: '🌮 Learn more',
-        class: ' text-black border-black ml-2',
+        class: 'text-black border-black ml-2',
       },
     ],
   },
