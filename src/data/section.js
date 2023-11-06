@@ -1,5 +1,11 @@
+import wrestleImage from './../assets/images/64f086fc9537ff63dda7f953_Arcade wrestle-p-1080.webp';
+import playImage from './../assets/images/646fb24a3ad2f2ac41afd67b_herokind-adventure-lores-p-800.png';
+import ideasImage from './../assets/images/63e09ea82ae9b06d12ea9b91_028-band-playing-p-800.webp';
+import lunchboxImage from './../assets/images/63765b76de5f1356947d9d23_Lunchboxes.gif';
+
 const section = {
   wrestle: {
+    image: wrestleImage,
     text: {
       title: 'Wrestle. Wrestle. Wrestle!',
       paragraph: [
@@ -8,19 +14,18 @@ const section = {
     },
     button: [
       {
-        icon: '🤓',
-        text: 'Learn More',
-        class: 'bg-black text-white border-black  hover:bg-red-500 ',
+        text: '🤓 Learn More',
+        class: 'bg-black text-white border-black hover:bg-red-500',
       },
       {
-        icon: '🤼',
-        text: 'Wrestle Now!',
+        text: '🤼 Wrestle Now!',
         class:
           'bg-yellow-300 text-black border-yellow-500 hover:bg-lime-200 ml-2',
       },
     ],
   },
   play: {
+    image: playImage,
     text: {
       title: 'Play Herokind!',
       paragraph: [
@@ -30,10 +35,43 @@ const section = {
     },
     button: [
       {
-        icon: 'icon',
-        text: 'Hello',
-        class:
-          'bg-yellow-300 text-black border-yellow-500 hover:bg-lime-200 ml-2',
+        text: '⚔️ Play Now!',
+        class: 'bg-yellow-300 text-black border-yellow-500 hover:bg-lime-200',
+      },
+    ],
+  },
+  ideas: {
+    image: ideasImage,
+    text: {
+      title: 'Bring your ideas to life with the Humankind Fund',
+      paragraph: [
+        'The Humankind Fund is a community-driven initiative that supports and empowers projects that share the values and mission of the Humankind brand. Join us in bringing creative ideas to life and making a positive impact on the world.',
+      ],
+    },
+    button: [
+      {
+        text: '❤️ Learn More',
+        class: 'bg-yellow-300 text-black border-yellow-500 hover:bg-lime-200',
+      },
+    ],
+  },
+  lunchbox: {
+    image: lunchboxImage,
+    text: {
+      title: 'Bring your ideas to life with the Humankind Fund',
+      paragraph: [
+        'We are delighted you’re finally joining our adventure alongside Maya and Dallas. It all starts with a simple and nostalgic object: a lunchbox. A lunchbox? What for? Well, it’s gonna be a long journey! ',
+        'Every lunchbox will unlock a Humankind on a brave quest. You’ll be able to claim your Kind with them. We’ve made our generative lunchboxes with art we’ve been creating for the last year. ',
+      ],
+    },
+    button: [
+      {
+        text: '🌊 Get one from Opensea',
+        class: 'bg-black text-white border-black hover:bg-red-500',
+      },
+      {
+        text: '🌮 Learn more',
+        class: ' text-black border-black ml-2',
       },
     ],
   },
