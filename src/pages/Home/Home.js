@@ -6,6 +6,7 @@ import Section from './components/Section';
 import homeTopImage from './../../assets/images/62d1b8e2c048c969e47514c7_hero-top-p-1600.webp';
 import homeBottomImage from './../../assets/images/62d1b8e32e16f6b524514c60_hero-bottom-p-1600.webp';
 import nftImage from './../../assets/images/62d0eba9fd0791f1321f3463_hk-8.webp';
+import mechaImage from './../../assets/images/6310a4518beef1d8f521fd6a_mechaWEBbaja.gif';
 
 function Home() {
   return (
@@ -28,11 +29,12 @@ function Home() {
           Lunchbox burn starts on Dec 13th, 2022
         </p>
       </div>
-
-      <Section data={sectionData.wrestle} />
-      <Section data={sectionData.play} />
-      <Section data={sectionData.ideas} />
-      <Section data={sectionData.lunchbox} />
+      <div className="my-16">
+        <Section data={sectionData.wrestle} />
+        <Section data={sectionData.play} />
+        <Section data={sectionData.ideas} />
+        <Section data={sectionData.lunchbox} />
+      </div>
 
       <div className="pb-24 pt-48 section-collectibles">
         <div className="w-2/3 m-auto ">
@@ -66,7 +68,28 @@ function Home() {
         </div>
       </div>
       <div className="section-multi py-28 px-5">
-        <p>hola</p>
+        <div className=" flex justify-center">
+          <div className="w-3/4 flex">
+            <div className="w-5/12">
+              <div className="bg-white px-10 py-12 text-left rounded-md">
+                <p className="text-5xl font-extrabold">
+                  Art and kindness are our tools of trade
+                </p>
+                <p className="text-xl mt-6 font-lora">
+                  Humankind is a creative force developing relatable characters
+                  and epic stories for a global audience across various formats
+                  powered by decentralization.
+                </p>
+                <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+                  Learn About Us
+                </button>
+              </div>
+            </div>
+            <div className="w-7/12">
+              <img src={mechaImage} alt="mechaImage" className=" w-full " />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
