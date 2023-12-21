@@ -1,4 +1,3 @@
-import playImage from './../../../assets/images/646fb24a3ad2f2ac41afd67b_herokind-adventure-lores-p-800.png';
 
 function Section({ data }) {
   return (
