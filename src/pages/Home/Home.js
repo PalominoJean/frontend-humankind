@@ -39,7 +39,7 @@ function Home() {
       <div className="pb-24 pt-48 section-collectibles">
         <div className="w-2/3 m-auto ">
           <div className="p-16  border-black rounded-3xl transition bg-black text-white">
-            <div className="w-2/3 w-3/4 m-auto text-center">
+            <div className="w-3/4 m-auto text-center">
               <div className="flex items-center -mt-28 ml-7 max-w-3xl flex-wrap justify-center">
                 {[...Array(9)].map((item, index) => (
                   <img
@@ -68,10 +68,10 @@ function Home() {
         </div>
       </div>
       <div className="section-multi py-28 px-5">
-        <div className=" flex justify-center">
+        <div className="flex justify-center">
           <div className="w-3/4 flex">
             <div className="w-5/12">
-              <div className="bg-white px-10 py-12 text-left rounded-md">
+              <div className="bg-white px-10 py-12 text-left rounded-xl">
                 <p className="text-5xl font-extrabold">
                   Art and kindness are our tools of trade
                 </p>
