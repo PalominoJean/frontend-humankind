@@ -1,12 +1,13 @@
 //data
-import sectionData from './../../data/section';
+import sectionData from "./../../data/section";
 //component
-import Section from './components/Section';
+import Section from "./components/Section";
 //images
-import homeTopImage from './../../assets/images/62d1b8e2c048c969e47514c7_hero-top-p-1600.webp';
-import homeBottomImage from './../../assets/images/62d1b8e32e16f6b524514c60_hero-bottom-p-1600.webp';
-import nftImage from './../../assets/images/62d0eba9fd0791f1321f3463_hk-8.webp';
-import mechaImage from './../../assets/images/6310a4518beef1d8f521fd6a_mechaWEBbaja.gif';
+import homeTopImage from "./../../assets/images/62d1b8e2c048c969e47514c7_hero-top-p-1600.webp";
+import homeBottomImage from "./../../assets/images/62d1b8e32e16f6b524514c60_hero-bottom-p-1600.webp";
+import nftImage from "./../../assets/images/62d0eba9fd0791f1321f3463_hk-8.webp";
+import mechaImage from "./../../assets/images/6310a4518beef1d8f521fd6a_mechaWEBbaja.gif";
+import designingImage from "./../../assets/images/62d769d7aeaf6503ae33a1d2_kinds.webp";
 
 function Home() {
   return (
@@ -88,6 +89,60 @@ function Home() {
             <div className="w-7/12">
               <img src={mechaImage} alt="mechaImage" className=" w-full " />
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="py-28 px-5">
+        <div className="flex justify-center">
+          <div className="w-3/4 ">
+            <div>
+              <img
+                src={designingImage}
+                alt="designingImage"
+                className=" w-full "
+              />
+            </div>
+            <div className="flex justify-center text-left gap-10 mt-16">
+              <div className="w-1/3">
+                <div className="rounded-xl">
+                  <p className="text-5xl font-extrabold">
+                    Designing a universe
+                  </p>
+                </div>
+              </div>
+              <div className="w-2/4">
+                <p className="text-2xl leading-10 font-lora">
+                  We’re building the Humankind brand, its world, stories, and
+                  characters. Our goal is to capture the hearts and minds of
+                  kids and adults worldwide with epic creations, a unique
+                  vision, and community-driven storytelling.
+                </p>
+                <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+                  Discover the Art
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className=" bg-black">
+        <p className="text-white font-bold font-size-19vw line-height-20rem">stayhuman</p>
+        <div className="flex justify-center text-left gap-10 mt-16">
+          <div className="w-1/3">
+            <div className="rounded-xl">
+              <p className="text-5xl font-extrabold">Designing a universe</p>
+            </div>
+          </div>
+          <div className="w-2/4">
+            <p className="text-2xl leading-10 font-lora">
+              We’re building the Humankind brand, its world, stories, and
+              characters. Our goal is to capture the hearts and minds of kids
+              and adults worldwide with epic creations, a unique vision, and
+              community-driven storytelling.
+            </p>
+            <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+              Discover the Art
+            </button>
           </div>
         </div>
       </div>
