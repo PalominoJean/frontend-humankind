@@ -8,6 +8,8 @@ import homeBottomImage from "./../../assets/images/62d1b8e32e16f6b524514c60_hero
 import nftImage from "./../../assets/images/62d0eba9fd0791f1321f3463_hk-8.webp";
 import mechaImage from "./../../assets/images/6310a4518beef1d8f521fd6a_mechaWEBbaja.gif";
 import designingImage from "./../../assets/images/62d769d7aeaf6503ae33a1d2_kinds.webp";
+import studiosImage from "./../../assets/images/62bff77773892535e8a14d13_Studios.webp";
+import artFundImage from "./../../assets/images/62bff77649a83b488feffb57_Fund.webp";
 
 function Home() {
   return (
@@ -126,22 +128,61 @@ function Home() {
         </div>
       </div>
       <div className=" bg-black">
-        <p className="text-white font-bold font-size-19vw line-height-20rem">stayhuman</p>
-        <div className="flex justify-center text-left gap-10 mt-16">
-          <div className="w-1/3">
-            <div className="rounded-xl">
-              <p className="text-5xl font-extrabold">Designing a universe</p>
+        <p className="text-white font-bold font-size-19vw line-height-20rem">
+          stayhuman
+        </p>
+        <div className="flex justify-center items-center text-left gap-10 mt-16 section-stayhuman">
+          <div className="grid grid-cols-2 gap-5 max-w-screen-lg">
+            <div className="bg-white px-10 py-12 rounded-xl border-4 border-black duration-500 hover:bg-yellow-400">
+              <img
+                src={studiosImage}
+                alt="studiosImage"
+                className="w-28 mix-blend-multiply"
+              />
+              <p className="font-bold text-4xl mt-2">Humankind Studios</p>
+              <p className="font-lora mt-1 ">
+                A creative studio designing the stories, world, and brand of
+                Humankind.
+              </p>
+            </div>
+            <div className="bg-white px-10 py-12 rounded-xl border-4 border-black duration-500 hover:bg-yellow-400">
+              <img
+                src={artFundImage}
+                alt="artFundImage"
+                className="w-36 mix-blend-multiply"
+              />
+              <p className="font-bold text-4xl mt-2">Humankind Fund</p>
+              <p className="font-lora mt-1 ">
+                A fund that helps artists conceive their creations free of
+                economic dependencies.
+              </p>
             </div>
           </div>
-          <div className="w-2/4">
-            <p className="text-2xl leading-10 font-lora">
-              We’re building the Humankind brand, its world, stories, and
-              characters. Our goal is to capture the hearts and minds of kids
-              and adults worldwide with epic creations, a unique vision, and
-              community-driven storytelling.
+        </div>
+      </div>
+      <div className="grid grid-cols-10 min-h-full">
+        <div className="col-span-8">
+          <img
+            src={studiosImage}
+            alt="studiosImage"
+            className="w-28 mix-blend-multiply"
+          />
+          <p className="font-bold text-4xl mt-2">Humankind Studios</p>
+          <p className="font-lora mt-1 ">
+            A creative studio designing the stories, world, and brand of
+            Humankind.
+          </p>
+        </div>
+        <div className="col-span-2 flex items-end text-left">
+          <div className=" ">
+            <p className="font-bold text-5xl mt-2">Building together</p>
+            <p className="font-lora text-2xl mt-4">
+              Our mission is to entertain and inspire people all over the globe
+              through the power of art, kindness, and unique storytelling in
+              web3.
             </p>
             <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
-              Discover the Art
+              Explore Careers
             </button>
           </div>
         </div>
