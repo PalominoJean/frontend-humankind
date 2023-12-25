@@ -160,7 +160,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-10 min-h-full">
+      <div className="grid grid-cols-10 min-heigth-851px">
         <div className="col-span-8">
           <img
             src={studiosImage}
