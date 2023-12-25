@@ -180,16 +180,18 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-10 min-heigth-851px">
-        <div className="col-span-7">
+      <div className="flex justify-center py-28">
+        <div className="w-1/3 ">
           <img src={joinImg} alt="joinImg" className="w-full max-h-full" />
-          <p className="font-bold text-5xl mt-2">Building together</p>
-          <p className="font-lora text-2xl mt-4">
-            Our mission is to entertain and inspire people all over the globe
-            through the power of art, kindness, and unique storytelling in web3.
+          <p className="font-bold text-5xl mt-10">Join our adventure</p>
+          <p className="font-lora text-xl mt-4">
+            Despite the many evil forces in the world, there is hope. We can
+            still make a positive difference through art and community. We’re
+            looking for other geeks, punks, and freaks like us who believe in
+            the power of storytelling to be a part of our quest.
           </p>
-          <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
-            Explore Careers
+          <button className="mt-6 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition bg-black text-white border-black hover:bg-red-500">
+          👾 Join our Discord 
           </button>
         </div>
       </div>
