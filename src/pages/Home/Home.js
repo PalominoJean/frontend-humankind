@@ -3,21 +3,22 @@ import sectionData from "./../../data/section";
 //component
 import Section from "./components/Section";
 //images
-import homeTopImage from "./../../assets/images/62d1b8e2c048c969e47514c7_hero-top-p-1600.webp";
-import homeBottomImage from "./../../assets/images/62d1b8e32e16f6b524514c60_hero-bottom-p-1600.webp";
-import nftImage from "./../../assets/images/62d0eba9fd0791f1321f3463_hk-8.webp";
-import mechaImage from "./../../assets/images/6310a4518beef1d8f521fd6a_mechaWEBbaja.gif";
-import designingImage from "./../../assets/images/62d769d7aeaf6503ae33a1d2_kinds.webp";
-import studiosImage from "./../../assets/images/62bff77773892535e8a14d13_Studios.webp";
-import artFundImage from "./../../assets/images/62bff77649a83b488feffb57_Fund.webp";
-import buildingImage from "./../../assets/images/62d76a66cddf7a1a50d2a8b9_teamwork.png";
+import homeTopImg from "./../../assets/images/62d1b8e2c048c969e47514c7_hero-top-p-1600.webp";
+import homeBottomImg from "./../../assets/images/62d1b8e32e16f6b524514c60_hero-bottom-p-1600.webp";
+import nftImg from "./../../assets/images/62d0eba9fd0791f1321f3463_hk-8.webp";
+import mechaImg from "./../../assets/images/6310a4518beef1d8f521fd6a_mechaWEBbaja.gif";
+import designingImg from "./../../assets/images/62d769d7aeaf6503ae33a1d2_kinds.webp";
+import studiosImg from "./../../assets/images/62bff77773892535e8a14d13_Studios.webp";
+import artFundImg from "./../../assets/images/62bff77649a83b488feffb57_Fund.webp";
+import buildingImg from "./../../assets/images/62d76a66cddf7a1a50d2a8b9_teamwork.png";
+import joinImg from "./../../assets/images/62bfedd174a366f04445ae7a_your-back 1.webp";
 
 function Home() {
   return (
     <>
       <div className="w-11/12 m-auto pt-24 pb-3">
-        <img src={homeTopImage} alt="homeTopImage" />
-        <img src={homeBottomImage} className="-mt-72" alt="homeBottomImage" />
+        <img src={homeTopImg} alt="homeTopImg" />
+        <img src={homeBottomImg} className="-mt-72" alt="homeBottomImg" />
         <p className="text-2xl mt-4 font-lora">
           Creating a magical world for the kid in all of us.
         </p>
@@ -47,8 +48,8 @@ function Home() {
               <div className="flex items-center -mt-28 ml-7 max-w-3xl flex-wrap justify-center">
                 {[...Array(9)].map((item, index) => (
                   <img
-                    src={nftImage}
-                    alt="nftImage"
+                    src={nftImg}
+                    alt="nftImg"
                     className="rounded-full border-4 border-black w-40 -mt-7 -ml-7 hover:scale-110 transition relative"
                   />
                 ))}
@@ -90,7 +91,7 @@ function Home() {
               </div>
             </div>
             <div className="w-7/12">
-              <img src={mechaImage} alt="mechaImage" className=" w-full " />
+              <img src={mechaImg} alt="mechaImg" className=" w-full " />
             </div>
           </div>
         </div>
@@ -99,11 +100,7 @@ function Home() {
         <div className="flex justify-center">
           <div className="w-3/4 ">
             <div>
-              <img
-                src={designingImage}
-                alt="designingImage"
-                className=" w-full "
-              />
+              <img src={designingImg} alt="designingImg" className=" w-full " />
             </div>
             <div className="flex justify-center text-left gap-10 mt-16">
               <div className="w-1/3">
@@ -136,8 +133,8 @@ function Home() {
           <div className="grid grid-cols-2 gap-5 max-w-screen-lg">
             <div className="bg-white px-10 py-12 rounded-xl border-4 border-black duration-500 hover:bg-yellow-400">
               <img
-                src={studiosImage}
-                alt="studiosImage"
+                src={studiosImg}
+                alt="studiosImg"
                 className="w-28 mix-blend-multiply"
               />
               <p className="font-bold text-4xl mt-2">Humankind Studios</p>
@@ -148,8 +145,8 @@ function Home() {
             </div>
             <div className="bg-white px-10 py-12 rounded-xl border-4 border-black duration-500 hover:bg-yellow-400">
               <img
-                src={artFundImage}
-                alt="artFundImage"
+                src={artFundImg}
+                alt="artFundImg"
                 className="w-36 mix-blend-multiply"
               />
               <p className="font-bold text-4xl mt-2">Humankind Fund</p>
@@ -164,8 +161,8 @@ function Home() {
       <div className="grid grid-cols-10 min-heigth-851px">
         <div className="col-span-7">
           <img
-            src={buildingImage}
-            alt="buildingImage"
+            src={buildingImg}
+            alt="buildingImg"
             className="w-full max-h-full"
           />
         </div>
@@ -185,11 +182,7 @@ function Home() {
       </div>
       <div className="grid grid-cols-10 min-heigth-851px">
         <div className="col-span-7">
-          <img
-            src={buildingImage}
-            alt="buildingImage"
-            className="w-full max-h-full"
-          />
+          <img src={joinImg} alt="joinImg" className="w-full max-h-full" />
           <p className="font-bold text-5xl mt-2">Building together</p>
           <p className="font-lora text-2xl mt-4">
             Our mission is to entertain and inspire people all over the globe
