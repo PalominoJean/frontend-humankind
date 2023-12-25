@@ -10,6 +10,7 @@ import mechaImage from "./../../assets/images/6310a4518beef1d8f521fd6a_mechaWEBb
 import designingImage from "./../../assets/images/62d769d7aeaf6503ae33a1d2_kinds.webp";
 import studiosImage from "./../../assets/images/62bff77773892535e8a14d13_Studios.webp";
 import artFundImage from "./../../assets/images/62bff77649a83b488feffb57_Fund.webp";
+import buildingImage from "./../../assets/images/62d76a66cddf7a1a50d2a8b9_teamwork.png";
 
 function Home() {
   return (
@@ -161,19 +162,14 @@ function Home() {
         </div>
       </div>
       <div className="grid grid-cols-10 min-heigth-851px">
-        <div className="col-span-8">
+        <div className="col-span-7">
           <img
-            src={studiosImage}
-            alt="studiosImage"
-            className="w-28 mix-blend-multiply"
+            src={buildingImage}
+            alt="buildingImage"
+            className="w-full max-h-full"
           />
-          <p className="font-bold text-4xl mt-2">Humankind Studios</p>
-          <p className="font-lora mt-1 ">
-            A creative studio designing the stories, world, and brand of
-            Humankind.
-          </p>
         </div>
-        <div className="col-span-2 flex items-end text-left">
+        <div className="col-span-3 flex items-end text-left px-12 pb-10">
           <div className=" ">
             <p className="font-bold text-5xl mt-2">Building together</p>
             <p className="font-lora text-2xl mt-4">
@@ -185,6 +181,23 @@ function Home() {
               Explore Careers
             </button>
           </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-10 min-heigth-851px">
+        <div className="col-span-7">
+          <img
+            src={buildingImage}
+            alt="buildingImage"
+            className="w-full max-h-full"
+          />
+          <p className="font-bold text-5xl mt-2">Building together</p>
+          <p className="font-lora text-2xl mt-4">
+            Our mission is to entertain and inspire people all over the globe
+            through the power of art, kindness, and unique storytelling in web3.
+          </p>
+          <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+            Explore Careers
+          </button>
         </div>
       </div>
     </>
