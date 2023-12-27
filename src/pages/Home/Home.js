@@ -3,15 +3,17 @@ import sectionData from "./../../data/section";
 //component
 import Section from "./components/Section";
 //images
-import homeTopImg from "./../../assets/images/62d1b8e2c048c969e47514c7_hero-top-p-1600.webp";
-import homeBottomImg from "./../../assets/images/62d1b8e32e16f6b524514c60_hero-bottom-p-1600.webp";
-import nftImg from "./../../assets/images/62d0eba9fd0791f1321f3463_hk-8.webp";
-import mechaImg from "./../../assets/images/6310a4518beef1d8f521fd6a_mechaWEBbaja.gif";
-import designingImg from "./../../assets/images/62d769d7aeaf6503ae33a1d2_kinds.webp";
-import studiosImg from "./../../assets/images/62bff77773892535e8a14d13_Studios.webp";
-import artFundImg from "./../../assets/images/62bff77649a83b488feffb57_Fund.webp";
-import buildingImg from "./../../assets/images/62d76a66cddf7a1a50d2a8b9_teamwork.png";
-import joinImg from "./../../assets/images/62bfedd174a366f04445ae7a_your-back 1.webp";
+import homeTopImg from "./../../assets/images/hero-top-p-1600.webp";
+import homeBottomImg from "./../../assets/images/hero-bottom-p-1600.webp";
+import nftImg from "./../../assets/images/hk-8.webp";
+import mechaImg from "./../../assets/images/mechaWEBbaja.gif";
+import designingImg from "./../../assets/images/kinds.webp";
+import studiosImg from "./../../assets/images/Studios.webp";
+import artFundImg from "./../../assets/images/Fund.webp";
+import buildingImg from "./../../assets/images/teamwork.png";
+import joinImg from "./../../assets/images/your-back 1.webp";
+import mayaSittingImg from "./../../assets/images/maya-sitting 1.webp";
+import discordImg from "./../../assets/images/discord.svg";
 
 function Home() {
   return (
@@ -191,8 +193,41 @@ function Home() {
             the power of storytelling to be a part of our quest.
           </p>
           <button className="mt-6 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition bg-black text-white border-black hover:bg-red-500">
-          👾 Join our Discord 
+            👾 Join our Discord
           </button>
+        </div>
+      </div>
+      <div className="flex justify-center py-28">
+        <div className="w-4/5 grid grid-cols-7">
+          <div className="col-span-3 text-left flex items-center">
+            <div>
+              <p className="font-bold text-6xl mt-10">Humankind</p>
+              <p className="font-lora text-xl ">stay human. be kind.</p>
+              <div className="mt-8">
+                <img src={discordImg} alt="discordImg" className="" />
+                <img src={discordImg} alt="discordImg" className="" />
+                <img src={discordImg} alt="discordImg" className="" />
+                <img src={discordImg} alt="discordImg" className="" />
+                <img src={discordImg} alt="discordImg" className="" />
+              </div>
+              <div>
+                <button className="mt-6 text-xl py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition bg-black text-white border-black hover:bg-red-500">
+                  ⚔️ Play Now!
+                </button>
+                <button className="text-black border-black ml-2 mt-8 text-xl py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+                  👾 Join our Discord
+                </button>
+              </div>
+              <p className="mt-10">Humankind Industries Inc. 2023</p>
+            </div>
+          </div>
+          <div className="col-span-4">
+            <img
+              src={mayaSittingImg}
+              alt="mayaSittingImg"
+              className="w-full max-h-full"
+            />
+          </div>
         </div>
       </div>
     </>

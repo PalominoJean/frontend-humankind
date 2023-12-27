@@ -1,7 +1,7 @@
-import wrestleImage from './../assets/images/64f086fc9537ff63dda7f953_Arcade wrestle-p-1080.webp';
-import playImage from './../assets/images/646fb24a3ad2f2ac41afd67b_herokind-adventure-lores-p-800.png';
-import ideasImage from './../assets/images/63e09ea82ae9b06d12ea9b91_028-band-playing-p-800.webp';
-import lunchboxImage from './../assets/images/63765b76de5f1356947d9d23_Lunchboxes.gif';
+import wrestleImage from './../assets/images/Arcade wrestle-p-1080.webp';
+import playImage from './../assets/images/herokind-adventure-lores-p-800.png';
+import ideasImage from './../assets/images/028-band-playing-p-800.webp';
+import lunchboxImage from './../assets/images/Lunchboxes.gif';
 
 const section = {
   wrestle: {
