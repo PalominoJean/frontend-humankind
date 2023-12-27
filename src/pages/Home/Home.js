@@ -14,6 +14,10 @@ import buildingImg from "./../../assets/images/teamwork.png";
 import joinImg from "./../../assets/images/your-back 1.webp";
 import mayaSittingImg from "./../../assets/images/maya-sitting 1.webp";
 import discordImg from "./../../assets/images/discord.svg";
+import twiterImg from "./../../assets/images/twitter_squared.svg";
+import instagramImg from "./../../assets/images/icons8-instagram.svg";
+import linkedinImg from "./../../assets/images/icons8-linkedin.svg";
+import openSeaImg from "./../../assets/images/OpenSea.svg";
 
 function Home() {
   return (
@@ -203,22 +207,22 @@ function Home() {
             <div>
               <p className="font-bold text-6xl mt-10">Humankind</p>
               <p className="font-lora text-xl ">stay human. be kind.</p>
-              <div className="mt-8">
-                <img src={discordImg} alt="discordImg" className="" />
-                <img src={discordImg} alt="discordImg" className="" />
-                <img src={discordImg} alt="discordImg" className="" />
-                <img src={discordImg} alt="discordImg" className="" />
-                <img src={discordImg} alt="discordImg" className="" />
+              <div className="mt-8 flex gap-6">
+                <img src={discordImg} alt="discordImg" className="w-8" />
+                <img src={twiterImg} alt="twiterImg" className="w-8" />
+                <img src={instagramImg} alt="instagramImg" className="w-8" />
+                <img src={linkedinImg} alt="linkedinImg" className="w-8" />
+                <img src={openSeaImg} alt="openSeaImg" className="w-8" />
               </div>
               <div>
-                <button className="mt-6 text-xl py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition bg-black text-white border-black hover:bg-red-500">
+                <button className="mt-6 text-lg py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition bg-black text-white border-black hover:bg-red-500">
                   ⚔️ Play Now!
                 </button>
-                <button className="text-black border-black ml-2 mt-8 text-xl py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+                <button className="text-black border-black ml-2 mt-6 text-lg py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
                   👾 Join our Discord
                 </button>
               </div>
-              <p className="mt-10">Humankind Industries Inc. 2023</p>
+              <p className="mt-10 font-lora text-sm">Humankind Industries Inc. 2023</p>
             </div>
           </div>
           <div className="col-span-4">
