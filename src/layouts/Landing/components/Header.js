@@ -1,6 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import logo from "./../../../assets/images/icon.svg";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const navigateWrestle = () => {
+    navigate("/wrestle");
+  };
+
+  const navigateCollectibles = () => {
+    navigate("/collectibles");
+  };
+
   return (
     <div className="flex justify-between py-2 px-4 sticky top-0 bg-white">
       <div className="flex items-center gap-1">
@@ -8,10 +19,16 @@ function Header() {
         <p className="text-2xl font-bold">humankind</p>
       </div>
       <div className="flex gap-1">
-        <button className="py-2 px-4 text-lg font-semibold hover:text-gray-500 transition">
-          Art
+        <button
+          className="py-2 px-4 text-lg font-semibold hover:text-gray-500 transition"
+          onClick={navigateWrestle}
+        >
+          Wrestle
         </button>
-        <button className="py-2 px-4 text-lg font-semibold hover:text-gray-500 transition">
+        <button
+          className="py-2 px-4 text-lg font-semibold hover:text-gray-500 transition"
+          onClick={navigateCollectibles}
+        >
           Collectibles
         </button>
         <button className="py-2 px-4 text-lg font-semibold hover:text-gray-500 transition">
