@@ -131,7 +131,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className=" bg-black">
+      <div className="bg-black">
         <p className="text-white font-bold font-size-19vw line-height-20rem">
           stayhuman
         </p>
