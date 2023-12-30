@@ -41,10 +41,10 @@ function Home() {
         </p>
       </div>
       <div className="my-16">
-        <Section data={sectionData.wrestle} />
-        <Section data={sectionData.play} />
-        <Section data={sectionData.ideas} />
-        <Section data={sectionData.lunchbox} />
+        <Section data={sectionData.wrestle} key={"wrestle"} />
+        <Section data={sectionData.play} key={"play"} />
+        <Section data={sectionData.ideas} key={"ideas"} />
+        <Section data={sectionData.lunchbox} key={"lunchbox"} />
       </div>
 
       <div className="pb-24 pt-48 section-collectibles">
@@ -222,7 +222,9 @@ function Home() {
                   👾 Join our Discord
                 </button>
               </div>
-              <p className="mt-10 font-lora text-sm">Humankind Industries Inc. 2023</p>
+              <p className="mt-10 font-lora text-sm">
+                Humankind Industries Inc. 2023
+              </p>
             </div>
           </div>
           <div className="col-span-4">
