@@ -3,6 +3,8 @@ import heroImg from "./../../assets/images/hero-image-p-2600.webp";
 
 import headImg from "./../../assets/images/Wild_robot_head-p-500.webp";
 import stanleyImg from "./../../assets/images/Pablo Stanley Me Logo Icon Pabs-p-500.webp";
+import avatarImg from "./../../assets/images/avatar.gif";
+
 
 export default function Wrestle() {
   return (
@@ -62,22 +64,30 @@ export default function Wrestle() {
           </div>
         </div>
       </div>
-      <div className="bg-black">
-        <div className="w-1/2">
-          <img src="" alt="" />
-          {/* <img src={data.image} className="rounded-lg" alt="playImage" /> */}
-        </div>
-        <div className="w-1/2 text-left flex items-center">
-          <div>
-            <p className="text-4xl font-bold">data.text.title</p>
-
-            <p className="text-xl mt-6 font-lora">item</p>
-
-            <button
-              className={`mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition`}
-            >
-              item.text
-            </button>
+      <div className="bg-black text-white flex justify-center py-16">
+        <div className="w-10/12 grid grid-cols-11 gap-10 sm:gap-16 sm:w-9/12 md:w-8/12">
+          <div className="col-span-11 sm:col-span-5 rounded-sm">
+            <img src={avatarImg} alt="avatarImg" className="rounded-2xl"/>
+            {/* <img src={data.image} className="rounded-lg" alt="playImage" /> */}
+          </div>
+          <div className="col-span-11 text-left flex items-center p-6 pt-12  sm:col-span-6 sm:pt-0 sm:p-0">
+            <div>
+              <p className="text-2xl font-bold sm:text-4xl md:text-5xl">
+                Wrestle. Wrestle. Wrestle. Wrestle. Wrestle. Wrestle. Wrestle.
+                Wrestle. Wrestle!
+              </p>
+              <p className="mt-6 font-lora md:text-xl">
+                Go play the Beta version of Wrestle in Herokind. It’s a simple
+                turn-based fight game where your Humankind collectibles can
+                wrestle monsters on different islands. It’s a bit like some
+                old-school games we loved as kids, and we think you’ll enjoy it.
+              </p>
+              <button
+                className={`mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition`}
+              >
+                item.text
+              </button>
+            </div>
           </div>
         </div>
       </div>
