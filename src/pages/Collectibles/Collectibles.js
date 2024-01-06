@@ -1,5 +1,6 @@
 import runLeftImg from "./../../assets/images/run-run-left.png";
 import runRightImg from "./../../assets/images/run-run-right.png";
+import stickersImg from "./../../assets/images/stickers-website.webp";
 
 export default function Collectibles() {
   return (
@@ -31,6 +32,13 @@ export default function Collectibles() {
             className="w-full max-h-full"
           />
         </div>
+      </div>
+      <div className="mt-40">
+        <img
+          src={stickersImg}
+          alt="stickersImg"
+          className="h-20 md:h-24 lg:h-32 xl:h-44"
+        />
       </div>
     </>
   );
