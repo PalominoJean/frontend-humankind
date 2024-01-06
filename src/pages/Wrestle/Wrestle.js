@@ -1,6 +1,5 @@
 import wrestleImg from "./../../assets/images/Logo.svg";
 import heroImg from "./../../assets/images/hero-image-p-2600.webp";
-
 import headImg from "./../../assets/images/Wild_robot_head-p-500.webp";
 import stanleyImg from "./../../assets/images/Pablo Stanley Me Logo Icon Pabs-p-500.webp";
 import avatarImg from "./../../assets/images/avatar.gif";
