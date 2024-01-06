@@ -4,6 +4,13 @@ import stickersImg from "./../../assets/images/stickers-website.webp";
 import lunchboxesImg from "./../../assets/images/Lunchboxes.gif";
 import treeImg from "./../../assets/images/Tree.webp";
 import lunchboxImg from "./../../assets/images/Lunchbox.webp";
+import nftImg from "./../../assets/images/hk-8.webp";
+import membershipImg from "./../../assets/images/icons-membership.svg";
+import diamondImg from "./../../assets/images/icons-diamond.svg";
+import ipfsImg from "./../../assets/images/icons-ipfs.svg";
+import utilityImg from "./../../assets/images/icons-utility.svg";
+import voteImg from "./../../assets/images/icons-vote.svg";
+import mapImg from "./../../assets/images/icons-world_map.svg";
 
 export default function Collectibles() {
   return (
@@ -84,6 +91,73 @@ export default function Collectibles() {
         </div>
         <div className="col-span-11 md:col-span-6">
           <img src={treeImg} alt="treeImg" className="w-full max-h-full" />
+        </div>
+      </div>
+      <div className="pb-24 pt-48 section-collectibles">
+        <div className="w-11/12 m-auto ">
+          <div className=" border-black rounded-3xl transition bg-black text-white">
+            <div className="w-11/12 m-auto text-center pb-10">
+              <div className="flex items-center -mt-28 ml-7 max-w-3xl flex-wrap justify-center">
+                {[...Array(9)].map((item, index) => (
+                  <img
+                    src={nftImg}
+                    alt="nftImg"
+                    className="rounded-full border-4 border-black w-28 -mt-7 -ml-7 hover:scale-110 transition relative md:w-32"
+                  />
+                ))}
+              </div>
+              <p className="text-3xl font-bold mt-5 md:text-4xl">Humankind Collectibles</p>
+              <p className="mt-6 font-lora lg:text-lg">
+                We're launching a set of diverse and unique art collectibles
+                featuring the Humankind species, the most prevalent in The Land
+                of Kinds.
+              </p>
+              <p className="text mt-6 font-lora">
+                Through ownership, these art pieces will unlock exclusive access
+                to the Humankind world and support the LINK . Collectors will
+                participate in the ongoing creation of the world, get sneak
+                peeks, access to the latest products, merchandise, and
+                additional benefits, including dibs on future projects like
+                Creaturekind, Spiritkind, and Monsterkind.
+              </p>
+              <div className="grid grid-cols-2 mt-8 gap-10">
+                <div className="flex flex-col items-center gap-2">
+                  <img
+                    src={membershipImg}
+                    alt="membershipImg"
+                    className="w-8"
+                  />
+                  <p className="font-lora">Community Pass</p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <img src={diamondImg} alt="diamondImg" className="w-8" />
+                  <p className="font-lora">Minted in ETH</p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <img src={ipfsImg} alt="ipfsImg" className="w-8" />
+                  <p className="font-lora">IPFS Hosted</p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <img src={utilityImg} alt="utilityImg" className="w-8" />
+                  <p className="font-lora">Benefits Unlock</p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <img src={voteImg} alt="voteImg" className="w-8" />
+                  <p className="font-lora">Benefits Unlock</p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <img src={mapImg} alt="mapImg" className="w-8" />
+                  <p className="font-lora">Staking Mechanism</p>
+                </div>
+              </div>
+              <div className="mt-8">
+                <button className="bg-white text-black py-4 px-6 rounded-full font-bold border-4 border-white transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5">
+                  Mint now
+                </button>
+                <p className="mt-5 font-lora">View on Etherscan</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
