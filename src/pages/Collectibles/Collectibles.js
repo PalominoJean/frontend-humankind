@@ -1,14 +1,17 @@
-import fireImg from "./../../assets/images/fire-p-500.webp";
+import runLeftImg from "./../../assets/images/run-run-left.png";
+import runRightImg from "./../../assets/images/run-run-right.png";
 
 export default function Collectibles() {
   return (
     <>
-      <div className="w-11/12 m-auto grid grid-cols-11 gap-2 mt-24 lg:w-10/12 xl:w-8/12">
-        <div className="col-span-11 md:col-span-5">
+      <div className="w-11/12 m-auto grid grid-cols-11 gap-5 mt-24 lg:w-10/12 xl:w-8/12">
+        <div className="col-span-11 md:col-span-5 flex flex-col justify-center text-left items-start">
           <p className="font-semibold uppercase text-xl ">
             HUMANKIND collectibles
           </p>
-          <h1 className="text-5xl font-bold mt-2 md:text-6xl lg:text-7xl xl:text-8xl">Time for an adventure.</h1>
+          <h1 className="text-5xl font-bold mt-2 md:text-6xl lg:text-7xl xl:text-8xl">
+            Time for an adventure.
+          </h1>
           <p className="mt-4 font-lora text-lg md:text-xl lg:text-2xl">
             After a long time of doodling we're launching our first collection.
           </p>
@@ -16,8 +19,17 @@ export default function Collectibles() {
             Mint Now
           </button>
         </div>
-        <div className="col-span-11 md:col-span-6 ">
-          <img src={fireImg} alt="fireImg" className="w-full max-h-full" />
+        <div className="col-span-11 md:col-span-6 relative">
+          <img
+            src={runLeftImg}
+            alt="runLeftImg"
+            className="w-full max-h-full absolute"
+          />
+          <img
+            src={runRightImg}
+            alt="runRightImg"
+            className="w-full max-h-full"
+          />
         </div>
       </div>
     </>
