@@ -94,25 +94,27 @@ export default function Collectibles() {
         </div>
       </div>
       <div className="pb-24 pt-48 section-collectibles">
-        <div className="w-11/12 m-auto ">
-          <div className=" border-black rounded-3xl transition bg-black text-white">
-            <div className="w-11/12 m-auto text-center pb-10">
-              <div className="flex items-center -mt-28 ml-7 max-w-3xl flex-wrap justify-center">
+        <div className="w-11/12 m-auto md:w-10/12 lg:w-9/12  xl:w-7/12">
+          <div className=" border-black rounded-3xl transition bg-black text-white ">
+            <div className="w-11/12 m-auto text-center pb-10 md:w-10/12 lg:w-9/12 xl:pb-16">
+              <div className="flex items-center m-auto flex-wrap justify-center w-11/12 pl-7 md:w-11/12 xl:w-10/12">
                 {[...Array(9)].map((item, index) => (
                   <img
                     src={nftImg}
                     alt="nftImg"
-                    className="rounded-full border-4 border-black w-28 -mt-7 -ml-7 hover:scale-110 transition relative md:w-32"
+                    className="rounded-full border-4 border-black w-24 -mt-7 -ml-7  hover:scale-110 transition relative sm:w-28  md:w-32 lg:w-36 xl:w-48"
                   />
                 ))}
               </div>
-              <p className="text-3xl font-bold mt-5 md:text-4xl">Humankind Collectibles</p>
-              <p className="mt-6 font-lora lg:text-lg">
+              <p className="text-3xl font-bold mt-5 md:text-4xl lg:text-5xl xl:text-6xl">
+                Humankind Collectibles
+              </p>
+              <p className="mt-6 font-lora lg:text-lg xl:text-2xl">
                 We're launching a set of diverse and unique art collectibles
                 featuring the Humankind species, the most prevalent in The Land
                 of Kinds.
               </p>
-              <p className="text mt-6 font-lora">
+              <p className="text mt-6 font-lora lg:text-lg xl:text-2xl">
                 Through ownership, these art pieces will unlock exclusive access
                 to the Humankind world and support the LINK . Collectors will
                 participate in the ongoing creation of the world, get sneak
@@ -120,38 +122,46 @@ export default function Collectibles() {
                 additional benefits, including dibs on future projects like
                 Creaturekind, Spiritkind, and Monsterkind.
               </p>
-              <div className="grid grid-cols-2 mt-8 gap-10">
+              <div className="grid grid-cols-2 mt-8 gap-y-10 md:grid-cols-3 xl:mt-14">
                 <div className="flex flex-col items-center gap-2">
                   <img
                     src={membershipImg}
                     alt="membershipImg"
-                    className="w-8"
+                    className="w-8 xl:w-10"
                   />
-                  <p className="font-lora">Community Pass</p>
+                  <p className="font-lora xl:text-xl">Community Pass</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <img src={diamondImg} alt="diamondImg" className="w-8" />
-                  <p className="font-lora">Minted in ETH</p>
+                  <img
+                    src={diamondImg}
+                    alt="diamondImg"
+                    className="w-8 xl:w-10"
+                  />
+                  <p className="font-lora xl:text-xl">Minted in ETH</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <img src={ipfsImg} alt="ipfsImg" className="w-8" />
-                  <p className="font-lora">IPFS Hosted</p>
+                  <img src={ipfsImg} alt="ipfsImg" className="w-8 xl:w-10" />
+                  <p className="font-lora xl:text-xl">IPFS Hosted</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <img src={utilityImg} alt="utilityImg" className="w-8" />
-                  <p className="font-lora">Benefits Unlock</p>
+                  <img
+                    src={utilityImg}
+                    alt="utilityImg"
+                    className="w-8 xl:w-10"
+                  />
+                  <p className="font-lora xl:text-xl">Benefits Unlock</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <img src={voteImg} alt="voteImg" className="w-8" />
-                  <p className="font-lora">Benefits Unlock</p>
+                  <img src={voteImg} alt="voteImg" className="w-8 xl:w-10" />
+                  <p className="font-lora xl:text-xl">Community-Driven</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <img src={mapImg} alt="mapImg" className="w-8" />
-                  <p className="font-lora">Staking Mechanism</p>
+                  <img src={mapImg} alt="mapImg" className="w-8 xl:w-10" />
+                  <p className="font-lora xl:text-xl">Staking Mechanism</p>
                 </div>
               </div>
-              <div className="mt-8">
-                <button className="bg-white text-black py-4 px-6 rounded-full font-bold border-4 border-white transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5">
+              <div className="mt-8 xl:mt-12">
+                <button className="bg-white text-black py-4 px-6 rounded-full font-bold border-4 border-white transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:text-lg">
                   Mint now
                 </button>
                 <p className="mt-5 font-lora">View on Etherscan</p>
