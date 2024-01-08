@@ -11,6 +11,9 @@ import ipfsImg from "./../../assets/images/icons-ipfs.svg";
 import utilityImg from "./../../assets/images/icons-utility.svg";
 import voteImg from "./../../assets/images/icons-vote.svg";
 import mapImg from "./../../assets/images/icons-world_map.svg";
+import studiosImg from "./../../assets/images/Studios.webp";
+import artFundImg from "./../../assets/images/Fund.webp";
+import mushroomImg from "./../../assets/images/mushroom-sticker.png";
 
 export default function Collectibles() {
   return (
@@ -167,6 +170,27 @@ export default function Collectibles() {
                 <p className="mt-5 font-lora">View on Etherscan</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-black">
+        <p className="text-white font-bold font-size-19vw line-height-20rem">
+          stayhuman
+        </p>
+        <div className="flex justify-center items-center text-left gap-10 mt-16 section-stayhuman p-5">
+          <div className="bg-white px-6 py-8 rounded-xl border-4 flex flex-col items-center border-black duration-500 text-center hover:bg-yellow-400 md:px-10 md:py-12">
+            <img
+              src={mushroomImg}
+              alt="mushroomImg"
+              className="w-32 mix-blend-multiply"
+            />
+            <p className="font-bold text-4xl mt-2 lg:text-5xl lg:mt-2">Let's hangout!</p>
+            <p className="font-lora mt-1 text-lg lg:mt-4">
+              Stop by and say hello; we're looking to make some new friends.
+            </p>
+            <button className="py-3 px-6 rounded-full font-bold border-4 transition bg-black text-white border-black mt-7 hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:w-auto lg:text-lg lg:mt-8 ">
+              Join our Discord
+            </button>
           </div>
         </div>
       </div>
