@@ -22,23 +22,20 @@ import openSeaImg from "./../../assets/images/OpenSea.svg";
 function Home() {
   return (
     <>
-      <div className="w-11/12 m-auto pt-24 pb-3">
+      <div className="w-11/12 m-auto pt-24 pb-3 flex flex-col">
         <img src={homeTopImg} alt="homeTopImg" />
-        <img src={homeBottomImg} className="-mt-72" alt="homeBottomImg" />
-        <p className="text-2xl mt-4 font-lora">
+        <img src={homeBottomImg} className="" alt="homeBottomImg" />
+        <p className="text-xl mt-4 font-lora text-center md:text-2xl">
           Creating a magical world for the kid in all of us.
         </p>
-        <div className="flex justify-center gap-2 mt-8">
-          <button className="py-4 px-6 text-xl rounded-full font-bold border-4 border-black transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5">
+        <div className="flex flex-col justify-center gap-3 mt-8 px-5 sm:flex-row">
+          <button className="py-4 px-6 rounded-full font-bold border-4 border-black transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:text-xl">
             🎁 Get a Lunchbox
           </button>
-          <button className="bg-black text-xl text-white py-4 px-6 rounded-full font-bold border-4 border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+          <button className="bg-black  text-white py-4 px-6 rounded-full font-bold border-4 border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition md:text-xl">
             ⚔️ Play Now!
           </button>
         </div>
-        <p className="mt-4 font-lora text-lg">
-          Lunchbox burn starts on Dec 13th, 2022
-        </p>
       </div>
       <div className="my-16">
         <Section data={sectionData.wrestle} key={"wrestle"} />
@@ -48,20 +45,22 @@ function Home() {
       </div>
 
       <div className="pb-24 pt-48 section-collectibles">
-        <div className="w-2/3 m-auto ">
-          <div className="p-16  border-black rounded-3xl transition bg-black text-white">
-            <div className="w-3/4 m-auto text-center">
-              <div className="flex items-center -mt-28 ml-7 max-w-3xl flex-wrap justify-center">
+        <div className="w-11/12 m-auto md:w-10/12 lg:w-9/12 xl:w-7/12">
+          <div className="border-black rounded-3xl transition bg-black text-white">
+            <div className="w-11/12 m-auto text-center pb-10 md:w-10/12 lg:w-9/12 xl:pb-16">
+              <div className="flex items-center m-auto flex-wrap justify-center w-11/12 pl-7 md:w-11/12 xl:w-10/12">
                 {[...Array(9)].map((item, index) => (
                   <img
                     src={nftImg}
                     alt="nftImg"
-                    className="rounded-full border-4 border-black w-40 -mt-7 -ml-7 hover:scale-110 transition relative"
+                    className="rounded-full border-4 border-black w-24 -mt-7 -ml-7 hover:scale-110 transition relative sm:w-28  md:w-32 lg:w-36 xl:w-48"
                   />
                 ))}
               </div>
-              <p className="text-5xl font-bold mt-4">Humankind Collectibles</p>
-              <p className="text-xl mt-6 font-lora">
+              <p className="text-3xl font-bold mt-5 md:text-4xl lg:text-5xl xl:text-6xl">
+                Humankind Collectibles
+              </p>
+              <p className="mt-6 font-lora lg:text-lg xl:text-2xl">
                 Back in 2022, we launched a set of diverse and unique art
                 collectibles featuring the Humankind species, the most prevalent
                 in The Land of Kinds.

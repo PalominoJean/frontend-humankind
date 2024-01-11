@@ -101,15 +101,15 @@ export default function Collectibles() {
         </div>
       </div>
       <div className="pb-24 pt-48 section-collectibles">
-        <div className="w-11/12 m-auto md:w-10/12 lg:w-9/12  xl:w-7/12">
-          <div className=" border-black rounded-3xl transition bg-black text-white ">
+        <div className="w-11/12 m-auto md:w-10/12 lg:w-9/12 xl:w-7/12">
+          <div className="border-black rounded-3xl transition bg-black text-white">
             <div className="w-11/12 m-auto text-center pb-10 md:w-10/12 lg:w-9/12 xl:pb-16">
               <div className="flex items-center m-auto flex-wrap justify-center w-11/12 pl-7 md:w-11/12 xl:w-10/12">
                 {[...Array(9)].map((item, index) => (
                   <img
                     src={nftImg}
                     alt="nftImg"
-                    className="rounded-full border-4 border-black w-24 -mt-7 -ml-7  hover:scale-110 transition relative sm:w-28  md:w-32 lg:w-36 xl:w-48"
+                    className="rounded-full border-4 border-black w-24 -mt-7 -ml-7 hover:scale-110 transition relative sm:w-28  md:w-32 lg:w-36 xl:w-48"
                   />
                 ))}
               </div>

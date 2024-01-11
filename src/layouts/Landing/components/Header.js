@@ -4,6 +4,10 @@ import logo from "./../../../assets/images/icon.svg";
 function Header() {
   const navigate = useNavigate();
 
+  const navigateHome = () => {
+    navigate("/");
+  };
+
   const navigateWrestle = () => {
     navigate("/wrestle");
   };
@@ -14,7 +18,7 @@ function Header() {
 
   return (
     <div className="flex justify-between py-2 px-4 sticky top-0 bg-white">
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1" onClick={navigateHome}>
         <img src={logo} className="w-11 m-auto" alt="logo" />
         <p className="text-2xl font-bold">humankind</p>
       </div>
@@ -32,7 +36,7 @@ function Header() {
           Collectibles
         </button>
         <button className="py-2 px-4 text-lg font-semibold hover:text-gray-500 transition">
-          Studios
+          Shop
         </button>
         <button className="py-2 px-4 text-lg font-semibold hover:text-gray-500 transition">
           Community

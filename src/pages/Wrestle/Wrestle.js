@@ -99,10 +99,10 @@ export default function Wrestle() {
           </div>
           <div className="col-span-7 md:col-span-3 text-left flex items-center justify-center">
             <div>
-              <p className="font-bold text-4xl mt-10 text-center md:text-left">
+              <p className="font-bold text-5xl mt-10 text-center md:text-left md:text-6xl xl:text-7xl">
                 Humankind
               </p>
-              <p className="font-lora text-xl text-center md:text-left">
+              <p className="font-lora text-lg text-center md:text-left md:text-xl xl:text-2xl">
                 stay human. be kind.
               </p>
               <div className="mt-8 flex gap-6">
@@ -113,7 +113,7 @@ export default function Wrestle() {
                 <img src={openSeaImg} alt="openSeaImg" className="w-8" />
               </div>
               <div className="flex flex-col mt-8 gap-3 lg:flex-row">
-                <button className="py-2 px-5 rounded-full font-bold border-4 transition bg-black text-white border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg">
+                <button className="py-2 px-5 rounded-full font-bold border-4 transition bg-black text-white border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7">
                   ⚔️ Play Now!
                 </button>
                 <button className="text-black border-black py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg">
