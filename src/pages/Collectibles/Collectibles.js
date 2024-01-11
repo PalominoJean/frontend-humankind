@@ -27,13 +27,13 @@ export default function Collectibles() {
           <p className="font-semibold uppercase text-xl ">
             HUMANKIND collectibles
           </p>
-          <h1 className="text-5xl font-bold mt-2 md:text-6xl lg:text-7xl xl:text-8xl">
+          <h1 className="text-5xl font-bold mt-2 md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
             Time for an adventure.
           </h1>
           <p className="mt-4 font-lora text-lg md:text-xl lg:text-2xl">
             After a long time of doodling we're launching our first collection.
           </p>
-          <button className="py-2 px-5 w-full rounded-full font-bold border-4 transition bg-black text-white border-black mt-7 hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:w-auto lg:text-lg xl:mt-10">
+          <button className="py-2 px-5 w-full rounded-full font-bold border-4 transition bg-black text-white border-black mt-7 hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:w-auto lg:text-lg xl:mt-10  ">
             Mint Now
           </button>
         </div>
@@ -57,7 +57,7 @@ export default function Collectibles() {
           className="h-20 md:h-24 lg:h-32 xl:h-44"
         />
       </div>
-      <div className="w-11/12 m-auto grid grid-cols-11 gap-5 mt-28 lg:w-9/12 xl:w-7/12 xl:gap-8">
+      <div className="w-11/12 m-auto grid grid-cols-11 gap-5 mt-28 lg:w-9/12 xl:w-7/12  xl:gap-8 2xl:w-6/12">
         <div className="col-span-11">
           <img
             src={lunchboxesImg}
@@ -71,14 +71,14 @@ export default function Collectibles() {
           </p>
         </div>
         <div className="col-span-11 md:col-span-6">
-          <p className="font-lora text-lg md:text-xl lg:text-2xl xl:leading-10">
+          <p className="font-lora text-lg md:text-xl lg:text-2xl xl:leading-10 2xl:text-3xl 2xl:leading-10">
             First, you need to get a lunchbox that will serve to wake up your
             Humankind. You can only start the adventure as soon as your Kind is
             well-nourished!
           </p>
         </div>
       </div>
-      <div className="w-11/12 m-auto grid grid-cols-11 gap-5 mt-28 lg:w-9/12 xl:w-7/12 xl:gap-8 xl:mt-40">
+      <div className="w-11/12 m-auto grid grid-cols-11 gap-5 mt-28 lg:w-9/12 xl:w-7/12 xl:gap-8 xl:mt-40 2xl:w-6/12">
         <div className="col-span-11 md:col-span-5 flex flex-col justify-center items-start">
           <img
             src={lunchboxImg}
@@ -188,10 +188,10 @@ export default function Collectibles() {
               alt="mushroomImg"
               className="w-32 mix-blend-multiply"
             />
-            <p className="font-bold text-4xl mt-2 lg:text-5xl lg:mt-2">
+            <p className="font-bold text-4xl mt-2 lg:text-5xl lg:mt-2 2xl:text-6xl">
               Let's hangout!
             </p>
-            <p className="font-lora mt-1 text-lg lg:mt-4">
+            <p className="font-lora mt-1 text-lg lg:mt-4 2xl:text-xl" >
               Stop by and say hello; we're looking to make some new friends.
             </p>
             <button className="py-3 px-6 rounded-full font-bold border-4 transition bg-black text-white border-black mt-7 hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:w-auto lg:text-lg lg:mt-8 ">
