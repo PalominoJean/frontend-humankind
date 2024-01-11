@@ -36,7 +36,7 @@ export default function Wrestle() {
           wrestle!
         </p>
         <div className="flex justify-center items-center text-center gap-10 section-stayhuman md:text-left">
-          <div className="grid grid-cols-1 gap-5 w-11/12 sm:grid-cols-2 md:w-5/6 lg:w-3/4 xl:w-7/12">
+          <div className="grid grid-cols-1 gap-5 w-11/12 sm:grid-cols-2 md:w-5/6 lg:w-3/4 xl:w-7/12 2xl:w-6/12">
             <div className="bg-white px-5 py-6 rounded-xl border-8 border-black duration-500 hover:bg-yellow-400 md:px-10 md:py-10 xl:p-14">
               <img
                 src={headImg}
@@ -69,7 +69,7 @@ export default function Wrestle() {
         </div>
       </div>
       <div className="bg-black text-white flex justify-center py-16">
-        <div className="w-10/12 grid grid-cols-11 gap-10 sm:gap-16 sm:w-9/12 md:w-8/12">
+        <div className="w-10/12 grid grid-cols-11 gap-10 sm:gap-16 sm:w-9/12 md:w-8/12 2xl:w-6/12 2xl:gap-24">
           <div className="col-span-11 sm:col-span-5 rounded-sm">
             <img src={avatarImg} alt="avatarImg" className="rounded-2xl" />
           </div>
