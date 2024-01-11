@@ -113,14 +113,14 @@ export default function Wrestle() {
                 <img src={openSeaImg} alt="openSeaImg" className="w-8" />
               </div>
               <div className="flex flex-col mt-8 gap-3 lg:flex-row">
-                <button className="py-2 px-5 rounded-full font-bold border-4 transition bg-black text-white border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7">
+                <button className="py-2 px-5 rounded-full font-bold border-4 transition bg-black text-white border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7 xl:text-xl ">
                   ⚔️ Play Now!
                 </button>
-                <button className="text-black border-black py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg">
+                <button className="text-black border-black py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:text-xl ">
                   👾 Join our Discord
                 </button>
               </div>
-              <p className="mt-10 font-lora text-sm text-center lg:text-left">
+              <p className="mt-10 font-lora text-sm text-center lg:text-left 2xl:text-md">
                 Humankind Industries Inc. 2023
               </p>
             </div>
