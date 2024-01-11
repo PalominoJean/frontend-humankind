@@ -22,17 +22,17 @@ import openSeaImg from "./../../assets/images/OpenSea.svg";
 function Home() {
   return (
     <>
-      <div className="w-11/12 m-auto pt-24 pb-3 flex flex-col">
-        <img src={homeTopImg} alt="homeTopImg" />
+      <div className="m-auto pt-24 pb-3 flex flex-col md:w-11/12 lg:w-10/12 xl:w-9/12">
+        <img src={homeTopImg} alt="homeTopImg" className="-mb-20 sm:-mb-32 md:-mb-36 lg:-mb-44 xl:-mb-52 2xl:-mb-72" />
         <img src={homeBottomImg} className="" alt="homeBottomImg" />
-        <p className="text-xl mt-4 font-lora text-center md:text-2xl">
+        <p className="text-xl mt-4 font-lora text-center md:text-2xl 2xl:text-3xl">
           Creating a magical world for the kid in all of us.
         </p>
-        <div className="flex flex-col justify-center gap-3 mt-8 px-5 sm:flex-row">
-          <button className="py-4 px-6 rounded-full font-bold border-4 border-black transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:text-xl">
+        <div className="flex flex-col justify-center gap-3 mt-8 px-5 sm:flex-row 2xl:mt-12">
+          <button className="py-4 px-6 rounded-full font-bold border-4 border-black transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:text-xl 2xl:text-2xl">
             🎁 Get a Lunchbox
           </button>
-          <button className="bg-black  text-white py-4 px-6 rounded-full font-bold border-4 border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition md:text-xl">
+          <button className="bg-black  text-white py-4 px-6 rounded-full font-bold border-4 border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition md:text-xl 2xl:text-2xl">
             ⚔️ Play Now!
           </button>
         </div>
@@ -66,10 +66,10 @@ function Home() {
                 in The Land of Kinds.
               </p>
               <div className="flex justify-center gap-5 mt-8">
-                <button className="bg-black text-xl text-white py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+                <button className="bg-black text-xl text-white py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition xl:text-xl 2xl:text-2xl">
                   Learn More
                 </button>
-                <button className="bg-white text-black py-4 px-6 text-xl rounded-full font-bold border-4 border-white transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5">
+                <button className="bg-white text-black py-4 px-6 text-xl rounded-full font-bold border-4 border-white transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 xl:text-xl 2xl:text-2xl">
                   Get one from Opensea
                 </button>
               </div>
@@ -82,15 +82,15 @@ function Home() {
           <div className="w-3/4 flex">
             <div className="w-5/12">
               <div className="bg-white px-10 py-12 text-left rounded-xl">
-                <p className="text-5xl font-extrabold">
+                <p className="text-5xl font-extrabold 2xl:text-7xl">
                   Art and kindness are our tools of trade
                 </p>
-                <p className="text-xl mt-6 font-lora">
+                <p className="text-xl mt-6 font-lora 2xl:text-2xl 2xl:leading-9">
                   Humankind is a creative force developing relatable characters
                   and epic stories for a global audience across various formats
                   powered by decentralization.
                 </p>
-                <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+                <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition xl:text-xl 2xl:text-2xl">
                   Learn About Us
                 </button>
               </div>
@@ -103,26 +103,26 @@ function Home() {
       </div>
       <div className="py-28 px-5">
         <div className="flex justify-center">
-          <div className="w-3/4 ">
+          <div className="w-3/4 2xl:w-7/12 ">
             <div>
               <img src={designingImg} alt="designingImg" className=" w-full " />
             </div>
             <div className="flex justify-center text-left gap-10 mt-16">
               <div className="w-1/3">
                 <div className="rounded-xl">
-                  <p className="text-5xl font-extrabold">
+                  <p className="text-5xl font-bold 2xl:text-6xl">
                     Designing a universe
                   </p>
                 </div>
               </div>
               <div className="w-2/4">
-                <p className="text-2xl leading-10 font-lora">
+                <p className="text-2xl leading-10 font-lora 2xl:text-3xl 2xl:leading-10">
                   We’re building the Humankind brand, its world, stories, and
                   characters. Our goal is to capture the hearts and minds of
                   kids and adults worldwide with epic creations, a unique
                   vision, and community-driven storytelling.
                 </p>
-                <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+                <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition xl:text-xl 2xl:text-2xl">
                   Discover the Art
                 </button>
               </div>
@@ -135,27 +135,27 @@ function Home() {
           stayhuman
         </p>
         <div className="flex justify-center items-center text-left gap-10 mt-16 section-stayhuman">
-          <div className="grid grid-cols-2 gap-5 max-w-screen-lg">
-            <div className="bg-white px-10 py-12 rounded-xl border-4 border-black duration-500 hover:bg-yellow-400">
+          <div className="grid grid-cols-2 gap-5 max-w-screen-lg 2xl:max-w-screen-xl">
+            <div className="bg-white px-10 py-12 rounded-xl border-4 border-black duration-500 hover:bg-yellow-400 2xl:px-16 2xl:py-16">
               <img
                 src={studiosImg}
                 alt="studiosImg"
-                className="w-28 mix-blend-multiply"
+                className="w-28 mix-blend-multiply 2xl:w-32"
               />
-              <p className="font-bold text-4xl mt-2">Humankind Studios</p>
-              <p className="font-lora mt-1 ">
+              <p className="font-bold text-4xl mt-2 2xl:text-5xl">Humankind Studios</p>
+              <p className="font-lora mt-1 2xl:text-xl">
                 A creative studio designing the stories, world, and brand of
                 Humankind.
               </p>
             </div>
-            <div className="bg-white px-10 py-12 rounded-xl border-4 border-black duration-500 hover:bg-yellow-400">
+            <div className="bg-white px-10 py-12 rounded-xl border-4 border-black duration-500 hover:bg-yellow-400 2xl:px-16 2xl:py-16">
               <img
                 src={artFundImg}
                 alt="artFundImg"
-                className="w-36 mix-blend-multiply"
+                className="w-36 mix-blend-multiply 2xl:w-44"
               />
-              <p className="font-bold text-4xl mt-2">Humankind Fund</p>
-              <p className="font-lora mt-1 ">
+              <p className="font-bold text-4xl mt-2 2xl:text-5xl">Humankind Fund</p>
+              <p className="font-lora mt-1 2xl:text-xl">
                 A fund that helps artists conceive their creations free of
                 economic dependencies.
               </p>
@@ -173,13 +173,13 @@ function Home() {
         </div>
         <div className="col-span-3 flex items-end text-left px-12 pb-10">
           <div className=" ">
-            <p className="font-bold text-5xl mt-2">Building together</p>
-            <p className="font-lora text-2xl mt-4">
+            <p className="font-bold text-5xl mt-2 2xl:text-6xl">Building together</p>
+            <p className="font-lora text-2xl mt-4 2xl:text-3xl 2xl:leading-10" >
               Our mission is to entertain and inspire people all over the globe
               through the power of art, kindness, and unique storytelling in
               web3.
             </p>
-            <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+            <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition xl:text-xl 2xl:text-2xl">
               Explore Careers
             </button>
           </div>
@@ -188,8 +188,8 @@ function Home() {
       <div className="flex justify-center py-28">
         <div className="w-1/3 ">
           <img src={joinImg} alt="joinImg" className="w-full max-h-full" />
-          <p className="font-bold text-5xl mt-10">Join our adventure</p>
-          <p className="font-lora text-xl mt-4">
+          <p className="font-bold text-5xl mt-10 2xl:text-6xl">Join our adventure</p>
+          <p className="font-lora text-xl mt-4 2xl:text-2xl 2xl:leading-9">
             Despite the many evil forces in the world, there is hope. We can
             still make a positive difference through art and community. We’re
             looking for other geeks, punks, and freaks like us who believe in
@@ -201,11 +201,11 @@ function Home() {
         </div>
       </div>
       <div className="flex justify-center py-28">
-        <div className="w-4/5 grid grid-cols-7">
+        <div className="w-4/5 grid grid-cols-7 2xl:w-8/12">
           <div className="col-span-3 text-left flex items-center">
             <div>
-              <p className="font-bold text-6xl mt-10">Humankind</p>
-              <p className="font-lora text-xl ">stay human. be kind.</p>
+              <p className="font-bold text-6xl mt-10 2xl:text-7xl">Humankind</p>
+              <p className="font-lora text-xl 2xl:text-2xl">stay human. be kind.</p>
               <div className="mt-8 flex gap-6">
                 <img src={discordImg} alt="discordImg" className="w-8" />
                 <img src={twiterImg} alt="twiterImg" className="w-8" />
@@ -214,14 +214,14 @@ function Home() {
                 <img src={openSeaImg} alt="openSeaImg" className="w-8" />
               </div>
               <div>
-                <button className="mt-6 text-lg py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition bg-black text-white border-black hover:bg-red-500">
+                <button className="mt-6 text-lg py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition bg-black text-white border-black hover:bg-red-500 xl:text-xl ">
                   ⚔️ Play Now!
                 </button>
-                <button className="text-black border-black ml-2 mt-6 text-lg py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition">
+                <button className="text-black border-black ml-2 mt-6 text-lg py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition xl:text-xl ">
                   👾 Join our Discord
                 </button>
               </div>
-              <p className="mt-10 font-lora text-sm">
+              <p className="mt-10 font-lora text-sm 2xl:text-md">
                 Humankind Industries Inc. 2023
               </p>
             </div>
