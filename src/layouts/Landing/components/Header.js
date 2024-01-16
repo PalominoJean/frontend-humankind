@@ -4,26 +4,31 @@ import { useState } from "react";
 import logo from "./../../../assets/images/icon.svg";
 
 function Header() {
-  const [isMenuHidden, setIsMenuHidden] = useState(true);
-  const [isSubmenuShown, setIsSubmenuShown] = useState(false);
-
   const navigate = useNavigate();
   const { pathname } = useLocation();
+
+  const [isMenuHidden, setIsMenuHidden] = useState(true);
+  const [isSubmenuHidden, setIsSubmenuHidden] = useState(true);
 
   const handleSetIsMenuHidden = () => {
     setIsMenuHidden(!isMenuHidden);
   };
 
-  const handleSetIsSubmenuShown = (isShown) => {
-    setIsSubmenuShown(isShown);
+  const handleSetIsSubmenuHidden = (isShown) => {
+    setIsSubmenuHidden(isShown);
   };
 
   const navigateTo = (route = "") => {
     navigate(`/${route}`);
+    setIsMenuHidden(true);
   };
 
-  const getClassActive = (value) => {
-    return pathname === `/${value}` ? "list-disc" : "";
+  const getClassActive = (value, isMenu = true) => {
+    return pathname !== `/${value}`
+      ? ""
+      : isMenu
+      ? "list-disc"
+      : "underline decoration-solid";
   };
 
   return (
@@ -62,37 +67,78 @@ function Header() {
           >
             Collectibles
           </li>
-          {/* <li className="py-3 px-4 font-semibold text-sm text-left transition cursor-pointer mt-5 hover:text-gray-500 md:text-md lg:text-lg">
-            Shop
-          </li> */}
           <li
             className="py-3 px-4 font-semibold text-sm text-left transition mt-5 md:text-md lg:text-lg"
-            onMouseEnter={() => handleSetIsSubmenuShown(true)}
-            onMouseLeave={() => handleSetIsSubmenuShown(false)}
+            onMouseEnter={() => handleSetIsSubmenuHidden(false)}
+            onMouseLeave={() => handleSetIsSubmenuHidden(true)}
           >
             Community
             <ul
-              className={`flex-col gap-3 ${isSubmenuShown ? "flex" : "hidden"}`}
+              className={`flex-col gap-3 ${
+                isSubmenuHidden ? "hidden" : "flex"
+              }`}
             >
-              <li className="ml-2 mt-5 cursor-pointer hover:text-gray-500">
+              <li
+                className={`ml-2 mt-5 cursor-pointer hover:text-gray-500 ${getClassActive(
+                  "conference",
+                  false
+                )}`}
+                onClick={() => navigateTo("conference")}
+              >
                 Conference
               </li>
-              <li className="ml-2 mt-2 cursor-pointer hover:text-gray-500">
+              <li
+                className={`ml-2 mt-2 cursor-pointer hover:text-gray-500 ${getClassActive(
+                  "careers",
+                  false
+                )}`}
+                onClick={() => navigateTo("careers")}
+              >
                 Carrers
               </li>
-              <li className="ml-2 mt-2 cursor-pointer hover:text-gray-500">
+              <li
+                className={`ml-2 mt-2 cursor-pointer hover:text-gray-500 ${getClassActive(
+                  "about",
+                  false
+                )}`}
+                onClick={() => navigateTo("about")}
+              >
                 About
               </li>
-              <li className="ml-2 mt-2 cursor-pointer hover:text-gray-500">
+              <li
+                className={`ml-2 mt-2 cursor-pointer hover:text-gray-500 ${getClassActive(
+                  "dailyDoodles",
+                  false
+                )}`}
+                onClick={() => navigateTo("dailyDoodles")}
+              >
                 Daily Doodles
               </li>
-              <li className="ml-2 mt-2 cursor-pointer hover:text-gray-500">
+              <li
+                className={`ml-2 mt-2 cursor-pointer hover:text-gray-500 ${getClassActive(
+                  "photos",
+                  false
+                )}`}
+                onClick={() => navigateTo("photos")}
+              >
                 Photos
               </li>
-              <li className="ml-2 mt-2 cursor-pointer hover:text-gray-500">
+              <li
+                className={`ml-2 mt-2 cursor-pointer hover:text-gray-500 ${getClassActive(
+                  "discord",
+                  false
+                )}`}
+                onClick={() => navigateTo("discord")}
+              >
                 Discord
               </li>
-              <li className="ml-2 mt-2 cursor-pointer hover:text-gray-500">
+              <li
+                className={`ml-2 mt-2 cursor-pointer hover:text-gray-500 ${getClassActive(
+                  "studios",
+                  false
+                )}`}
+                onClick={() => navigateTo("studios")}
+              >
                 Studios
               </li>
             </ul>
