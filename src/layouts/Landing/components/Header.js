@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import logo from "./../../../assets/images/icon.svg";
 import { useState } from "react";
-import { isVisible } from "@testing-library/user-event/dist/utils";
+//images
+import logo from "./../../../assets/images/icon.svg";
 
 function Header() {
   const [isMenuHidden, setIsMenuHidden] = useState(true);
@@ -10,31 +10,16 @@ function Header() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
-  console.log("pathname", pathname);
-
   const handleSetIsMenuHidden = () => {
     setIsMenuHidden(!isMenuHidden);
   };
 
   const handleSetIsSubmenuShown = (isShown) => {
-    console.log("en efeccto", isShown);
     setIsSubmenuShown(isShown);
   };
 
   const navigateTo = (route = "") => {
     navigate(`/${route}`);
-  };
-
-  const navigateHome = (route = "") => {
-    navigate(`/${route}`);
-  };
-
-  const navigateWrestle = () => {
-    navigate("/wrestle");
-  };
-
-  const navigateCollectibles = () => {
-    navigate("/collectibles");
   };
 
   const getClassActive = (value) => {
@@ -73,7 +58,7 @@ function Header() {
             className={`py-3 px-4 font-semibold text-sm text-left transition cursor-pointer mt-5 hover:text-gray-500 md:text-md lg:text-lg ${getClassActive(
               "collectibles"
             )}`}
-            onClick={() => navigateCollectibles("collectibles")}
+            onClick={() => navigateTo("collectibles")}
           >
             Collectibles
           </li>
@@ -113,7 +98,9 @@ function Header() {
             </ul>
           </li>
           <li
-            className="py-2 px-4 font-semibold text-sm text-left transition cursor-pointer mt-5 hover:text-gray-500 md:text-md lg:text-lg"
+            className={`py-3 px-4 font-semibold text-sm text-left transition cursor-pointer mt-5 hover:text-gray-500 md:text-md lg:text-lg ${getClassActive(
+              "subscribe"
+            )}`}
             onClick={() => navigateTo("subscribe")}
           >
             Subscribe
