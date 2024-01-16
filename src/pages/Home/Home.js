@@ -29,10 +29,10 @@ function Home() {
           Creating a magical world for the kid in all of us.
         </p>
         <div className="flex flex-col justify-center gap-3 mt-8 px-5 sm:flex-row 2xl:mt-12">
-          <button className="py-4 px-6 rounded-full font-bold border-4 border-black transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:text-xl 2xl:text-2xl">
+          <button className="py-4 px-6 rounded-full font-bold border-4 border-black transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:text-lg 2xl:text-2xl">
             🎁 Get a Lunchbox
           </button>
-          <button className="bg-black  text-white py-4 px-6 rounded-full font-bold border-4 border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition md:text-xl 2xl:text-2xl">
+          <button className="bg-black text-white py-4 px-6 rounded-full font-bold border-4 border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition md:text-lg 2xl:text-2xl">
             ⚔️ Play Now!
           </button>
         </div>
@@ -43,7 +43,6 @@ function Home() {
         <Section data={sectionData.ideas} key={"ideas"} />
         <Section data={sectionData.lunchbox} key={"lunchbox"} />
       </div>
-
       <div className="pb-24 pt-48 section-collectibles">
         <div className="w-11/12 m-auto md:w-10/12 lg:w-9/12 xl:w-7/12">
           <div className="border-black rounded-3xl transition bg-black text-white">
@@ -103,7 +102,7 @@ function Home() {
       </div>
       <div className="py-28 px-5">
         <div className="flex justify-center">
-          <div className="w-3/4 2xl:w-7/12 ">
+          <div className="w-3/4 2xl:w-7/12">
             <div>
               <img src={designingImg} alt="designingImg" className=" w-full " />
             </div>
