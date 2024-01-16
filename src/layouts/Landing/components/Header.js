@@ -21,8 +21,12 @@ function Header() {
     setIsSubmenuShown(isShown);
   };
 
-  const navigateHome = () => {
-    navigate("/");
+  const navigateTo = (route = "") => {
+    navigate(`/${route}`);
+  };
+
+  const navigateHome = (route = "") => {
+    navigate(`/${route}`);
   };
 
   const navigateWrestle = () => {
@@ -40,7 +44,7 @@ function Header() {
   return (
     <div className="grid grid-cols-12 py-2  sticky top-0 bg-white">
       <div className="col-span-3">
-        <div className="flex items-start gap-1" onClick={navigateHome}>
+        <div className="flex items-start gap-1" onClick={() => navigateTo()}>
           <img src={logo} className="w-11" alt="logo" />
           <p className="text-xl font-bold lg:text-2xl">humankind</p>
         </div>
@@ -61,7 +65,7 @@ function Header() {
             className={`py-3 px-4 font-semibold text-sm text-left transition cursor-pointer hover:text-gray-500 md:text-md lg:text-lg ${getClassActive(
               "wrestle"
             )}`}
-            onClick={navigateWrestle}
+            onClick={() => navigateTo("wrestle")}
           >
             Wrestle
           </li>
@@ -69,13 +73,13 @@ function Header() {
             className={`py-3 px-4 font-semibold text-sm text-left transition cursor-pointer mt-5 hover:text-gray-500 md:text-md lg:text-lg ${getClassActive(
               "collectibles"
             )}`}
-            onClick={navigateCollectibles}
+            onClick={() => navigateCollectibles("collectibles")}
           >
             Collectibles
           </li>
-          <li className="py-3 px-4 font-semibold text-sm text-left transition cursor-pointer mt-5 hover:text-gray-500 md:text-md lg:text-lg">
+          {/* <li className="py-3 px-4 font-semibold text-sm text-left transition cursor-pointer mt-5 hover:text-gray-500 md:text-md lg:text-lg">
             Shop
-          </li>
+          </li> */}
           <li
             className="py-3 px-4 font-semibold text-sm text-left transition mt-5 md:text-md lg:text-lg"
             onMouseEnter={() => handleSetIsSubmenuShown(true)}
@@ -108,11 +112,17 @@ function Header() {
               </li>
             </ul>
           </li>
-          <li className="py-2 px-4 font-semibold text-sm text-left transition cursor-pointer mt-5 hover:text-gray-500 md:text-md lg:text-lg">
+          <li
+            className="py-2 px-4 font-semibold text-sm text-left transition cursor-pointer mt-5 hover:text-gray-500 md:text-md lg:text-lg"
+            onClick={() => navigateTo("subscribe")}
+          >
             Subscribe
           </li>
         </ul>
-        <button className="bg-black text-white text-sm py-1 px-6 rounded-full font-bold border-4 border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition md:text-md lg:text-lg">
+        <button
+          className="bg-black text-white text-sm py-1 px-6 rounded-full font-bold border-4 border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition md:text-md lg:text-lg"
+          onClick={() => navigateTo("play")}
+        >
           Play Now! 💀
         </button>
       </div>
