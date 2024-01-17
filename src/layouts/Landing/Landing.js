@@ -7,7 +7,9 @@ export default function Landing() {
   return (
     <>
       <Header></Header>
-      <Outlet />
+      <div className="mt-16">
+        <Outlet />
+      </div>
       <Footer></Footer>
     </>
   );

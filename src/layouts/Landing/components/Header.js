@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 //images
 import logo from "./../../../assets/images/icon.svg";
+import chevronDown from "./../../../assets/images/chevron-down.svg";
 
 function Header() {
   const navigate = useNavigate();
@@ -77,7 +78,10 @@ function Header() {
             onMouseEnter={() => handleSetIsSubmenuHidden(false)}
             onMouseLeave={() => handleSetIsSubmenuHidden(true)}
           >
-            Community
+            <div className="flex">
+              <p>Community</p>
+              <img src={chevronDown} className="w-5" alt="chevronDown" />
+            </div>
             <ul
               className={`flex-col gap-y-4 md:absolute px-3 pt-6 md:bg-white md:p-5 md:gap-y-6 md:border-2 md:rounded md:border-black	 ${
                 isSubmenuHidden ? "hidden" : "flex"
