@@ -21,6 +21,8 @@ function Header() {
   const navigateTo = (route = "") => {
     navigate(`/${route}`);
     setIsMenuHidden(true);
+    setIsSubmenuHidden(true);
+
   };
 
   const getClassActive = (value, isMenu = true) => {
@@ -32,7 +34,7 @@ function Header() {
   };
 
   return (
-    <div className="grid grid-cols-12 py-2  sticky top-0 bg-white">
+    <div className="grid grid-cols-12 px-4 py-3 top-0 bg-white sticky z-10 w-full shadow-xl md:px-4 md:py-2 md:shadow-none">
       <div className="col-span-3">
         <div className="flex items-start gap-1" onClick={() => navigateTo()}>
           <img src={logo} className="w-11" alt="logo" />
@@ -46,13 +48,13 @@ function Header() {
         <button>Menu</button>
       </div>
       <div
-        className={`col-span-12 justify-end flex flex-col p-10 shadow-xl gap-y-5 md:flex lg:gap-1 ${
+        className={`col-span-12 justify-end flex flex-col p-8 gap-y-5 md:flex md:flex-row md:gap-x-5 md:col-span-9 md:p-0 lg:gap-x-8 ${
           isMenuHidden ? "hidden" : "flex"
         }`}
       >
-        <ul>
+        <ul className="flex flex-col gap-x-14 gap-y-12 p-2 md:flex-row md:items-center md:p-0">
           <li
-            className={`py-3 px-4 font-semibold text-sm text-left transition cursor-pointer hover:text-gray-500 md:text-md lg:text-lg ${getClassActive(
+            className={`font-semibold text-sm text-left transition cursor-pointer hover:text-gray-500 md:text-md lg:text-lg ${getClassActive(
               "wrestle"
             )}`}
             onClick={() => navigateTo("wrestle")}
@@ -60,7 +62,7 @@ function Header() {
             Wrestle
           </li>
           <li
-            className={`py-3 px-4 font-semibold text-sm text-left transition cursor-pointer mt-5 hover:text-gray-500 md:text-md lg:text-lg ${getClassActive(
+            className={`font-semibold text-sm text-left transition cursor-pointer hover:text-gray-500 md:text-md lg:text-lg ${getClassActive(
               "collectibles"
             )}`}
             onClick={() => navigateTo("collectibles")}
@@ -68,18 +70,18 @@ function Header() {
             Collectibles
           </li>
           <li
-            className="py-3 px-4 font-semibold text-sm text-left transition mt-5 md:text-md lg:text-lg"
+            className="font-semibold text-sm text-left transition md:relative md:text-md md:z-10 lg:text-lg "
             onMouseEnter={() => handleSetIsSubmenuHidden(false)}
             onMouseLeave={() => handleSetIsSubmenuHidden(true)}
           >
             Community
             <ul
-              className={`flex-col gap-3 ${
+              className={`flex-col gap-y-4 md:absolute px-3 pt-6 md:bg-white md:p-5 md:gap-y-6 md:border-2 md:rounded md:border-black	 ${
                 isSubmenuHidden ? "hidden" : "flex"
               }`}
             >
               <li
-                className={`ml-2 mt-5 cursor-pointer hover:text-gray-500 ${getClassActive(
+                className={` cursor-pointer hover:text-gray-500 ${getClassActive(
                   "conference",
                   false
                 )}`}
@@ -88,7 +90,7 @@ function Header() {
                 Conference
               </li>
               <li
-                className={`ml-2 mt-2 cursor-pointer hover:text-gray-500 ${getClassActive(
+                className={` cursor-pointer hover:text-gray-500 ${getClassActive(
                   "careers",
                   false
                 )}`}
@@ -97,7 +99,7 @@ function Header() {
                 Carrers
               </li>
               <li
-                className={`ml-2 mt-2 cursor-pointer hover:text-gray-500 ${getClassActive(
+                className={` cursor-pointer hover:text-gray-500 ${getClassActive(
                   "about",
                   false
                 )}`}
@@ -106,16 +108,16 @@ function Header() {
                 About
               </li>
               <li
-                className={`ml-2 mt-2 cursor-pointer hover:text-gray-500 ${getClassActive(
+                className={`cursor-pointer hover:text-gray-500 ${getClassActive(
                   "dailyDoodles",
                   false
                 )}`}
                 onClick={() => navigateTo("dailyDoodles")}
               >
-                Daily Doodles
+                <p>Daily Doodles</p>
               </li>
               <li
-                className={`ml-2 mt-2 cursor-pointer hover:text-gray-500 ${getClassActive(
+                className={` cursor-pointer hover:text-gray-500 ${getClassActive(
                   "photos",
                   false
                 )}`}
@@ -124,7 +126,7 @@ function Header() {
                 Photos
               </li>
               <li
-                className={`ml-2 mt-2 cursor-pointer hover:text-gray-500 ${getClassActive(
+                className={` cursor-pointer hover:text-gray-500 ${getClassActive(
                   "discord",
                   false
                 )}`}
@@ -133,7 +135,7 @@ function Header() {
                 Discord
               </li>
               <li
-                className={`ml-2 mt-2 cursor-pointer hover:text-gray-500 ${getClassActive(
+                className={` cursor-pointer hover:text-gray-500 ${getClassActive(
                   "studios",
                   false
                 )}`}
@@ -144,7 +146,7 @@ function Header() {
             </ul>
           </li>
           <li
-            className={`py-3 px-4 font-semibold text-sm text-left transition cursor-pointer mt-5 hover:text-gray-500 md:text-md lg:text-lg ${getClassActive(
+            className={`font-semibold text-sm text-left transition cursor-pointer hover:text-gray-500 md:text-md lg:text-lg ${getClassActive(
               "subscribe"
             )}`}
             onClick={() => navigateTo("subscribe")}
