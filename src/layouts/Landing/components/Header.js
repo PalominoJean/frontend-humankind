@@ -22,7 +22,6 @@ function Header() {
     navigate(`/${route}`);
     setIsMenuHidden(true);
     setIsSubmenuHidden(true);
-
   };
 
   const getClassActive = (value, isMenu = true) => {
@@ -41,11 +40,15 @@ function Header() {
           <p className="text-xl font-bold lg:text-2xl">humankind</p>
         </div>
       </div>
-      <div
-        className="col-span-9 text-right md:hidden"
-        onClick={handleSetIsMenuHidden}
-      >
-        <button>Menu</button>
+      <div className="col-span-9 flex items-center justify-end md:hidden">
+        <div
+          className="flex flex-col gap-y-1 cursor-pointer"
+          onClick={handleSetIsMenuHidden}
+        >
+          <div className="menu-icon"></div>
+          <div className="menu-icon"></div>
+          <div className="menu-icon"></div>
+        </div>
       </div>
       <div
         className={`col-span-12 justify-end flex flex-col p-8 gap-y-5 md:flex md:flex-row md:gap-x-5 md:col-span-9 md:p-0 lg:gap-x-8 ${
