@@ -1,3 +1,4 @@
+//images
 import runLeftImg from "./../../assets/images/run-run-left.png";
 import runRightImg from "./../../assets/images/run-run-right.png";
 import stickersImg from "./../../assets/images/stickers-website.webp";
