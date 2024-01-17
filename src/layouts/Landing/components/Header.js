@@ -80,7 +80,13 @@ function Header() {
           >
             <div className="flex gap-1">
               <p>Community</p>
-              <img src={chevronDown} className="w-5 " alt="chevronDown" />
+              <img
+                src={chevronDown}
+                className={`w-5 transition-all	${
+                  isSubmenuHidden ? "" : "rotate-180"
+                }`}
+                alt="chevronDown"
+              />
             </div>
             <ul
               className={`flex-col gap-y-4 md:absolute px-3 pt-6 md:bg-white md:p-5 md:gap-y-6 md:border-2 md:rounded md:border-black	 ${
