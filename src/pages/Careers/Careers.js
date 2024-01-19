@@ -188,7 +188,7 @@ export default function Careers() {
             return (
               <div
                 key={title}
-                className="col-span-2 grid grid-rows-2 grid-cols-12 grid-flow-col border-4 gap-x-1 border-black rounded-lg p-4 md:col-span-1 2xl:p-8 lg:rounded-xl 2xl:rounded-3xl"
+                className="col-span-2 grid grid-rows-2 grid-cols-12 grid-flow-col border-4 gap-x-1 border-black rounded-xl p-4 card md:rounded-2xl md:col-span-1 2xl:p-8 2xl:rounded-2xl"
               >
                 <div className="row-span-2 col-span-2 flex items-center justify-center sm:col-span-1 md:col-span-2">
                   <img
