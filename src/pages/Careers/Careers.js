@@ -170,7 +170,7 @@ export default function Careers() {
           </ul>
         </div>
       </div>
-      <div className="w-11/12 grid grid-cols-12 m-auto gap-y-8 py-24 lg:w-10/12 xl:w-8/12 2xl:w-7/12">
+      <div className="w-11/12 grid grid-cols-12 m-auto gap-y-8 py-24 lg:w-10/12 2xl:w-8/12">
         <div className="col-span-12 ">
           <img
             src={girlsImg}
