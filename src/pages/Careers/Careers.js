@@ -1,7 +1,8 @@
+// import { motion, useAnimation, useInView } from "framer-motion";
 //images
 import believeImg from "./../../assets/images/believe-p-800.webp";
 import changeOfPlansImg from "./../../assets/images/change-of-plans.png";
-import girlsImg from "./../../assets/images/girls.png";
+// import girlsImg from "./../../assets/images/girls.png";
 import blockchainImg from "./../../assets/images/blockchain.svg";
 import partnershipsImg from "./../../assets/images/partnerships.svg";
 import goalImg from "./../../assets/images/goal.svg";
@@ -12,8 +13,19 @@ import designImg from "./../../assets/images/design.svg";
 import communityImg from "./../../assets/images/community.svg";
 import fillColorImg from "./../../assets/images/fill-color.svg";
 import SubFooter from "../../components/subfooter";
+// import { useEffect, useRef } from "react";
 
 export default function Careers() {
+  // const ref = useRef(null);
+  // const isInview = useInView(ref, {  });
+  // const controls = useAnimation();
+
+  // useEffect(() => {
+  //   if (isInview) {
+  //     controls.start("visible");
+  //   }
+  // }, [isInview]);
+
   const courses = [
     {
       img: blockchainImg,
@@ -172,13 +184,22 @@ export default function Careers() {
         </div>
       </div>
       <div className="w-11/12 grid grid-cols-12 m-auto gap-y-8 py-24 lg:w-10/12 2xl:w-8/12">
-        <div className="col-span-12 ">
+        {/* <motion.div
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, translateX: 90 },
+            visible: { opacity: 1, translateX: 0 },
+          }}
+          animate={controls}
+          initial="hidden"
+          className="col-span-12 "
+        >
           <img
             src={girlsImg}
             alt="girlsImg"
             className="w-11/12 m-auto md:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12"
           />
-        </div>
+        </motion.div> */}
         <div className="col-span-12 text-center">
           <p className="text-3xl font-semibold md:text-4xl lg:text-5xl 2xl:text-6xl">
             Where will your story begin?
