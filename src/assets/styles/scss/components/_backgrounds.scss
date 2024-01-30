@@ -18,3 +18,45 @@
   background-image: url("../../../images/Section.png");
   background-size: 500px;
 }
+
+.section-teamkind {
+  background-image: url("../../../images/team-lipstick.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  p {
+    font-size: 22vw;
+    line-height: 0.6;
+    margin-bottom: -40px;
+  }
+  @media (min-width: 640px) {
+    height: 50vh;
+    p {
+      margin-bottom: -90px;
+    }
+  }
+  @media (min-width: 768px) {
+    height: 60vh;
+    p {
+      margin-bottom: -130px;
+    }
+  }
+  @media (min-width: 1024px) {
+    height: 70vh;
+    p {
+      margin-bottom: -170px;
+    }
+  }
+  @media (min-width: 1280px) {
+    height: 80vh;
+    p {
+      margin-bottom: -210px;
+    }
+  }
+  @media (min-width: 1536px) {
+    height: 90vh;
+    p {
+      margin-bottom: -330px;
+    }
+  }
+}

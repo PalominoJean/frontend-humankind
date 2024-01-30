@@ -4,6 +4,7 @@ import uCool2Img from "./../../assets/images/u-cool-2.webp";
 import cityBgImg from "./../../assets/images/city-bg.png";
 import cityTopImg from "./../../assets/images/city-top-p-1600.webp";
 
+
 export default function About() {
   return (
     <>
@@ -39,7 +40,9 @@ export default function About() {
         </div>
         <div className="col-span-12 bg-black  text-white py-10  flex items-center md:col-span-6 ">
           <div className="w-10/12 m-auto md:w-9/12 2xl:w-6/12 ">
-            <p className="text-4xl font-semibold 2xl:text-6xl">What is Humankind?</p>
+            <p className="text-4xl font-semibold 2xl:text-6xl">
+              What is Humankind?
+            </p>
             <p className="mt-4 font-lora text-lg leading-6 md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal">
               Humankind is a creative team led by Pablo Stanley dedicated to
               capturing the hearts and minds of kids and adults worldwide with
@@ -48,6 +51,9 @@ export default function About() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="section-teamkind relative overflow-hidden">
+        <p className="uppercase font-black tracking-tighter	text-white absolute bottom-0">TEAMKIND BESTKIND</p>
       </div>
     </>
   );
