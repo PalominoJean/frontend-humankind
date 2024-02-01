@@ -1,3 +1,4 @@
+import { useState } from "react";
 //images
 import uCool1Img from "./../../assets/images/u-cool-1.webp";
 import uCool2Img from "./../../assets/images/u-cool-2.webp";
@@ -9,7 +10,14 @@ import squad163Img from "./../../assets/images/squad163.png";
 import squad195Img from "./../../assets/images/squad195.png";
 import squad46Img from "./../../assets/images/squad46.png";
 import pabsImg from "./../../assets/images/pabs-humankind-bw 1-p-500.webp";
-import { useState } from "react";
+import iconImg from "./../../assets/images/icon.svg";
+import vector1Img from "./../../assets/images/Vector-1.webp";
+import vector2Img from "./../../assets/images/Vector-2.webp";
+import vector3Img from "./../../assets/images/Vector-3.webp";
+import vector4Img from "./../../assets/images/Vector-4.webp";
+import vector5Img from "./../../assets/images/Vector-5.webp";
+//components
+import SubFooter from "../../components/subfooter";
 
 export default function About() {
   const squad = [
@@ -139,11 +147,91 @@ export default function About() {
           >
             Read {showResume ? "Less ↑" : "More ↓"}
           </button>
-          <button className="mt-10 py-3 px-6 rounded-full font-bold border-4 transition bg-black text-white hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:w-auto lg:text-lg lg:mt-8 ">
+          <button className="mt-10 py-3 px-6 rounded-full font-bold border-4 transition bg-black text-white hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:w-auto lg:text-lg lg:mt-8">
             Say hi on Twitter
           </button>
         </div>
       </div>
+      <div className="bg-black flex flex-col items-center px-5 py-10 sm:px-10 md:px-14 md:py-24 xl:py-36">
+        <div className="max-w-3xl">
+          <div className=" text-white text-center flex flex-col items-center">
+            <img src={iconImg} alt="iconImg" className="w-32 lg:w-40" />
+            <p className="text-3xl font-semibold mt-5 sm:text-4xl lg:text-5xl 2xl:text-6xl">
+              How we do stuff
+            </p>
+            <p className="mt-5 font-lora lg:text-lg 2xl:text-2xl">
+              At Humankind, we believe in a culture of freedom and
+              responsibility, allowing serendipity to guide us. It might look
+              like chaos for an outsider, but it's a shared consciousness.
+              <br /> <br />
+              We believe that freedom and autonomy feed motivation, so we all
+              have the authority to organize around projects and seize the
+              opportunity while accelerating our personal growth. The idea is to
+              maintain relationships across a network without a central command.
+              That means that people can hold multiple roles in numerous
+              projects.
+              <br /> <br />
+              Teams amongst teams operate as cells in a dynamic network—a living
+              system. Each person has their purpose and goals, so talent and
+              information flow freely. We work more like a marketplace than an
+              org chart. Hierarchies emerge, but they are based on influence,
+              reputation, and the work itself.
+              <br /> <br />
+              Decentralized, fluid, but with a clear goal.
+            </p>
+          </div>
+          <div className="mt-40 ">
+            <div className="flex flex-row-reverse">
+              <img
+                src={vector2Img}
+                alt="vector2Img"
+                className="w-32 scale-2-3 lg:w-40"
+              />
+              <img
+                src={vector1Img}
+                alt="vector1Img"
+                className="w-32 scale-2-3 lg:w-40"
+              />
+              <img
+                src={vector3Img}
+                alt="vector3Img"
+                className="w-32 scale-2-3 lg:w-40"
+              />
+              <img
+                src={vector4Img}
+                alt="vector4Img"
+                className="w-32 scale-2-3 lg:w-40"
+              />
+              <img
+                src={vector5Img}
+                alt="vector5Img"
+                className="w-32 scale-2-3 lg:w-40"
+              />
+            </div>
+            <div className="text-center bg-white rounded-3xl border-4 border-black p-8 relative z-10">
+              <div>
+                <p className="text-3xl font-semibold mt-5 sm:text-4xl lg:text-5xl 2xl:text-6xl">
+                  Wanna join our team?
+                </p>
+                <p className="mt-5 font-lora lg:text-lg 2xl:text-xl">
+                  Embark the Humankind adventure and help us capture the hearts
+                  and minds of kids and adults worldwide with lovely creations,
+                  unique vision, and decentralized storytelling.
+                </p>
+                <div className="flex flex-col mt-8 gap-3 md:flex-row md:justify-center">
+                  <button className="text-black border-black py-3 px-6 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg">
+                    Join as an Investor
+                  </button>
+                  <button className="py-3 px-6 rounded-full font-bold border-4 transition bg-black text-white border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7">
+                    Explore Careers
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <SubFooter></SubFooter>
     </>
   );
 }
