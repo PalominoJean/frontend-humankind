@@ -4,7 +4,10 @@ import studios2Img from "./../../assets/images/studios-2.png";
 import sleepyTimeImg from "./../../assets/images/sleepy-time.png";
 import mayaImg from "./../../assets/images/Maya.webp";
 import beKindImg from "./../../assets/images/be-kind 1.webp";
-
+import tunTunImg from "./../../assets/images/tun-tun.webp";
+import subfooterImg from "./../../assets/images/gummy-doodle-p-1600.webp";
+//components
+import SubFooter from "../../components/Subfooter";
 
 export default function Studios() {
   return (
@@ -63,20 +66,52 @@ export default function Studios() {
         </p>
         <img src={mayaImg} alt="mayaImg" className="w-full max-h-full mt-5" />
       </div>
-      <div className="w-11/12 m-auto lg:max-w-6xl xl:max-w-7xl">
+      <div className="w-11/12 m-auto my-20 lg:max-w-6xl xl:max-w-7xl">
         <div>
-          <img src={beKindImg} alt="beKindImg" className="w-full max-h-full mt-5" />
+          <img
+            src={beKindImg}
+            alt="beKindImg"
+            className="w-full max-h-full mt-5"
+          />
         </div>
         <div className="flex flex-col mt-8 gap-4 sm:flex-row ">
-          <p className="font-semibold text-4xl sm:w-6/12 md:text-5xl xl:text-6xl">Join the fellowship</p>
-          <p className="font-lora sm:w-6/12 md:text-xl lg:text-2xl 2xl:text-3xl">
-            Humankind is creating relatable characters and epic stories of
-            well-meaning monsters. Their journey includes a group of friends
-            that always find a way, a former captain gone rogue, creatures and
-            spirits joining forces, and many more.
+          <p className="font-semibold text-4xl sm:w-6/12 md:text-5xl xl:text-6xl">
+            Join the fellowship
           </p>
+          <div className="sm:w-6/12">
+            <p className="font-lora  md:text-xl lg:text-2xl 2xl:text-3xl">
+              Humankind is creating relatable characters and epic stories of
+              well-meaning monsters. Their journey includes a group of friends
+              that always find a way, a former captain gone rogue, creatures and
+              spirits joining forces, and many more.
+            </p>
+            <button className="mt-5 py-2 px-5 rounded-full font-bold border-4 transition bg-black text-white border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7">
+              Explore Careers
+            </button>
+          </div>
         </div>
       </div>
+      <div className="grid grid-cols-12">
+        <div className="col-span-12 relative md:col-span-6">
+          <img src={tunTunImg} alt="tunTunImg" className="w-full" />
+        </div>
+        <div className="col-span-12 bg-black  text-white py-10  flex items-center md:col-span-6 ">
+          <div className="w-10/12 m-auto md:w-9/12 2xl:w-6/12 ">
+            <p className="text-4xl font-semibold 2xl:text-6xl">
+              Let's conquer new worlds together
+            </p>
+            <p className="mt-4 font-lora text-lg leading-6 md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal">
+              If you want to invest in Humankind, collaborate on a project,
+              obtain a license for one of the characters, or begin a
+              partnership, let’s chat!
+            </p>
+            <button className="mt-5 bg-white text-black border-black py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg">
+              Apply to Humankind
+            </button>
+          </div>
+        </div>
+      </div>
+      <SubFooter image={subfooterImg}></SubFooter>
     </>
   );
 }

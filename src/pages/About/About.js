@@ -232,7 +232,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <SubFooter subfooterImg={subfooterImg}></SubFooter>
+      <SubFooter image={subfooterImg}></SubFooter>
     </>
   );
 }
