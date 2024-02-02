@@ -27,7 +27,7 @@ export default function Wrestle() {
         </div>
       </div>
       <div className="bg-black ">
-        <p className="text-white font-bold font-size-19vw line-height-20rem text-center leading-none">
+        <p className="text-white font-bold font-size-21vw line-height-20rem text-center leading-none">
           wrestle!
         </p>
         <div className="flex justify-center items-center text-center gap-10 section-stayhuman md:text-left">

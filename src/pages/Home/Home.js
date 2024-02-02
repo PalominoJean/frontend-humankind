@@ -130,7 +130,7 @@ function Home() {
         </div>
       </div>
       <div className="bg-black">
-        <p className="text-white font-bold font-size-19vw line-height-20rem">
+        <p className="text-white font-bold font-size-21vw line-height-20rem">
           stayhuman
         </p>
         <div className="flex justify-center items-center text-left gap-10 mt-16 section-stayhuman">

@@ -6,17 +6,13 @@ import linkedinImg from "../assets/images/icons8-linkedin.svg";
 import openSeaImg from "../assets/images/OpenSea.svg";
 import fireImg from "../assets/images/fire-p-500.webp";
 
-export default function SubFooter({ subfooterImg = fireImg }) {
+export default function SubFooter({ image = fireImg }) {
   return (
     <>
       <div className="flex justify-center py-28">
         <div className="w-4/5 grid grid-cols-7 gap-5 md:gap-8">
           <div className="col-span-7 px-10 md:col-span-4 md:order-last xl:px-20 2xl:px-40">
-            <img
-              src={subfooterImg}
-              alt="subfooterImg"
-              className="w-full max-h-full"
-            />
+            <img src={image} alt="subfooterImg" className="w-full max-h-full" />
           </div>
           <div className="col-span-7 md:col-span-3 text-left flex items-center justify-center">
             <div>
