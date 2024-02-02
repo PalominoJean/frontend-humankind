@@ -16,6 +16,7 @@ import vector2Img from "./../../assets/images/Vector-2.webp";
 import vector3Img from "./../../assets/images/Vector-3.webp";
 import vector4Img from "./../../assets/images/Vector-4.webp";
 import vector5Img from "./../../assets/images/Vector-5.webp";
+import subfooterImg from "./../../assets/images/gummies-and-dallas-p-500.webp";
 //components
 import SubFooter from "../../components/subfooter";
 
@@ -231,7 +232,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <SubFooter></SubFooter>
+      <SubFooter subfooterImg={subfooterImg}></SubFooter>
     </>
   );
 }
