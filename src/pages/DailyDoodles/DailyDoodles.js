@@ -1,3 +1,4 @@
+//images
 import doodle1Img from "../../assets/images/doodle-003.jpg";
 import doodle2Img from "../../assets/images/doodle-004.jpeg";
 import doodle3Img from "../../assets/images/doodle-006.jpeg";
@@ -25,7 +26,7 @@ import doodle24Img from "../../assets/images/doodle-035.png";
 import doodle25Img from "../../assets/images/doodle-036.png";
 import doodle26Img from "../../assets/images/doodle-037.png";
 import goomieImg from "../../assets/images/gummy-doodle-p-1600.webp";
-
+//components
 import SubFooter from "../../components/Subfooter";
 
 export default function DailyDoodles() {
