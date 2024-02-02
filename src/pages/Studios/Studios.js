@@ -105,7 +105,7 @@ export default function Studios() {
               obtain a license for one of the characters, or begin a
               partnership, let’s chat!
             </p>
-            <button className="mt-5 bg-white text-black border-black py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg">
+            <button className="mt-5 bg-white text-black border-white py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg">
               Apply to Humankind
             </button>
           </div>
