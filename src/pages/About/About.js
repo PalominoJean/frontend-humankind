@@ -18,7 +18,7 @@ import vector4Img from "./../../assets/images/Vector-4.webp";
 import vector5Img from "./../../assets/images/Vector-5.webp";
 import subfooterImg from "./../../assets/images/gummies-and-dallas-p-500.webp";
 //components
-import SubFooter from "../../components/subfooter";
+import SubFooter from "../../components/Subfooter";
 
 export default function About() {
   const squad = [

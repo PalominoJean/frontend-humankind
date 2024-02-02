@@ -12,7 +12,7 @@ import artImg from "./../../assets/images/art.svg";
 import designImg from "./../../assets/images/design.svg";
 import communityImg from "./../../assets/images/community.svg";
 import fillColorImg from "./../../assets/images/fill-color.svg";
-import SubFooter from "../../components/subfooter";
+import SubFooter from "../../components/Subfooter";
 // import { useEffect, useRef } from "react";
 
 export default function Careers() {

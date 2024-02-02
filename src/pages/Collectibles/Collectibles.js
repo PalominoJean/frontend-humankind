@@ -13,7 +13,7 @@ import utilityImg from "./../../assets/images/icons-utility.svg";
 import voteImg from "./../../assets/images/icons-vote.svg";
 import mapImg from "./../../assets/images/icons-world_map.svg";
 import mushroomImg from "./../../assets/images/mushroom-sticker.png";
-import SubFooter from "../../components/subfooter";
+import SubFooter from "../../components/Subfooter";
 
 export default function Collectibles() {
   return (
