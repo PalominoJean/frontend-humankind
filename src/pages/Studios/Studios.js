@@ -85,7 +85,7 @@ export default function Studios() {
               that always find a way, a former captain gone rogue, creatures and
               spirits joining forces, and many more.
             </p>
-            <button className="mt-5 py-2 px-5 rounded-full font-bold border-4 transition bg-black text-white border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7">
+            <button className="mt-5 text-xl py-4 px-6 rounded-full font-bold border-4 transition bg-black text-white border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7 2xl:mt-16 2xl:px-8 2xl:py-5 2xl:text-2xl">
               Explore Careers
             </button>
           </div>
@@ -105,7 +105,7 @@ export default function Studios() {
               obtain a license for one of the characters, or begin a
               partnership, let’s chat!
             </p>
-            <button className="mt-5 bg-white text-black border-white py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg">
+            <button className="mt-5 bg-white text-black border-white py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg 2xl:mt-16 2xl:px-8 2xl:py-5 2xl:text-2xl">
               Apply to Humankind
             </button>
           </div>

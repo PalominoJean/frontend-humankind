@@ -80,7 +80,7 @@ export default function Wrestle() {
                 wrestle monsters on different islands. It’s a bit like some
                 old-school games we loved as kids, and we think you’ll enjoy it.
               </p>
-              <button className="mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition bg-yellow-300 text-black border-yellow-500 hover:bg-lime-200">
+              <button className="mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 transition bg-yellow-300 text-black border-yellow-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5  hover:bg-lime-200">
                 Wrestle Wrestle Wrestle!
               </button>
             </div>
