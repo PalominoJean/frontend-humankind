@@ -2,9 +2,19 @@
   border-width: 6px;
   transition: 200ms;
   cursor: pointer;
-  // min-width: 500px;
+
   &:hover {
     transform: translate(4px, -4px);
     box-shadow: -3px 3px black;
+  }
+
+  @media (min-width: 1024px) {
+    min-width: 500px;
+  }
+  @media (min-width: 1280px) {
+    min-width: 500px;
+  }
+  @media (min-width: 1536px) {
+    min-width: 600px;
   }
 }
