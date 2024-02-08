@@ -1,3 +1,5 @@
+import Button from "../../../components/Button";
+
 function Section({ data }) {
   return (
     <>
@@ -13,21 +15,17 @@ function Section({ data }) {
               </p>
               {data.text.paragraph.map((item, index) => {
                 return (
-                  <p className="mt-4 font-lora md:text-lg xl:text-xl 2xl:text-2xl 2xl:leading-9" key={index}>
+                  <p
+                    className="mt-4 font-lora md:text-lg xl:text-xl 2xl:text-2xl 2xl:leading-9"
+                    key={index}
+                  >
                     {item}
                   </p>
                 );
               })}
               <div className="flex mt-8 flex-col gap-3 items-center md:items-start lg:flex-row">
-                {data.button.map((item, index) => {
-                  return (
-                    <button
-                      className={`py-3 px-5 rounded-full font-semibold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition xl:text-lg 2xl:text-2xl 2xl:py-4 2xl:px-6 ${item.class} `}
-                      key={index}
-                    >
-                      {item.text}
-                    </button>
-                  );
+                {data.button.map(({ text, type }, index) => {
+                  return <Button text={text} type={type} key={index}></Button>;
                 })}
               </div>
             </div>

@@ -15,11 +15,11 @@ const section = {
     button: [
       {
         text: "🤓 Learn More",
-        class: "bg-black text-white border-black hover:bg-red-500",
+        type: "btn-secondary",
       },
       {
         text: "🤼 Wrestle Now!",
-        class: "bg-yellow-300 text-black border-yellow-500 hover:bg-lime-200 ",
+        type: "btn-tertiary",
       },
     ],
   },
@@ -35,7 +35,7 @@ const section = {
     button: [
       {
         text: "⚔️ Play Now!",
-        class: "bg-yellow-300 text-black border-yellow-500 hover:bg-lime-200",
+        type: "btn-tertiary",
       },
     ],
   },
@@ -50,7 +50,7 @@ const section = {
     button: [
       {
         text: "❤️ Learn More",
-        class: "bg-yellow-300 text-black border-yellow-500 hover:bg-lime-200",
+        type: "btn-tertiary",
       },
     ],
   },
@@ -66,11 +66,11 @@ const section = {
     button: [
       {
         text: "🌊 Get one from Opensea",
-        class: "bg-black text-white border-black hover:bg-red-500",
+        type: "btn-secondary",
       },
       {
         text: "🌮 Learn more",
-        class: "text-black border-black ",
+        type: "btn-primary",
       },
     ],
   },

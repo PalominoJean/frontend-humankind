@@ -130,12 +130,8 @@ function Home() {
                 in The Land of Kinds.
               </p>
               <div className="flex justify-center flex-col gap-5 mt-8 sm:flex-row">
-                <button className="bg-black text-white py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5  lg:text-lg xl:py-3 xl:px-7">
-                  Learn More
-                </button>
-                <button className="bg-white text-black py-2 px-5 rounded-full font-bold border-4 border-white transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7">
-                  Get one from Opensea
-                </button>
+                <Button text="Learn More" type="btn-primary-dark" />
+                <Button text="Get one from Opensea" type="btn-secondary-dark" />
               </div>
             </div>
           </div>
@@ -154,9 +150,8 @@ function Home() {
                   and epic stories for a global audience across various formats
                   powered by decentralization.
                 </p>
-                <button className="text-black border-black mt-8 py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition lg:text-lg xl:py-3 xl:px-7">
-                  Learn About Us
-                </button>
+                <br />
+                <Button text="Learn About Us" type="btn-primary" />
               </div>
             </div>
             <div className="w-full md:w-7/12">
@@ -202,9 +197,8 @@ function Home() {
                   kids and adults worldwide with epic creations, a unique
                   vision, and community-driven storytelling.
                 </p>
-                <button className="text-black border-black mt-4 md:mt-8 py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition lg:text-lg xl:py-3 xl:px-7">
-                  Discover the Art
-                </button>
+                <br />
+                <Button text="Discover the Art" />
               </div>
             </div>
           </div>
@@ -274,9 +268,8 @@ function Home() {
               through the power of art, kindness, and unique storytelling in
               web3.
             </p>
-            <button className="text-black border-black mt-8 py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7">
-              Explore Careers
-            </button>
+            <br />
+            <Button text="Explore Careers" />
           </div>
         </div>
       </div>
@@ -300,9 +293,8 @@ function Home() {
             looking for other geeks, punks, and freaks like us who believe in
             the power of storytelling to be a part of our quest.
           </p>
-          <button className="mt-6 py-2 px-5 rounded-full font-bold border-4 transition bg-black text-white border-black hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5  hover:bg-red-500 lg:text-lg xl:py-3 xl:px-7">
-            👾 Join our Discord
-          </button>
+          <br />
+          <Button text="👾 Join our Discord" type="btn-secondary" />
         </div>
       </div>
       <SubFooter image={subfooterImg}></SubFooter>

@@ -9,6 +9,7 @@ import linkedinImg from "../assets/images/icons8-linkedin.svg";
 import openSeaImg from "../assets/images/OpenSea.svg";
 import fireImg from "../assets/images/fire-p-500.webp";
 import { useEffect } from "react";
+import Button from "./Button";
 
 const variants = {
   visible: { scale: 1, transition: { duration: 0.5 } },
@@ -54,12 +55,8 @@ export default function SubFooter({ image = fireImg }) {
                 <img src={openSeaImg} alt="openSeaImg" className="w-8" />
               </div>
               <div className="flex flex-col mt-8 gap-3 lg:flex-row">
-                <button className="py-2 px-5 rounded-full font-bold border-4 transition bg-black text-white border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7">
-                  ⚔️ Play Now!
-                </button>
-                <button className="text-black border-black py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7">
-                  👾 Join our Discord
-                </button>
+                <Button text="⚔️ Play Now!" type="btn-secondary" />
+                <Button text="👾 Join our Discord" />
               </div>
               <p className="mt-10 font-lora text-sm text-center lg:text-left">
                 Humankind Industries Inc. 2023
