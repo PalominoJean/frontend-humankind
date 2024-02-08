@@ -3,6 +3,7 @@ import { useState } from "react";
 //images
 import logo from "./../../../assets/images/icon.svg";
 import chevronDown from "./../../../assets/images/chevron-down.svg";
+import Button from "../../../components/Button";
 
 function Header() {
   const navigate = useNavigate();
@@ -167,12 +168,12 @@ function Header() {
             Subscribe
           </li>
         </ul>
-        <button
-          className="bg-black text-white text-sm py-1 px-6 rounded-full font-bold border-4 border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition md:text-md lg:text-lg"
+        <Button
+          text="Play Now! 💀"
+          type="btn-secondary"
+          size="small"
           onClick={() => navigateTo("play")}
-        >
-          Play Now! 💀
-        </button>
+        ></Button>
       </div>
     </div>
   );
