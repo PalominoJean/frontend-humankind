@@ -6,7 +6,7 @@ export default function Button({
 }) {
   const sizeStyle = {
     normal: "py-3 px-5 2xl:py-4 2xl:px-7",
-    small: "py-2 px-4 2xl:py-2 2xl:px-5",
+    small: "py-2 px-4 2xl:px-5",
   };
   return (
     <button

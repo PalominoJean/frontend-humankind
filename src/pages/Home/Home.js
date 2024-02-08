@@ -1,11 +1,12 @@
 import { useEffect } from "react";
-
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 //data
 import sectionData from "./../../data/section";
 //component
 import Section from "./components/Section";
+import SubFooter from "../../components/Subfooter";
+import Button from "../../components/Button";
 //images
 import homeTopImg from "./../../assets/images/hero-top-p-1600.webp";
 import homeBottomImg from "./../../assets/images/hero-bottom-p-1600.webp";
@@ -17,8 +18,6 @@ import artFundImg from "./../../assets/images/Fund.webp";
 import buildingImg from "./../../assets/images/teamwork.png";
 import joinImg from "./../../assets/images/your-back 1.webp";
 import subfooterImg from "./../../assets/images/maya-sitting 1.webp";
-import SubFooter from "../../components/Subfooter";
-import Button from "../../components/Button";
 
 const variants = {
   visible: { scale: 1, transition: { duration: 0.5 } },
@@ -36,7 +35,15 @@ const variantsReverse = {
 };
 
 function Home() {
-  const controls = useAnimation();
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
+  const controls3 = useAnimation();
+  const controls4 = useAnimation();
+  const controls5 = useAnimation();
+  const controls6 = useAnimation();
+  const controls7 = useAnimation();
+  const controls8 = useAnimation();
+
   const [ref1, inView1] = useInView();
   const [ref2, inView2] = useInView();
   const [ref3, inView3] = useInView();
@@ -47,16 +54,23 @@ function Home() {
   const [ref8, inView8] = useInView();
 
   useEffect(() => {
-    controls.start(inView1 ? "visible" : "hidden");
-    controls.start(inView2 ? "visible" : "hidden");
-    controls.start(inView3 ? "visible" : "hidden");
-    controls.start(inView4 ? "visible" : "hidden");
-    controls.start(inView5 ? "visible" : "hidden");
-    controls.start(inView6 ? "visible" : "hidden");
-    controls.start(inView7 ? "visible" : "hidden");
-    controls.start(inView8 ? "visible" : "hidden");
+    controls1.start(inView1 ? "visible" : "hidden");
+    controls2.start(inView2 ? "visible" : "hidden");
+    controls3.start(inView3 ? "visible" : "hidden");
+    controls4.start(inView4 ? "visible" : "hidden");
+    controls5.start(inView5 ? "visible" : "hidden");
+    controls6.start(inView6 ? "visible" : "hidden");
+    controls7.start(inView7 ? "visible" : "hidden");
+    controls8.start(inView8 ? "visible" : "hidden");
   }, [
-    controls,
+    controls1,
+    controls2,
+    controls3,
+    controls4,
+    controls5,
+    controls6,
+    controls7,
+    controls8,
     inView1,
     inView2,
     inView3,
@@ -72,7 +86,7 @@ function Home() {
       <div className="m-auto pt-24 pb-3 flex flex-col md:w-11/12 lg:w-10/12 xl:w-9/12">
         <motion.img
           ref={ref1}
-          animate={controls}
+          animate={controls1}
           initial="hidden"
           variants={variants}
           src={homeTopImg}
@@ -81,7 +95,7 @@ function Home() {
         />
         <motion.img
           ref={ref2}
-          animate={controls}
+          animate={controls2}
           initial="hidden"
           variants={variantsReverse}
           src={homeBottomImg}
@@ -107,7 +121,7 @@ function Home() {
             <div className="w-11/12 m-auto text-center pb-10 md:w-10/12 lg:w-9/12 xl:pb-16">
               <motion.div
                 ref={ref3}
-                animate={controls}
+                animate={controls3}
                 initial="hidden"
                 variants={variants}
                 className="flex items-center m-auto flex-wrap justify-center w-11/12 pl-7 md:w-11/12 xl:w-10/12"
@@ -157,7 +171,7 @@ function Home() {
             <div className="w-full md:w-7/12">
               <motion.img
                 ref={ref4}
-                animate={controls}
+                animate={controls4}
                 initial="hidden"
                 variants={variants}
                 src={mechaImg}
@@ -170,11 +184,11 @@ function Home() {
       </div>
       <div className="py-28">
         <div className="flex justify-center">
-          <div className="w-11/12 lg:w-3/4 2xl:w-7/12">
+          <div className="w-11/12 lg:w-9/12 2xl:w-7/12">
             <div>
               <motion.img
                 ref={ref5}
-                animate={controls}
+                animate={controls5}
                 initial="hidden"
                 variants={variants}
                 src={designingImg}
@@ -185,7 +199,7 @@ function Home() {
             <div className="flex flex-col md:flex-row justify-center text-left gap-5 md:gap-10 mt-16">
               <div className="w-full md:w-1/3">
                 <div className="rounded-xl">
-                  <p className="text-4xl font-bold md:text-4xl lg:text-5xl 2xl:text-6xl">
+                  <p className="text-4xl font-bold lg:text-5xl 2xl:text-6xl">
                     Designing a universe
                   </p>
                 </div>
@@ -240,7 +254,7 @@ function Home() {
         </p>
         <motion.div
           ref={ref6}
-          animate={controls}
+          animate={controls6}
           initial="hidden"
           variants={variants2}
           className="section-stayhuman absolute w-full h-105vh bottom-0"
@@ -250,7 +264,7 @@ function Home() {
         <div className="col-span-10 overflow-hidden flex items-center md:col-span-7 ">
           <motion.img
             ref={ref7}
-            animate={controls}
+            animate={controls7}
             initial="hidden"
             variants={variants2}
             src={buildingImg}
@@ -277,7 +291,7 @@ function Home() {
         <div className="w-11/12 text-center md:w-1/3">
           <motion.img
             ref={ref8}
-            animate={controls}
+            animate={controls8}
             initial="hidden"
             variants={variants}
             src={joinImg}
