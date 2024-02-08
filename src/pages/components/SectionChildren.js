@@ -23,7 +23,7 @@ export default function SectionChildren({ data }) {
           {data.cards.map(({ image, title, text }, index) => (
             <div
               key={index}
-              className="flex flex-col items-center col-span-2 sm:col-span-1 text-center bg-white px-10 py-12 rounded-xl border-4 border-black duration-500 hover:bg-yellow-400 md:items-start md:text-left 2xl:px-16 2xl:py-16"
+              className="card flex flex-col items-center col-span-2 text-center bg-white px-10 py-12 rounded-xl border-black hover:bg-yellow-400 sm:col-span-1 md:items-start md:text-left 2xl:px-16 2xl:py-16"
             >
               <img
                 src={image}
