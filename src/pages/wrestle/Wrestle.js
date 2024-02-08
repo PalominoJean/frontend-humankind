@@ -10,26 +10,40 @@ import avatarImg from "./../../assets/images/avatar.gif";
 //components
 import SubFooter from "../../components/Subfooter";
 import Button from "../../components/Button";
+import SectionChildren from "../components/SectionChildren";
 
 const variants = {
   visible: { scale: 1, transition: { duration: 0.5 } },
   hidden: { scale: 0.9 },
 };
 
+const sectionChildrenData = {
+  title: "wrestle!",
+  cards: [
+    {
+      image: headImg,
+      title: "Adventuring guide",
+      text: "We've compiled a list of the most common questions and answers to help you better understand the game and its mechanics.",
+    },
+    {
+      image: stanleyImg,
+      title: "A message from Pabs",
+      text: "Our founder discusses the idea and process behind 'Wrestle'. Read on to learn more.",
+    },
+  ],
+};
+
 export default function Wrestle() {
   const controls1 = useAnimation();
   const controls2 = useAnimation();
-  const controls3 = useAnimation();
 
   const [ref1, inView1] = useInView();
   const [ref2, inView2] = useInView();
-  const [ref3, inView3] = useInView();
 
   useEffect(() => {
     controls1.start(inView1 ? "visible" : "hidden");
     controls2.start(inView2 ? "visible" : "hidden");
-    controls3.start(inView3 ? "visible" : "hidden");
-  }, [controls1, controls2, controls3, inView1, inView2, inView3]);
+  }, [controls1, controls2, inView1, inView2]);
 
   return (
     <>
@@ -64,47 +78,7 @@ export default function Wrestle() {
           />
         </div>
       </div>
-      <div className="bg-black ">
-        <p className="text-white font-bold font-size-21vw line-height-20rem text-center leading-none">
-          wrestle!
-        </p>
-        <div className="flex justify-center items-center text-center gap-10 section-stayhuman md:text-left">
-          <div className="grid grid-cols-1 gap-5 w-11/12 sm:grid-cols-2 md:w-5/6 lg:w-3/4 xl:w-7/12 2xl:w-6/12">
-            <div className="bg-white px-5 py-6 rounded-xl border-8 border-black duration-500 hover:bg-yellow-400 md:px-10 md:py-10 xl:p-14">
-              <motion.img
-                ref={ref3}
-                animate={controls3}
-                initial="hidden"
-                variants={variants}
-                src={headImg}
-                alt="headImg"
-                className="w-24 mix-blend-multiply inline xl:w-32"
-              />
-              <p className="font-bold text-2xl mt-1 first-letter md:text-3xl lg:text-4xl xl:text-5xl ">
-                Adventuring guide
-              </p>
-              <p className="font-lora mt-1 leading-5 lg:leading-6 lg:text-lg xl:text-xl xl:leading-8 xl:mt-2">
-                We've compiled a list of the most common questions and answers
-                to help you better understand the game and its mechanics.
-              </p>
-            </div>
-            <div className="bg-white px-5 py-6 rounded-xl border-8 border-black duration-500 hover:bg-yellow-400 md:px-10 md:py-10 xl:p-14">
-              <img
-                src={stanleyImg}
-                alt="stanleyImg"
-                className="w-24 mix-blend-multiply inline xl:w-32"
-              />
-              <p className="font-bold text-2xl mt-1 first-letter md:text-3xl lg:text-4xl xl:text-5xl">
-                A message from Pabs
-              </p>
-              <p className="font-lora mt-1 leading-5 lg:leading-6 lg:text-lg xl:text-xl xl:leading-8 xl:mt-2">
-                Our founder discusses the idea and process behind "Wrestle".
-                Read on to learn more.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SectionChildren data={sectionChildrenData}></SectionChildren>
       <div className="bg-black flex justify-center py-16">
         <div className="w-10/12 grid grid-cols-11 gap-10 sm:gap-16 sm:w-9/12 md:w-8/12 2xl:w-6/12 2xl:gap-24">
           <div className="col-span-11 sm:col-span-5 rounded-sm">
