@@ -151,7 +151,7 @@ function Home() {
                   powered by decentralization.
                 </p>
                 <br />
-                <Button text="Learn About Us" type="btn-primary" />
+                <Button text="Learn About Us" />
               </div>
             </div>
             <div className="w-full md:w-7/12">
