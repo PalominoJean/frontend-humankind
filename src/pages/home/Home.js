@@ -1,12 +1,16 @@
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
 //data
-import sectionData from "./../../data/section";
+import sectionData from "../../data/section";
+
 //component
 import Section from "./components/Section";
 import SubFooter from "../../components/Subfooter";
 import Button from "../../components/Button";
+import SectionChildren from "../components/SectionChildren";
+
 //images
 import homeTopImg from "./../../assets/images/hero-top-p-1600.webp";
 import homeBottomImg from "./../../assets/images/hero-bottom-p-1600.webp";
@@ -34,13 +38,28 @@ const variantsReverse = {
   hidden: { scale: 1.1 },
 };
 
+const sectionChildrenData = {
+  title: "stayhuman",
+  cards: [
+    {
+      image: studiosImg,
+      title: "Humankind Studios",
+      text: "A creative studio designing the stories, world, and brand of Humankind.",
+    },
+    {
+      image: artFundImg,
+      title: "Humankind Fund",
+      text: "A fund that helps artists conceive their creations free of economic dependencies.",
+    },
+  ],
+};
+
 function Home() {
   const controls1 = useAnimation();
   const controls2 = useAnimation();
   const controls3 = useAnimation();
   const controls4 = useAnimation();
   const controls5 = useAnimation();
-  const controls6 = useAnimation();
   const controls7 = useAnimation();
   const controls8 = useAnimation();
 
@@ -49,7 +68,6 @@ function Home() {
   const [ref3, inView3] = useInView();
   const [ref4, inView4] = useInView();
   const [ref5, inView5] = useInView();
-  const [ref6, inView6] = useInView();
   const [ref7, inView7] = useInView();
   const [ref8, inView8] = useInView();
 
@@ -59,7 +77,6 @@ function Home() {
     controls3.start(inView3 ? "visible" : "hidden");
     controls4.start(inView4 ? "visible" : "hidden");
     controls5.start(inView5 ? "visible" : "hidden");
-    controls6.start(inView6 ? "visible" : "hidden");
     controls7.start(inView7 ? "visible" : "hidden");
     controls8.start(inView8 ? "visible" : "hidden");
   }, [
@@ -68,7 +85,6 @@ function Home() {
     controls3,
     controls4,
     controls5,
-    controls6,
     controls7,
     controls8,
     inView1,
@@ -76,7 +92,6 @@ function Home() {
     inView3,
     inView4,
     inView5,
-    inView6,
     inView7,
     inView8,
   ]);
@@ -105,8 +120,8 @@ function Home() {
           Creating a magical world for the kid in all of us.
         </p>
         <div className="flex flex-col justify-center gap-3 mt-8 px-5 sm:flex-row 2xl:mt-12">
-          <Button text={"🎁 Get a Lunchbox"} />
-          <Button text={"⚔️ Play Now!"} type={"btn-secondary"} />
+          <Button text="🎁 Get a Lunchbox" />
+          <Button text="⚔️ Play Now!" type="secondary" />
         </div>
       </div>
       <div className="my-16">
@@ -145,7 +160,7 @@ function Home() {
               </p>
               <div className="flex justify-center flex-col gap-5 mt-8 sm:flex-row">
                 <Button text="Learn More" type="btn-primary-dark" />
-                <Button text="Get one from Opensea" type="btn-secondary-dark" />
+                <Button text="Get one from Opensea" type="secondary-dark" />
               </div>
             </div>
           </div>
@@ -218,48 +233,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-black h-120vh flex justify-center items-center  mt-16 relative overflow-hidden">
-        <div className="grid grid-cols-2 gap-5 max-w-screen-lg z-10  px-3 2xl:max-w-screen-xl ">
-          <div className="flex flex-col items-center col-span-2 sm:col-span-1 text-center bg-white px-10 py-12 rounded-xl border-4 border-black duration-500 hover:bg-yellow-400 md:items-start md:text-left 2xl:px-16 2xl:py-16">
-            <img
-              src={studiosImg}
-              alt="studiosImg"
-              className="w-28 mix-blend-multiply 2xl:w-32"
-            />
-            <p className="font-bold text-2xl md:text-4xl mt-2 2xl:text-5xl">
-              Humankind Studios
-            </p>
-            <p className="font-lora mt-1 text-sm md:text-md lg:text-lg 2xl:text-xl">
-              A creative studio designing the stories, world, and brand of
-              Humankind.
-            </p>
-          </div>
-          <div className="flex flex-col items-center col-span-2 sm:col-span-1 text-center bg-white px-10 py-12 rounded-xl border-4 border-black duration-500 hover:bg-yellow-400 md:items-start md:text-left 2xl:px-16 2xl:py-16">
-            <img
-              src={artFundImg}
-              alt="artFundImg"
-              className="w-36 mix-blend-multiply 2xl:w-44"
-            />
-            <p className="font-bold text-2xl mt-2 md:text-4xl 2xl:text-5xl">
-              Humankind Fund
-            </p>
-            <p className="font-lora mt-1 text-sm md:text-md lg:text-lg 2xl:text-xl">
-              A fund that helps artists conceive their creations free of
-              economic dependencies.
-            </p>
-          </div>
-        </div>
-        <p className="text-white font-bold font-size-21vw line-height-20rem absolute leading-none -top-2 sm:-top-3 md:-top-6 lg:-top-9 xl:-top-12 2xl:-top-16">
-          stayhuman
-        </p>
-        <motion.div
-          ref={ref6}
-          animate={controls6}
-          initial="hidden"
-          variants={variants2}
-          className="section-stayhuman absolute w-full h-105vh bottom-0"
-        ></motion.div>
-      </div>
+      <SectionChildren data={sectionChildrenData}></SectionChildren>
       <div className="grid grid-cols-10 min-heigth-851px ">
         <div className="col-span-10 overflow-hidden flex items-center md:col-span-7 ">
           <motion.img
@@ -308,7 +282,7 @@ function Home() {
             the power of storytelling to be a part of our quest.
           </p>
           <br />
-          <Button text="👾 Join our Discord" type="btn-secondary" />
+          <Button text="👾 Join our Discord" type="secondary" />
         </div>
       </div>
       <SubFooter image={subfooterImg}></SubFooter>

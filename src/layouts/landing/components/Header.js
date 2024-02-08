@@ -170,7 +170,7 @@ function Header() {
         </ul>
         <Button
           text="Play Now! 💀"
-          type="btn-secondary"
+          type="secondary"
           size="small"
           onClick={() => navigateTo("play")}
         ></Button>

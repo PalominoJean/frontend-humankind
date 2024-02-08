@@ -15,11 +15,11 @@ const section = {
     button: [
       {
         text: "🤓 Learn More",
-        type: "btn-secondary",
+        type: "secondary",
       },
       {
         text: "🤼 Wrestle Now!",
-        type: "btn-tertiary",
+        type: "tertiary",
       },
     ],
   },
@@ -35,7 +35,7 @@ const section = {
     button: [
       {
         text: "⚔️ Play Now!",
-        type: "btn-tertiary",
+        type: "tertiary",
       },
     ],
   },
@@ -50,7 +50,7 @@ const section = {
     button: [
       {
         text: "❤️ Learn More",
-        type: "btn-tertiary",
+        type: "tertiary",
       },
     ],
   },
@@ -66,11 +66,11 @@ const section = {
     button: [
       {
         text: "🌊 Get one from Opensea",
-        type: "btn-secondary",
+        type: "secondary",
       },
       {
         text: "🌮 Learn more",
-        type: "btn-primary",
+        type: "primary",
       },
     ],
   },

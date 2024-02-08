@@ -55,7 +55,7 @@ export default function SubFooter({ image = fireImg }) {
                 <img src={openSeaImg} alt="openSeaImg" className="w-8" />
               </div>
               <div className="flex flex-col mt-8 gap-3 lg:flex-row">
-                <Button text="⚔️ Play Now!" type="btn-secondary" size="small" />
+                <Button text="⚔️ Play Now!" type="secondary" size="small" />
                 <Button text="👾 Join our Discord" size="small"/>
               </div>
               <p className="mt-10 font-lora text-sm text-center lg:text-left">

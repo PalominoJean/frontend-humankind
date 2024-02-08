@@ -1,4 +1,5 @@
 {
     "workbench.quickOpen.preserveInput": true,
-    "workbench.editor.openSideBySideDirection": "down"
+    "workbench.editor.openSideBySideDirection": "down",
+    "simpleBrowser.focusLockIndicator.enabled": false
 }
