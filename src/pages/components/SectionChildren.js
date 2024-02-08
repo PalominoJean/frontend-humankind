@@ -1,5 +1,4 @@
 import { motion, useAnimation } from "framer-motion";
-//images
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
@@ -19,11 +18,11 @@ export default function SectionChildren({ data }) {
   return (
     <>
       <div className="bg-black h-120vh flex justify-center items-center mt-16 relative overflow-hidden">
-        <div className="grid grid-cols-2 gap-5 max-w-screen-lg z-10 px-3 2xl:max-w-screen-xl">
+        <div className="flex flex-col gap-5 max-w-screen-lg z-10 px-3 sm:flex-row sm:justify-center 2xl:max-w-screen-xl">
           {data.cards.map(({ image, title, text }, index) => (
             <div
               key={index}
-              className="card flex flex-col items-center col-span-2 text-center bg-white px-10 py-12 rounded-xl border-black hover:bg-yellow-400 sm:col-span-1 md:items-start md:text-left 2xl:px-16 2xl:py-16"
+              className="w-full card flex flex-col items-center text-center bg-white px-10 py-12 rounded-xl border-black hover:bg-yellow-400 sm:w-6/12 sm:min-w-96 md:items-start md:text-left 2xl:px-16 2xl:py-16"
             >
               <img
                 src={image}

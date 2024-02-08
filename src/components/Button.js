@@ -6,7 +6,9 @@ export default function Button({
 }) {
   const btnType = {
     primary: "btn-primary",
+    primaryDark: "btn-primary-dark",
     secondary: "btn-secondary",
+    secondaryDark: "btn-secondary-dark",
     tertiary: "btn-tertiary",
   };
   const btnSize = {

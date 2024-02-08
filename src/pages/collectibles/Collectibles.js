@@ -15,6 +15,19 @@ import mapImg from "./../../assets/images/icons-world_map.svg";
 import mushroomImg from "./../../assets/images/mushroom-sticker.png";
 //components
 import SubFooter from "../../components/Subfooter";
+import Button from "../../components/Button";
+import SectionChildren from "../components/SectionChildren";
+
+const sectionChildrenData = {
+  title: "stayhuman",
+  cards: [
+    {
+      image: mushroomImg,
+      title: "Let's hangout!",
+      text: "Stop by and say hello; we're looking to make some new friends.",
+    },
+  ],
+};
 
 export default function Collectibles() {
   return (
@@ -30,9 +43,8 @@ export default function Collectibles() {
           <p className="mt-4 font-lora text-lg md:text-xl lg:text-2xl">
             After a long time of doodling we're launching our first collection.
           </p>
-          <button className="py-2 px-5 w-full rounded-full font-bold border-4 transition bg-black text-white border-black mt-7 hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:w-auto lg:text-lg xl:mt-10  ">
-            Mint Now
-          </button>
+          <br />
+          <Button text="Mint Now" type="secondary"></Button>
         </div>
         <div className="col-span-11 md:col-span-6 relative">
           <img
@@ -89,9 +101,8 @@ export default function Collectibles() {
             Since your Kind will take the lunchbox with them, you will have to
             do an exchange. Soon we will announce more details of this.
           </p>
-          <button className="mt-6 text-md py-2 px-5 rounded-full font-bold border-4  sm:text-lg md:text-xl md:py-4 md:px-6 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition bg-black text-white border-black hover:bg-red-500">
-            Mint now
-          </button>
+          <br />
+          <Button text="Mint Now" type="secondary"></Button>
         </div>
         <div className="col-span-11 md:col-span-6">
           <img src={treeImg} alt="treeImg" className="w-full max-h-full" />
@@ -166,16 +177,14 @@ export default function Collectibles() {
                 </div>
               </div>
               <div className="mt-8 xl:mt-12">
-                <button className="bg-white text-black py-4 px-6 rounded-full font-bold border-4 border-white transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:text-lg">
-                  Mint now
-                </button>
+                <Button text="Mint Now" type="secondaryDark"></Button>
                 <p className="mt-5 font-lora">View on Etherscan</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-black">
+      {/* <div className="bg-black">
         <p className="text-white font-bold font-size-21vw line-height-20rem">
           stayhuman
         </p>
@@ -197,7 +206,8 @@ export default function Collectibles() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
+      <SectionChildren data={sectionChildrenData}></SectionChildren>
       <SubFooter></SubFooter>
     </>
   );
