@@ -209,11 +209,11 @@ function Home() {
                 collectibles featuring the Humankind species, the most prevalent
                 in The Land of Kinds.
               </p>
-              <div className="flex justify-center gap-5 mt-8">
-                <button className="bg-black text-xl text-white py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition xl:text-xl 2xl:text-2xl">
+              <div className="flex justify-center flex-col gap-5 mt-8 sm:flex-row">
+                <button className="bg-black text-white py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5  lg:text-lg xl:py-3 xl:px-7">
                   Learn More
                 </button>
-                <button className="bg-white text-black py-4 px-6 text-xl rounded-full font-bold border-4 border-white transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 xl:text-xl 2xl:text-2xl">
+                <button className="bg-white text-black py-2 px-5 rounded-full font-bold border-4 border-white transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7">
                   Get one from Opensea
                 </button>
               </div>
@@ -221,25 +221,25 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="section-multi py-28 px-5">
+      <div className="section-multi py-28">
         <div className="flex justify-center">
-          <div className="w-3/4 flex">
-            <div className="w-5/12">
-              <div className="bg-white px-10 py-12 text-left rounded-xl">
-                <p className="text-5xl font-extrabold 2xl:text-7xl">
+          <div className="w-11/12 lg:w-3/4 flex flex-col md:flex-row">
+            <div className="w-full md:w-5/12">
+              <div className="bg-white px-5  md:px-10 py-12 text-left rounded-xl">
+                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold 2xl:text-7xl">
                   Art and kindness are our tools of trade
                 </p>
-                <p className="text-xl mt-6 font-lora 2xl:text-2xl 2xl:leading-9">
+                <p className="text-sm mt-6 font-lora md:text-xl 2xl:text-2xl 2xl:leading-9">
                   Humankind is a creative force developing relatable characters
                   and epic stories for a global audience across various formats
                   powered by decentralization.
                 </p>
-                <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition xl:text-xl 2xl:text-2xl">
+                <button className="text-black border-black mt-8 py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition lg:text-lg xl:py-3 xl:px-7">
                   Learn About Us
                 </button>
               </div>
             </div>
-            <div className="w-7/12">
+            <div className="w-full md:w-7/12">
               <motion.img
                 ref={ref4}
                 animate={controls}
@@ -253,9 +253,9 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="py-28 px-5">
+      <div className="py-28">
         <div className="flex justify-center">
-          <div className="w-3/4 2xl:w-7/12">
+          <div className="w-11/12 lg:w-3/4 2xl:w-7/12">
             <div>
               <motion.img
                 ref={ref5}
@@ -267,22 +267,22 @@ function Home() {
                 className="w-full"
               />
             </div>
-            <div className="flex justify-center text-left gap-10 mt-16">
-              <div className="w-1/3">
+            <div className="flex flex-col md:flex-row justify-center text-left gap-5 md:gap-10 mt-16">
+              <div className="w-full md:w-1/3">
                 <div className="rounded-xl">
-                  <p className="text-5xl font-bold 2xl:text-6xl">
+                  <p className="text-4xl font-bold md:text-4xl lg:text-5xl 2xl:text-6xl">
                     Designing a universe
                   </p>
                 </div>
               </div>
-              <div className="w-2/4">
-                <p className="text-2xl leading-10 font-lora 2xl:text-3xl 2xl:leading-10">
+              <div className="w-full md:w-2/4">
+                <p className="text-sm sm:text-xl lg:text-2xl leading-6 font-lora 2xl:text-3xl 2xl:leading-10">
                   We’re building the Humankind brand, its world, stories, and
                   characters. Our goal is to capture the hearts and minds of
                   kids and adults worldwide with epic creations, a unique
                   vision, and community-driven storytelling.
                 </p>
-                <button className="text-black border-black ml-2 mt-8 text-xl py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition xl:text-xl 2xl:text-2xl">
+                <button className="text-black border-black mt-4 md:mt-8 py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition lg:text-lg xl:py-3 xl:px-7">
                   Discover the Art
                 </button>
               </div>

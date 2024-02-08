@@ -22,7 +22,7 @@ function Section({ data }) {
                 {data.button.map((item, index) => {
                   return (
                     <button
-                      className={`py-4 px-6 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition lg:text-lg xl:text-xl 2xl:text-2xl ${item.class} `}
+                      className={`py-2 px-5 rounded-full font-bold border-4 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition lg:text-lg xl:text-xl 2xl:text-2xl ${item.class} `}
                       key={index}
                     >
                       {item.text}
