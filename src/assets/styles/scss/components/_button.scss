@@ -1,0 +1,46 @@
+.btn {
+  border-color: #000000;
+  border-width: 3px;
+}
+
+.btn-primary {
+  &:hover {
+    box-shadow: -3px 3px #000;
+  }
+}
+
+.btn-primary-dark {
+  border-color: #ffffff;
+  background-color: #000000;
+  color: #ffffff;
+  &:hover {
+    box-shadow: -3px 3px #000;
+  }
+}
+
+.btn-secondary {
+  background-color: #000000;
+  color: #ffffff;
+  &:hover {
+    box-shadow: -3px 3px #000;
+    background-color: #e03327;
+  }
+}
+
+.btn-secondary-dark {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
+  &:hover {
+    box-shadow: -3px 3px #000;
+  }
+}
+
+.btn-tertiary {
+  border-color: #bb7a00;
+  background-color: #ffd91a;
+  &:hover {
+    box-shadow: -3px 3px #bb7a00;
+    background-color: #e1ff00;
+  }
+}

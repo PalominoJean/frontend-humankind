@@ -18,6 +18,7 @@ import buildingImg from "./../../assets/images/teamwork.png";
 import joinImg from "./../../assets/images/your-back 1.webp";
 import subfooterImg from "./../../assets/images/maya-sitting 1.webp";
 import SubFooter from "../../components/Subfooter";
+import Button from "../../components/Button";
 
 const variants = {
   visible: { scale: 1, transition: { duration: 0.5 } },
@@ -86,16 +87,12 @@ function Home() {
           src={homeBottomImg}
           alt="homeBottomImg"
         />
-        <p className="text-xl mt-4 font-lora text-center md:text-2xl 2xl:text-3xl">
+        <p className="mt-4 font-lora text-center sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl">
           Creating a magical world for the kid in all of us.
         </p>
         <div className="flex flex-col justify-center gap-3 mt-8 px-5 sm:flex-row 2xl:mt-12">
-          <button className="py-4 px-6 rounded-full font-bold border-4 border-black transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:text-lg 2xl:text-2xl">
-            🎁 Get a Lunchbox
-          </button>
-          <button className="bg-black text-white py-4 px-6 rounded-full font-bold border-4 border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 transition md:text-lg 2xl:text-2xl">
-            ⚔️ Play Now!
-          </button>
+          <Button text={"🎁 Get a Lunchbox"} />
+          <Button text={"⚔️ Play Now!"} type={"btn-secondary"} />
         </div>
       </div>
       <div className="my-16">
