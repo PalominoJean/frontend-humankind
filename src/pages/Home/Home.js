@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 //data
 import sectionData from "./../../data/section";
 //component
@@ -18,11 +22,6 @@ import twiterImg from "./../../assets/images/twitter_squared.svg";
 import instagramImg from "./../../assets/images/icons8-instagram.svg";
 import linkedinImg from "./../../assets/images/icons8-linkedin.svg";
 import openSeaImg from "./../../assets/images/OpenSea.svg";
-import { useState } from "react";
-import { useEffect } from "react";
-
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const variants = {
   visible: { scale: 1, transition: { duration: 0.5 } },
@@ -41,7 +40,6 @@ const variantsReverse = {
 
 function Home() {
   const controls = useAnimation();
-  // const [ref, inView] = useInView();
   const [ref1, inView1] = useInView();
   const [ref2, inView2] = useInView();
   const [ref3, inView3] = useInView();
@@ -51,15 +49,7 @@ function Home() {
   const [ref7, inView7] = useInView();
   const [ref8, inView8] = useInView();
 
-  const [testHeight, setTestHeight] = useState(10);
-
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setTestHeight(scrollTop);
-      // console.log(scrollTop);
-    };
-    // console.log(inView);
     controls.start(inView1 ? "visible" : "hidden");
     controls.start(inView2 ? "visible" : "hidden");
     controls.start(inView3 ? "visible" : "hidden");
@@ -68,9 +58,6 @@ function Home() {
     controls.start(inView6 ? "visible" : "hidden");
     controls.start(inView7 ? "visible" : "hidden");
     controls.start(inView8 ? "visible" : "hidden");
-
-    window.addEventListener("scroll", handleScroll);
-    // return () => {};
   }, [
     controls,
     inView1,
@@ -82,56 +69,6 @@ function Home() {
     inView7,
     inView8,
   ]);
-
-  const isElementInViewport = (el) => {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  };
-
-  // let scrollVal = window.scrollY;
-  // const demoDiv = document.querySelector("#demo");
-  // console.log(demoDiv, "demoDiv");
-  // var demoDiv2 = document.getElementById("demo");
-  // console.log(demoDiv2, "demoDiv2");
-
-  // window.addEventListener("scroll", function () {
-  //   console.log(scrollVal, "scrolVal");
-  //   // if (scrollVal * 0.0001 > 1 || scrollVal * 0.0001 < 0.2) {
-  //   //   console.log("em function 1");
-  //   //   return;
-  //   // } else {
-  //   //   console.log(" en fucnion 2");
-  //   //   demoDiv.setAttribute(
-  //   //     "style",
-  //   //     "transform: scale(" + scrollVal * 0.0001 + ");"
-  //   //   );
-  //   // }
-  // });
-  // function changeWidth() {
-  //   console.log("en fucntion");
-  //   var scrollVal = window.scrollY;
-  //   var scrollSlow = scrollVal / 4;
-  //   //Changing CSS Width
-  //   // demoDiv.style.width = Math.min(Math.max(scrollSlow, 20), 100) + "%";
-  //   demoDiv.setAttribute(
-  //     "style",
-  //     `width: ${Math.min(Math.max(scrollSlow, 20), 100) + "%"};`
-  //   );
-  // }
-
-  // window.addEventListener(
-  //   "scroll",
-  //   function () {
-  //     requestAnimationFrame(changeWidth);
-  //   },
-  //   false
-  // );
 
   return (
     <>
@@ -145,7 +82,6 @@ function Home() {
           alt="homeTopImg"
           className="-mb-20 sm:-mb-32 md:-mb-36 lg:-mb-44 xl:-mb-52 2xl:-mb-72 transition-transform"
         />
-        {/* style={{ transform: `scale(1.${testHeight})` }} */}
         <motion.img
           ref={ref2}
           animate={controls}
@@ -154,7 +90,6 @@ function Home() {
           src={homeBottomImg}
           alt="homeBottomImg"
         />
-        {/* <img src={homeBottomImg} alt="homeBottomImg" /> */}
         <p className="text-xl mt-4 font-lora text-center md:text-2xl 2xl:text-3xl">
           Creating a magical world for the kid in all of us.
         </p>
@@ -173,14 +108,6 @@ function Home() {
         <Section data={sectionData.ideas} key={"ideas"} />
         <Section data={sectionData.lunchbox} key={"lunchbox"} />
       </div>
-      {/* <motion.div
-        ref={ref}
-        animate={controls}
-        initial="hidden"
-        variants={variants}
-      >
-        <p className="text-4xl font-black text-center">Hola</p>
-      </motion.div> */}
       <div className="pb-24 pt-48 section-collectibles">
         <div className="w-11/12 m-auto md:w-10/12 lg:w-9/12 xl:w-7/12">
           <div className="border-black rounded-3xl transition bg-black text-white">
