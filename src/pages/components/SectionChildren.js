@@ -17,7 +17,7 @@ export default function SectionChildren({ data }) {
 
   return (
     <>
-      <div className="bg-black h-120vh flex justify-center items-center mt-16 relative overflow-hidden">
+      <div className="bg-black h-120vh flex justify-center items-center relative overflow-hidden">
         <div className="flex flex-col gap-5 max-w-screen-lg z-10 px-3 sm:flex-row sm:justify-center 2xl:max-w-screen-xl">
           {data.cards.map(({ image, title, text }, index) => (
             <div
