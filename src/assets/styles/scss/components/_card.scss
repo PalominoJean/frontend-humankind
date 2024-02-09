@@ -7,13 +7,13 @@
     transform: translate(4px, -4px);
     box-shadow: -3px 3px black;
   }
+}
 
+.card-query {
   @media (min-width: 1024px) {
     min-width: 500px;
   }
-  @media (min-width: 1280px) {
-    min-width: 500px;
-  }
+
   @media (min-width: 1536px) {
     min-width: 600px;
   }

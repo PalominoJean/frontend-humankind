@@ -13,6 +13,7 @@ import artImg from "./../../assets/images/art.svg";
 import designImg from "./../../assets/images/design.svg";
 import communityImg from "./../../assets/images/community.svg";
 import fillColorImg from "./../../assets/images/fill-color.svg";
+import girlsImg from "./../../assets/images/girls.png";
 //components
 import SubFooter from "../../components/Subfooter";
 import Button from "../../components/Button";
@@ -41,14 +42,17 @@ const courses = [
 export default function Careers() {
   const controls1 = useAnimation();
   const controls2 = useAnimation();
+  const controls3 = useAnimation();
 
   const [ref1, inView1] = useInView();
   const [ref2, inView2] = useInView();
+  const [ref3, inView3] = useInView();
 
   useEffect(() => {
     controls1.start(inView1 ? "visible" : "hidden");
     controls2.start(inView2 ? "visible" : "hidden");
-  }, [controls1, controls2, inView1, inView2]);
+    controls3.start(inView3 ? "visible" : "hidden");
+  }, [controls1, controls2, controls3, inView1, inView2, inView3]);
 
   return (
     <>
@@ -159,20 +163,27 @@ export default function Careers() {
           </ul>
         </div>
       </div>
-      <div className="w-11/12 grid grid-cols-12 m-auto gap-y-8 py-24 lg:w-10/12 2xl:w-8/12">
-        <div className="col-span-12 text-center">
-          <p className="text-3xl font-semibold md:text-4xl lg:text-5xl 2xl:text-6xl">
-            Where will your story begin?
-          </p>
-        </div>
-        <div className="col-span-12 grid grid-cols-2 gap-y-4 md:gap-8 ">
-          {courses.map(({ img, imgAlt, title, description }) => {
+      <div className="w-11/12 m-auto flex flex-col items-center gap-y-5 md:gap-y-10 py-24 lg:w-10/12 2xl:w-8/12">
+        <motion.img
+          ref={ref3}
+          animate={controls3}
+          initial="hidden"
+          variants={variants}
+          src={girlsImg}
+          alt="girlsImg"
+          className="w-full max-h-full max-w-4xl"
+        />
+        <p className="text-3xl text-center font-semibold md:text-4xl lg:text-5xl 2xl:text-6xl">
+          Where will your story begin?
+        </p>
+        <div className="w-full grid grid-cols-2 gap-3">
+          {courses.map(({ img, title, description }) => {
             return (
               <div
                 key={title}
                 className="col-span-2 grid grid-rows-2 grid-cols-12 grid-flow-col border-4 gap-x-1 border-black rounded-xl p-4 card md:rounded-2xl md:col-span-1 2xl:p-8 2xl:rounded-2xl"
               >
-                <div className="row-span-2 col-span-2 flex items-center justify-center sm:col-span-1 md:col-span-2">
+                <div className="col-span-2 row-span-2 flex items-center justify-center sm:col-span-1">
                   <img
                     src={img}
                     alt={`${img}`}
