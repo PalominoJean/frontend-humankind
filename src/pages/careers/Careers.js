@@ -1,8 +1,9 @@
-// import { motion, useAnimation, useInView } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 //images
 import believeImg from "./../../assets/images/believe-p-800.webp";
 import changeOfPlansImg from "./../../assets/images/change-of-plans.png";
-// import girlsImg from "./../../assets/images/girls.png";
 import blockchainImg from "./../../assets/images/blockchain.svg";
 import partnershipsImg from "./../../assets/images/partnerships.svg";
 import goalImg from "./../../assets/images/goal.svg";
@@ -12,97 +13,68 @@ import artImg from "./../../assets/images/art.svg";
 import designImg from "./../../assets/images/design.svg";
 import communityImg from "./../../assets/images/community.svg";
 import fillColorImg from "./../../assets/images/fill-color.svg";
+//components
 import SubFooter from "../../components/Subfooter";
-// import { useEffect, useRef } from "react";
+import Button from "../../components/Button";
+
+const variants = {
+  visible: { scale: 1, transition: { duration: 0.5 } },
+  hidden: { scale: 0.9 },
+};
+
+const courses = [
+  { img: blockchainImg, title: "Web3 Strategist", description: "Product" },
+  {
+    img: partnershipsImg,
+    title: "Partnerships Lead",
+    description: "Community",
+  },
+  { img: goalImg, title: "Marketing Lead", description: "Marketing" },
+  { img: contentImg, title: "Content Lead", description: "Marketing" },
+  { img: codeImg, title: "Software Engineer", description: "Product" },
+  { img: artImg, title: "Visual Artist", description: "Art" },
+  { img: designImg, title: "Product Designer", description: "Product" },
+  { img: communityImg, title: "Community Manager", description: "Community" },
+  { img: fillColorImg, title: "Graphic Designer", description: "Marketing" },
+];
 
 export default function Careers() {
-  // const ref = useRef(null);
-  // const isInview = useInView(ref, {  });
-  // const controls = useAnimation();
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
 
-  // useEffect(() => {
-  //   if (isInview) {
-  //     controls.start("visible");
-  //   }
-  // }, [isInview]);
+  const [ref1, inView1] = useInView();
+  const [ref2, inView2] = useInView();
 
-  const courses = [
-    {
-      img: blockchainImg,
-      imgAlt: "blockchainImg",
-      title: "Web3 Strategist",
-      description: "Product. Remote. Full Time.",
-    },
-    {
-      img: partnershipsImg,
-      imgAlt: "partnershipsImg",
-      title: "Partnerships Lead",
-      description: "Community. Remote. Full Time.",
-    },
-    {
-      img: goalImg,
-      imgAlt: "goalImg",
-      title: "Marketing Lead",
-      description: "Marketing. Remote. Full Time.",
-    },
-    {
-      img: contentImg,
-      imgAlt: "contentImg",
-      title: "Content Lead",
-      description: "Marketing. Remote. Full Time.",
-    },
-    {
-      img: codeImg,
-      imgAlt: "codeImg",
-      title: "Software Engineer",
-      description: "Product. Remote. Full Time.",
-    },
-    {
-      img: artImg,
-      imgAlt: "artImg",
-      title: "Visual Artist",
-      description: "Art. Remote. Full Time.",
-    },
-    {
-      img: designImg,
-      imgAlt: "designImg",
-      title: "Product Designer",
-      description: "Product. Remote. Full Time.",
-    },
-    {
-      img: communityImg,
-      imgAlt: "communityImg",
-      title: "Community Manager",
-      description: "Community. Remote. Full Time.",
-    },
-    {
-      img: fillColorImg,
-      imgAlt: "fillColorImg",
-      title: "Graphic Designer",
-      description: "Marketing. Remote. Full Time.",
-    },
-  ];
+  useEffect(() => {
+    controls1.start(inView1 ? "visible" : "hidden");
+    controls2.start(inView2 ? "visible" : "hidden");
+  }, [controls1, controls2, inView1, inView2]);
+
   return (
     <>
-      <div className="w-11/12 m-auto grid grid-cols-11 gap-5 py-24 lg:w-10/12 xl:w-8/12">
-        <div className="col-span-11 md:col-span-5 flex flex-col justify-center text-left items-start">
-          <p className="font-semibold uppercase text-xl 2xl:text-2xl">
-            Careers
-          </p>
-          <h1 className="text-5xl font-bold mt-2 md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
-            Become a Champion.
-          </h1>
-          <p className="mt-4 font-lora text-lg md:text-xl lg:text-2xl">
+      <div className="w-11/12 m-auto grid grid-cols-11 py-24 lg:w-11/12 xl:w-10/12 2xl:w-8/12">
+        <div className="col-span-11 md:col-span-5 flex flex-col gap-y-10 justify-center text-left items-start">
+          <div className="flex flex-col gap-1">
+            <p className="font-semibold uppercase text-xl 2xl:text-2xl">
+              Careers
+            </p>
+            <h1 className="text-5xl font-bold md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
+              Become a Champion.
+            </h1>
+          </div>
+          <p className="font-lora text-lg md:text-xl lg:text-2xl 2xl:text-3xl">
             Be part of an unthinkable mission. Work with an inspiring team who
             believes in the power of imagination and collaboration to lead the
             industry with new, innovative storytelling.
           </p>
-          <button className="py-2 px-5 w-full rounded-full font-bold border-4 transition bg-black text-white border-black mt-7 hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:w-auto lg:text-lg xl:mt-10  ">
-            Explore Careers
-          </button>
+          <Button text="Explore Careers" type="secondary"></Button>
         </div>
         <div className="col-span-11 md:col-span-6">
-          <img
+          <motion.img
+            ref={ref1}
+            animate={controls1}
+            initial="hidden"
+            variants={variants}
             src={believeImg}
             alt="believeImg"
             className="w-full max-h-full"
@@ -128,7 +100,11 @@ export default function Careers() {
       </div>
       <div className="w-11/12 grid grid-cols-12 m-auto gap-y-8 py-24 lg:w-10/12 xl:w-8/12 2xl:w-7/12">
         <div className="col-span-12 ">
-          <img
+          <motion.img
+            ref={ref2}
+            animate={controls2}
+            initial="hidden"
+            variants={variants}
             src={changeOfPlansImg}
             alt="changeOfPlansImg"
             className="w-11/12 m-auto md:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12"
@@ -184,22 +160,6 @@ export default function Careers() {
         </div>
       </div>
       <div className="w-11/12 grid grid-cols-12 m-auto gap-y-8 py-24 lg:w-10/12 2xl:w-8/12">
-        {/* <motion.div
-          ref={ref}
-          variants={{
-            hidden: { opacity: 0, translateX: 90 },
-            visible: { opacity: 1, translateX: 0 },
-          }}
-          animate={controls}
-          initial="hidden"
-          className="col-span-12 "
-        >
-          <img
-            src={girlsImg}
-            alt="girlsImg"
-            className="w-11/12 m-auto md:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12"
-          />
-        </motion.div> */}
         <div className="col-span-12 text-center">
           <p className="text-3xl font-semibold md:text-4xl lg:text-5xl 2xl:text-6xl">
             Where will your story begin?
@@ -215,7 +175,7 @@ export default function Careers() {
                 <div className="row-span-2 col-span-2 flex items-center justify-center sm:col-span-1 md:col-span-2">
                   <img
                     src={img}
-                    alt={imgAlt}
+                    alt={`${img}`}
                     className="w-8 md:w-10 lg:w-11 xl:w-12 2xl:w-13"
                   />
                 </div>
@@ -223,14 +183,14 @@ export default function Careers() {
                   {title}
                 </div>
                 <div className="col-span-10 font-lora sm:col-span-11 md:col-span-10 md:text-lg lg:text-xl 2xl:text-2xl 2xl:mt-2">
-                  {description}
+                  {description}. Remote. Full Time.
                 </div>
               </div>
             );
           })}
         </div>
       </div>
-      <SubFooter></SubFooter>
+      <SubFooter />
     </>
   );
 }

@@ -39,6 +39,7 @@ const sectionChildrenData = {
       image: mushroomImg,
       title: "Let's hangout!",
       text: "Stop by and say hello; we're looking to make some new friends.",
+      button: <Button text="Join our Discord" type="secondary" />,
     },
   ],
 };
