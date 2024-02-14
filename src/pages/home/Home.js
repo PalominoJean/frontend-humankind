@@ -171,7 +171,7 @@ function Home() {
           <div className="w-11/12 lg:w-3/4 flex flex-col md:flex-row">
             <div className="w-full md:w-5/12">
               <div className="bg-white px-5  md:px-10 py-12 text-left rounded-xl">
-                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold 2xl:text-7xl">
+                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold 2xl:text-7xl">
                   Art and kindness are our tools of trade
                 </p>
                 <p className="text-sm mt-6 font-lora md:text-xl 2xl:text-2xl 2xl:leading-9">
@@ -251,7 +251,7 @@ function Home() {
             <p className="font-bold text-3xl mt-2 md:text-4xl 2xl:text-5xl">
               Building together
             </p>
-            <p className="font-lora mt-4 md:text-md lg:text-lg 2xl:text-xl 2xl:leading-10">
+            <p className="font-lora mt-4  lg:text-lg 2xl:text-2xl 2xl:leading-10">
               Our mission is to entertain and inspire people all over the globe
               through the power of art, kindness, and unique storytelling in
               web3.

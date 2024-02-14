@@ -1,4 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import {
+  useAnimation,
+  motion,
+  useViewportScroll,
+  useTransform,
+} from "framer-motion";
+import { useInView } from "react-intersection-observer";
 //images
 import uCool1Img from "./../../assets/images/u-cool-1.webp";
 import uCool2Img from "./../../assets/images/u-cool-2.webp";
@@ -19,17 +26,86 @@ import vector5Img from "./../../assets/images/Vector-5.webp";
 import subfooterImg from "./../../assets/images/gummies-and-dallas-p-500.webp";
 //components
 import SubFooter from "../../components/Subfooter";
+import Button from "../../components/Button";
+
+const squad = [
+  { image: squad62Img, name: "Pabs", work: "Artist" },
+  { image: squad12Img, name: "Marian", work: "Media" },
+  { image: squad163Img, name: "Bueno", work: "Dev & Ops" },
+  { image: squad195Img, name: "Adam", work: "Artist" },
+  { image: squad46Img, name: "Maya Draisin", work: "Brand Advisor" },
+];
+const variantsIncrease = {
+  visible: { scale: 1, transition: { duration: 0.5 } },
+  hidden: { scale: 0.9 },
+};
+const variantsIncrease2 = {
+  visible: { scale: 1.1, transition: { duration: 0.5 } },
+  hidden: { scale: 1 },
+};
+const variantsDecrease = {
+  visible: { scale: 1, transition: { duration: 0.5 } },
+  hidden: { scale: 1.1 },
+};
+const variantsDecrease2 = {
+  visible: { scale: 1, transition: { duration: 0.5 } },
+  hidden: { scale: 1.2 },
+};
 
 export default function About() {
-  const squad = [
-    { image: squad62Img, name: "Pabs", work: "Artist" },
-    { image: squad12Img, name: "Marian", work: "Media" },
-    { image: squad163Img, name: "Bueno", work: "Dev & Ops" },
-    { image: squad195Img, name: "Adam", work: "Artist" },
-    { image: squad46Img, name: "Maya Draisin", work: "Brand Advisor" },
-  ];
-
   const [showResume, setShowResume] = useState(false);
+
+  const { scrollYProgress } = useViewportScroll();
+
+  const scaleAnim = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
+  const yPosAnim = useTransform(scrollYProgress, [0.3, 0.6], ["0%", "-30%"]);
+
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
+  const controls3 = useAnimation();
+  const controls4 = useAnimation();
+  const controls5 = useAnimation();
+  const controls6 = useAnimation();
+  const controls7 = useAnimation();
+
+  const [ref1, inView1] = useInView();
+  const [ref2, inView2] = useInView();
+  const [ref3, inView3] = useInView();
+  const [ref4, inView4] = useInView();
+  const [ref5, inView5] = useInView();
+  const [ref6, inView6] = useInView();
+  const [ref7, inView7] = useInView();
+
+  // let scaleTest = inView5 ? scale : 0;
+
+  useEffect(() => {
+    // console.log(scrollYProgress, scale);
+    // scale = getScale();
+    // console.log(scaleTest);
+
+    controls1.start(inView1 ? "visible" : "hidden");
+    controls2.start(inView2 ? "visible" : "hidden");
+    controls3.start(inView3 ? "visible" : "hidden");
+    controls4.start(inView4 ? "visible" : "hidden");
+    controls5.start(inView5 ? "visible" : "hidden");
+    controls6.start(inView6 ? "visible" : "hidden");
+    controls7.start(inView7 ? "visible" : "hidden");
+  }, [
+    controls1,
+    controls2,
+    controls3,
+    controls4,
+    controls5,
+    controls6,
+    controls7,
+    inView1,
+    inView2,
+    inView3,
+    inView4,
+    inView5,
+    inView6,
+    inView7,
+  ]);
 
   const handleSetShowMenu = () => {
     setShowResume(!showResume);
@@ -39,8 +115,20 @@ export default function About() {
     <>
       <div className="w-11/12 m-auto grid grid-cols-11 gap-5 py-24 lg:w-10/12 xl:w-8/12 xl:py-40">
         <div className="col-span-11 md:col-span-6 relative">
-          <img src={uCool1Img} alt="uCool1Img" className="w-full " />
-          <img
+          <motion.img
+            ref={ref1}
+            animate={controls1}
+            initial="hidden"
+            variants={variantsIncrease}
+            src={uCool1Img}
+            alt="uCool1Img"
+            className="w-full "
+          />
+          <motion.img
+            ref={ref2}
+            animate={controls2}
+            initial="hidden"
+            variants={variantsDecrease}
             src={uCool2Img}
             alt="uCool2Img"
             className="w-full absolute top-0"
@@ -60,8 +148,20 @@ export default function About() {
       </div>
       <div className="grid grid-cols-12">
         <div className="col-span-12 relative md:col-span-6">
-          <img src={cityBgImg} alt="cityBgImg" className="w-full" />
-          <img
+          <motion.img
+            ref={ref3}
+            animate={controls3}
+            initial="hidden"
+            variants={variantsDecrease}
+            src={cityBgImg}
+            alt="cityBgImg"
+            className="w-full"
+          />
+          <motion.img
+            ref={ref4}
+            animate={controls4}
+            initial="hidden"
+            variants={variantsIncrease}
             src={cityTopImg}
             alt="cityTopImg"
             className="w-full absolute top-0"
@@ -82,15 +182,19 @@ export default function About() {
         </div>
       </div>
       <div className="section-teamkind relative overflow-hidden">
-        <p className="uppercase font-black tracking-tighter	text-white absolute bottom-0">
+        <motion.div style={{ scaleAnim }}></motion.div>
+        <motion.p
+          style={{ y: yPosAnim }}
+          className="uppercase font-black	text-white absolute bottom-0"
+        >
           TEAMKIND BESTKIND
-        </p>
+        </motion.p>
       </div>
-      <div className="w-6/12 m-auto py-24 md:w-8/12 lg:w-10/12 xl:w-9/12 2xl:w-7/12 xl:py-40">
+      <div className="w-6/12 m-auto py-24 md:w-8/12 lg:w-10/12 xl:py-32 xl:w-9/12 2xl:w-8/12">
         <p className="text-center font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
           The Squad
         </p>
-        <div className="flex flex-wrap gap-y-5 mt-5 justify-center ">
+        <div className="flex flex-wrap  mt-5 justify-center">
           {squad.map(({ image, name, work }) => {
             return (
               <div
@@ -98,7 +202,7 @@ export default function About() {
                 className="w-full text-center sm:w-6/12 md:w-4/12 lg:w-3/12 2xl:w-2/12"
               >
                 <img src={image} alt="squad62Img" className=" w-full" />
-                <p className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+                <p className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl">
                   {name}
                 </p>
                 <p className="font-lora md:text-lg xl:text-xl 2xl:text-2xl">
@@ -109,23 +213,26 @@ export default function About() {
           })}
         </div>
       </div>
-      <div className="flex justify-center p-5 sm:p-10 md:p-14">
-        <div className="bg-black text-white pb-10 px-5 rounded-3xl text-center flex items-center flex-col max-w-3xl sm:px-10 md:px-16">
+      <div className="flex justify-center px-5 py-5 sm:px-10 sm:py-10 md:px-14 md:py-24">
+        <div className="bg-black text-white pb-10 px-5 rounded-3xl text-center flex flex-col items-center max-w-3xl gap-6 sm:px-10 md:px-16">
           <img
             src={pabsImg}
             alt="pabsImg"
             className="w-40 rounded-full border-4 border-black -mt-10 md:-mt-16 lg:w-52"
           />
-          <p className="text-3xl font-semibold mt-5 sm:text-4xl lg:text-5xl 2xl:text-6xl">
+          <p className="text-3xl font-semibold sm:text-4xl lg:text-5xl 2xl:text-6xl">
             Who is Pablo Stanley?
           </p>
-          <p className="mt-3 font-lora lg:text-lg 2xl:text-xl">
+          <p className="font-lora lg:text-lg 2xl:text-xl">
             Pablo Stanley is a passion-driven artist, co-founder, and CEO of
-            Bueno, creator of iconic NFT collections, and one of the most
-            influential forces in the illustration world. He's behind
-            open-source illustrations used by millions of people worldwide like
-            Humaaans, Open Peeps, Avataaars, Open Doodles, Buttts, and Bottts.
-            <br /> <br />
+            Bueno, creator of <strong>iconic NFT collections</strong>, and one
+            of the most influential forces in the illustration world. He's
+            behind open-source illustrations used by millions of people
+            worldwide like
+            <strong>
+              Humaaans, Open Peeps, Avataaars, Open Doodles, Buttts,{" "}
+            </strong>
+            and <strong>Bottts</strong>.
             <span className={`${showResume ? "block" : "hidden"}`}>
               His life purpose is to fill the world with doodles. This dream has
               led him to develop two ambitious projects: a children's animated
@@ -143,14 +250,12 @@ export default function About() {
             </span>
           </p>
           <button
-            className="mt-9 text-xl font-lora text-gray-500"
+            className="text-xl font-lora text-gray-500"
             onClick={() => handleSetShowMenu()}
           >
             Read {showResume ? "Less ↑" : "More ↓"}
           </button>
-          <button className="mt-10 py-3 px-6 rounded-full font-bold border-4 transition bg-black text-white hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 md:w-auto lg:text-lg lg:mt-8">
-            Say hi on Twitter
-          </button>
+          <Button text="Say hi on Twitter" type="primaryDark" />
         </div>
       </div>
       <div className="bg-black flex flex-col items-center px-5 py-10 sm:px-10 md:px-14 md:py-24 xl:py-36">
@@ -181,8 +286,12 @@ export default function About() {
               Decentralized, fluid, but with a clear goal.
             </p>
           </div>
-          <div className="mt-40 ">
-            <div className="flex flex-row-reverse">
+          <div className="mt-40">
+            <motion.div
+              ref={ref7}
+              style={{ scale: scrollYProgress }}
+              className="flex flex-row-reverse"
+            >
               <img
                 src={vector2Img}
                 alt="vector2Img"
@@ -208,7 +317,7 @@ export default function About() {
                 alt="vector5Img"
                 className="w-32 scale-2-3 lg:w-40"
               />
-            </div>
+            </motion.div>
             <div className="text-center bg-white rounded-3xl border-4 border-black p-8 relative z-10">
               <div>
                 <p className="text-3xl font-semibold mt-5 sm:text-4xl lg:text-5xl 2xl:text-6xl">
@@ -220,12 +329,8 @@ export default function About() {
                   unique vision, and decentralized storytelling.
                 </p>
                 <div className="flex flex-col mt-8 gap-3 md:flex-row md:justify-center">
-                  <button className="text-black border-black py-3 px-6 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg">
-                    Join as an Investor
-                  </button>
-                  <button className="py-3 px-6 rounded-full font-bold border-4 transition bg-black text-white border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7">
-                    Explore Careers
-                  </button>
+                  <Button text="Join as an Investor" />
+                  <Button text="Explore Careers" type="secondary" />
                 </div>
               </div>
             </div>

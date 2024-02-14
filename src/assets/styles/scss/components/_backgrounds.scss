@@ -20,10 +20,15 @@
 }
 
 .section-teamkind {
-  background-image: url("../../../images/team-lipstick.jpg");
-  background-size: cover;
-  background-position: center;
   height: 30vh;
+
+  div {
+    background-image: url("../../../images/team-lipstick.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+
   p {
     font-size: 22vw;
     line-height: 0.6;
@@ -56,7 +61,7 @@
   @media (min-width: 1536px) {
     height: 90vh;
     p {
-      margin-bottom: -330px;
+      margin-bottom: -270px;
     }
   }
 }
