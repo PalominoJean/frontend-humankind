@@ -30,7 +30,7 @@ export default function Studios() {
           <p className="font-semibold uppercase text-xl 2xl:text-2xl">
             HUMANKIND studios
           </p>
-          <h1 className="text-5xl font-bold mt-2 md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
+          <h1 className="text-5xl font-bold mt-2 md:text-6xl lg:text-7xl xl:text-8xl">
             Doodles have feelings too.
           </h1>
           <p className="mt-4 font-lora text-lg md:text-xl lg:text-2xl">
