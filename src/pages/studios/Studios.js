@@ -9,6 +9,7 @@ import tunTunImg from "./../../assets/images/tun-tun.webp";
 import subfooterImg from "./../../assets/images/gummy-doodle-p-1600.webp";
 //components
 import SubFooter from "../../components/Subfooter";
+import Button from "../../components/Button";
 
 export default function Studios() {
   const { scrollYProgress } = useViewportScroll();
@@ -97,16 +98,14 @@ export default function Studios() {
           <p className="font-semibold text-4xl sm:w-6/12 md:text-5xl xl:text-6xl">
             Join the fellowship
           </p>
-          <div className="sm:w-6/12">
+          <div className="flex flex-col items-start gap-y-8 sm:w-6/12">
             <p className="font-lora  md:text-xl lg:text-2xl 2xl:text-3xl">
               Humankind is creating relatable characters and epic stories of
               well-meaning monsters. Their journey includes a group of friends
               that always find a way, a former captain gone rogue, creatures and
               spirits joining forces, and many more.
             </p>
-            <button className="mt-5 text-xl py-4 px-6 rounded-full font-bold border-4 transition bg-black text-white border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7 2xl:mt-16 2xl:px-8 2xl:py-5 2xl:text-2xl">
-              Explore Careers
-            </button>
+            <Button text="Explore Careers" type="secondary"></Button>
           </div>
         </div>
       </div>
@@ -120,18 +119,16 @@ export default function Studios() {
           />
         </div>
         <div className="col-span-12 bg-black  text-white py-10  flex items-center md:col-span-6 ">
-          <div className="w-10/12 m-auto md:w-9/12 2xl:w-6/12 ">
+          <div className="w-10/12 m-auto flex flex-col gap-y-8 items-start md:w-9/12 2xl:w-6/12">
             <p className="text-4xl font-semibold 2xl:text-6xl">
               Let's conquer new worlds together
             </p>
-            <p className="mt-4 font-lora text-lg leading-6 md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal">
+            <p className="font-lora text-lg leading-6 md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal">
               If you want to invest in Humankind, collaborate on a project,
               obtain a license for one of the characters, or begin a
               partnership, let’s chat!
             </p>
-            <button className="mt-5 bg-white text-black border-white py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg 2xl:mt-16 2xl:px-8 2xl:py-5 2xl:text-2xl">
-              Apply to Humankind
-            </button>
+            <Button text="Apply to Humankind" type="secondaryDark"></Button>
           </div>
         </div>
       </div>
