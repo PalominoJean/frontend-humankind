@@ -1,11 +1,5 @@
-import { useEffect, useState } from "react";
-import {
-  useAnimation,
-  motion,
-  useViewportScroll,
-  useTransform,
-} from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useState } from "react";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 //images
 import uCool1Img from "./../../assets/images/u-cool-1.webp";
 import uCool2Img from "./../../assets/images/u-cool-2.webp";
@@ -35,77 +29,25 @@ const squad = [
   { image: squad195Img, name: "Adam", work: "Artist" },
   { image: squad46Img, name: "Maya Draisin", work: "Brand Advisor" },
 ];
-const variantsIncrease = {
-  visible: { scale: 1, transition: { duration: 0.5 } },
-  hidden: { scale: 0.9 },
-};
-const variantsIncrease2 = {
-  visible: { scale: 1.1, transition: { duration: 0.5 } },
-  hidden: { scale: 1 },
-};
-const variantsDecrease = {
-  visible: { scale: 1, transition: { duration: 0.5 } },
-  hidden: { scale: 1.1 },
-};
-const variantsDecrease2 = {
-  visible: { scale: 1, transition: { duration: 0.5 } },
-  hidden: { scale: 1.2 },
-};
 
 export default function About() {
   const [showResume, setShowResume] = useState(false);
 
   const { scrollYProgress } = useViewportScroll();
 
-  const scaleAnim = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
+  const reduceScaleAnim = useTransform(scrollYProgress, [0, 0.5], [1.5, 1]);
+  const reduceScaleAnim2 = useTransform(scrollYProgress, [0, 0.3], [1.1, 1]);
+
+  const increaseScaleAnim = useTransform(scrollYProgress, [0, 0.5], [1, 1.5]);
+
   const yPosAnim = useTransform(scrollYProgress, [0.3, 0.6], ["0%", "-30%"]);
+  const yPosAnim2 = useTransform(scrollYProgress, [0, 0.3], ["0%", "-30%"]);
 
-  const controls1 = useAnimation();
-  const controls2 = useAnimation();
-  const controls3 = useAnimation();
-  const controls4 = useAnimation();
-  const controls5 = useAnimation();
-  const controls6 = useAnimation();
-  const controls7 = useAnimation();
-
-  const [ref1, inView1] = useInView();
-  const [ref2, inView2] = useInView();
-  const [ref3, inView3] = useInView();
-  const [ref4, inView4] = useInView();
-  const [ref5, inView5] = useInView();
-  const [ref6, inView6] = useInView();
-  const [ref7, inView7] = useInView();
-
-  // let scaleTest = inView5 ? scale : 0;
-
-  useEffect(() => {
-    // console.log(scrollYProgress, scale);
-    // scale = getScale();
-    // console.log(scaleTest);
-
-    controls1.start(inView1 ? "visible" : "hidden");
-    controls2.start(inView2 ? "visible" : "hidden");
-    controls3.start(inView3 ? "visible" : "hidden");
-    controls4.start(inView4 ? "visible" : "hidden");
-    controls5.start(inView5 ? "visible" : "hidden");
-    controls6.start(inView6 ? "visible" : "hidden");
-    controls7.start(inView7 ? "visible" : "hidden");
-  }, [
-    controls1,
-    controls2,
-    controls3,
-    controls4,
-    controls5,
-    controls6,
-    controls7,
-    inView1,
-    inView2,
-    inView3,
-    inView4,
-    inView5,
-    inView6,
-    inView7,
-  ]);
+  const yPosAnim3 = useTransform(scrollYProgress, [0.6, 1], ["40%", "-10%"]);
+  const yPosAnim4 = useTransform(scrollYProgress, [0.6, 1], ["80%", "-10%"]);
+  const yPosAnim5 = useTransform(scrollYProgress, [0.6, 1], ["120%", "-10%"]);
+  const yPosAnim6 = useTransform(scrollYProgress, [0.6, 1], ["160%", "-10%"]);
+  const yPosAnim7 = useTransform(scrollYProgress, [0.6, 1], ["200%", "-10%"]);
 
   const handleSetShowMenu = () => {
     setShowResume(!showResume);
@@ -116,25 +58,21 @@ export default function About() {
       <div className="w-11/12 m-auto grid grid-cols-11 gap-5 py-24 lg:w-10/12 xl:w-8/12 xl:py-40">
         <div className="col-span-11 md:col-span-6 relative">
           <motion.img
-            ref={ref1}
-            animate={controls1}
-            initial="hidden"
-            variants={variantsIncrease}
             src={uCool1Img}
             alt="uCool1Img"
-            className="w-full "
+            className="w-full"
+            style={{ scale: reduceScaleAnim2, y: yPosAnim2 }}
           />
           <motion.img
-            ref={ref2}
-            animate={controls2}
-            initial="hidden"
-            variants={variantsDecrease}
             src={uCool2Img}
             alt="uCool2Img"
             className="w-full absolute top-0"
           />
         </div>
-        <div className="col-span-11 md:col-span-5 flex flex-col justify-center text-left items-start">
+        <motion.div
+          style={{ y: yPosAnim2 }}
+          className="col-span-11 md:col-span-5 flex flex-col justify-center text-left items-start"
+        >
           <p className="font-semibold uppercase text-xl 2xl:text-2xl">About</p>
           <h1 className="text-5xl font-bold mt-2 md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
             Stay human. <br />
@@ -144,27 +82,21 @@ export default function About() {
             We believe art and storytelling can change us and the world around
             us.
           </p>
-        </div>
+        </motion.div>
       </div>
       <div className="grid grid-cols-12">
-        <div className="col-span-12 relative md:col-span-6">
+        <div className="col-span-12 relative overflow-hidden md:col-span-6">
           <motion.img
-            ref={ref3}
-            animate={controls3}
-            initial="hidden"
-            variants={variantsDecrease}
             src={cityBgImg}
             alt="cityBgImg"
             className="w-full"
+            style={{ scale: reduceScaleAnim }}
           />
           <motion.img
-            ref={ref4}
-            animate={controls4}
-            initial="hidden"
-            variants={variantsIncrease}
             src={cityTopImg}
             alt="cityTopImg"
             className="w-full absolute top-0"
+            style={{ scale: increaseScaleAnim }}
           />
         </div>
         <div className="col-span-12 bg-black  text-white py-10  flex items-center md:col-span-6 ">
@@ -182,7 +114,7 @@ export default function About() {
         </div>
       </div>
       <div className="section-teamkind relative overflow-hidden">
-        <motion.div style={{ scaleAnim }}></motion.div>
+        <motion.div style={{ scale: increaseScaleAnim }}></motion.div>
         <motion.p
           style={{ y: yPosAnim }}
           className="uppercase font-black	text-white absolute bottom-0"
@@ -258,14 +190,14 @@ export default function About() {
           <Button text="Say hi on Twitter" type="primaryDark" />
         </div>
       </div>
-      <div className="bg-black flex flex-col items-center px-5 py-10 sm:px-10 md:px-14 md:py-24 xl:py-36">
-        <div className="max-w-3xl">
-          <div className=" text-white text-center flex flex-col items-center">
+      <div className="bg-black py-10 md:py-24 xl:py-36">
+        <div className="w-11/12 m-auto md:w-8/12 lg:w-7/12 xl:w-6/12 2xl:w-6/12">
+          <div className="text-white text-center flex flex-col items-center md:px-12 lg:px-16 xl:px-20 2xl:px-24">
             <img src={iconImg} alt="iconImg" className="w-32 lg:w-40" />
             <p className="text-3xl font-semibold mt-5 sm:text-4xl lg:text-5xl 2xl:text-6xl">
               How we do stuff
             </p>
-            <p className="mt-5 font-lora lg:text-lg 2xl:text-2xl">
+            <p className="mt-5 font-lora lg:text-lg 2xl:text-3xl">
               At Humankind, we believe in a culture of freedom and
               responsibility, allowing serendipity to guide us. It might look
               like chaos for an outsider, but it's a shared consciousness.
@@ -286,49 +218,50 @@ export default function About() {
               Decentralized, fluid, but with a clear goal.
             </p>
           </div>
-          <div className="mt-40">
-            <motion.div
-              ref={ref7}
-              style={{ scale: scrollYProgress }}
-              className="flex flex-row-reverse"
-            >
-              <img
+          <div className="mt-40 md:mt-60">
+            <div className="flex flex-row-reverse w-full">
+              <motion.img
                 src={vector2Img}
                 alt="vector2Img"
-                className="w-32 scale-2-3 lg:w-40"
+                className="w-1/5"
+                style={{ y: yPosAnim7, scale: 2.3 }}
               />
-              <img
+              <motion.img
                 src={vector1Img}
                 alt="vector1Img"
-                className="w-32 scale-2-3 lg:w-40"
+                className="w-1/5"
+                style={{ y: yPosAnim6, scale: 2.3 }}
               />
-              <img
+              <motion.img
                 src={vector3Img}
                 alt="vector3Img"
-                className="w-32 scale-2-3 lg:w-40"
+                className="w-1/5"
+                style={{ y: yPosAnim5, scale: 2.3 }}
               />
-              <img
+              <motion.img
                 src={vector4Img}
                 alt="vector4Img"
-                className="w-32 scale-2-3 lg:w-40"
+                className="w-1/5"
+                style={{ y: yPosAnim4, scale: 2.3 }}
               />
-              <img
+              <motion.img
                 src={vector5Img}
                 alt="vector5Img"
-                className="w-32 scale-2-3 lg:w-40"
+                className="w-1/5"
+                style={{ y: yPosAnim3, scale: 2.3 }}
               />
-            </motion.div>
-            <div className="text-center bg-white rounded-3xl border-4 border-black p-8 relative z-10">
-              <div>
-                <p className="text-3xl font-semibold mt-5 sm:text-4xl lg:text-5xl 2xl:text-6xl">
+            </div>
+            <div className="flex justify-center bg-white rounded-3xl border-4 border-black p-8 relative mt-20 lg:p-16">
+              <div className="text-center flex flex-col gap-8 md:max-w-xl">
+                <p className="text-3xl font-semibold sm:text-4xl lg:text-5xl 2xl:text-6xl">
                   Wanna join our team?
                 </p>
-                <p className="mt-5 font-lora lg:text-lg 2xl:text-xl">
+                <p className="font-lora lg:text-lg 2xl:text-xl">
                   Embark the Humankind adventure and help us capture the hearts
                   and minds of kids and adults worldwide with lovely creations,
                   unique vision, and decentralized storytelling.
                 </p>
-                <div className="flex flex-col mt-8 gap-3 md:flex-row md:justify-center">
+                <div className="flex flex-col gap-3 md:flex-row md:justify-center">
                   <Button text="Join as an Investor" />
                   <Button text="Explore Careers" type="secondary" />
                 </div>
