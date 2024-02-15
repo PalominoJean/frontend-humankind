@@ -111,7 +111,7 @@ export default function Studios() {
         </div>
       </div>
       <div className="grid grid-cols-12">
-        <div className="col-span-12 relative md:col-span-6">
+        <div className="col-span-12 relative overflow-hidden md:col-span-6">
           <motion.img
             src={tunTunImg}
             alt="tunTunImg"
