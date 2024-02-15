@@ -1,6 +1,4 @@
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 //images
 import discordImg from "../assets/images/discord.svg";
 import twiterImg from "../assets/images/twitter_squared.svg";
@@ -8,35 +6,24 @@ import instagramImg from "../assets/images/icons8-instagram.svg";
 import linkedinImg from "../assets/images/icons8-linkedin.svg";
 import openSeaImg from "../assets/images/OpenSea.svg";
 import fireImg from "../assets/images/fire-p-500.webp";
-import { useEffect } from "react";
+//components
 import Button from "./Button";
 
-const variants = {
-  visible: { scale: 1, transition: { duration: 0.5 } },
-  hidden: { scale: 0.9 },
-};
-
 export default function SubFooter({ image = fireImg }) {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const { scrollYProgress } = useViewportScroll();
 
-  useEffect(() => {
-    controls.start(inView ? "visible" : "hidden");
-  }, [controls, inView]);
+  const increaseScaleAnim = useTransform(scrollYProgress, [0.6, 1], [0.1, 1]);
 
   return (
     <>
-      <div className="flex justify-center py-28">
+      <div className="flex justify-center py-28 overflow-hidden">
         <div className="w-4/5 grid grid-cols-7 gap-5 md:gap-8">
           <div className="col-span-7 px-10 md:col-span-4 md:order-last xl:px-20 2xl:px-40">
             <motion.img
-              ref={ref}
-              animate={controls}
-              initial="hidden"
-              variants={variants}
               src={image}
               alt="subfooterImg"
               className="w-full max-h-full"
+              style={{ scale: increaseScaleAnim }}
             />
           </div>
           <div className="col-span-7 md:col-span-3 text-left flex items-center justify-center">
@@ -56,7 +43,7 @@ export default function SubFooter({ image = fireImg }) {
               </div>
               <div className="flex flex-col mt-8 gap-3 lg:flex-row">
                 <Button text="⚔️ Play Now!" type="secondary" size="small" />
-                <Button text="👾 Join our Discord" size="small"/>
+                <Button text="👾 Join our Discord" size="small" />
               </div>
               <p className="mt-10 font-lora text-sm text-center lg:text-left">
                 Humankind Industries Inc. 2023

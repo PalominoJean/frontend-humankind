@@ -37,12 +37,9 @@ export default function About() {
 
   const reduceScaleAnim = useTransform(scrollYProgress, [0, 0.5], [1.5, 1]);
   const reduceScaleAnim2 = useTransform(scrollYProgress, [0, 0.3], [1.1, 1]);
-
   const increaseScaleAnim = useTransform(scrollYProgress, [0, 0.5], [1, 1.5]);
-
   const yPosAnim = useTransform(scrollYProgress, [0.3, 0.6], ["0%", "-30%"]);
   const yPosAnim2 = useTransform(scrollYProgress, [0, 0.3], ["0%", "-30%"]);
-
   const yPosAnim3 = useTransform(scrollYProgress, [0.6, 1], ["40%", "-10%"]);
   const yPosAnim4 = useTransform(scrollYProgress, [0.6, 1], ["80%", "-10%"]);
   const yPosAnim5 = useTransform(scrollYProgress, [0.6, 1], ["120%", "-10%"]);
