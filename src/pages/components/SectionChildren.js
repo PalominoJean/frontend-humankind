@@ -1,19 +1,9 @@
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-
-const variants = {
-  visible: { scale: 1.1, transition: { duration: 0.5 } },
-  hidden: { scale: 1 },
-};
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 export default function SectionChildren({ data }) {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const { scrollYProgress } = useViewportScroll();
 
-  useEffect(() => {
-    controls.start(inView ? "visible" : "hidden");
-  }, [controls, inView]);
+  const increaseScale1 = useTransform(scrollYProgress, [0, 1], [0.8, 1.3]);
 
   return (
     <>
@@ -43,11 +33,8 @@ export default function SectionChildren({ data }) {
           {data.title}
         </p>
         <motion.div
-          ref={ref}
-          animate={controls}
-          initial="hidden"
-          variants={variants}
           className="section-stayhuman absolute w-full h-105vh bottom-0"
+          style={{ scale: increaseScale1 }}
         ></motion.div>
       </div>
     </>
