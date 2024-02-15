@@ -1,3 +1,4 @@
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 //images
 import studios1Img from "./../../assets/images/studios-1.png";
 import studios2Img from "./../../assets/images/studios-2.png";
@@ -10,10 +11,22 @@ import subfooterImg from "./../../assets/images/gummy-doodle-p-1600.webp";
 import SubFooter from "../../components/Subfooter";
 
 export default function Studios() {
+  const { scrollYProgress } = useViewportScroll();
+
+  const yTranslate1 = useTransform(scrollYProgress, [0, 0.3], ["0%", "-20%"]);
+  const yTranslate2 = useTransform(scrollYProgress, [0, 0.3], ["0%", "-20%"]);
+  const xTranslate1 = useTransform(scrollYProgress, [0.2, 0.6], ["0%", "-30%"]);
+  const decreaseScale1 = useTransform(scrollYProgress, [0, 0.3], [1.1, 0.9]);
+  const decreaseScale2 = useTransform(scrollYProgress, [0, 0.4], [1.1, 1]);
+  const decreaseScale3 = useTransform(scrollYProgress, [0.5, 1], [1.2, 1]);
+  const increaseScale1 = useTransform(scrollYProgress, [0.5, 0.8], [0.8, 1]);
   return (
     <>
       <div className="w-11/12 m-auto grid grid-cols-11 gap-5 py-24 lg:w-10/12 xl:w-8/12 xl:py-32">
-        <div className="col-span-11 md:col-span-5 flex flex-col justify-center text-left items-start">
+        <motion.div
+          className="col-span-11 md:col-span-5 flex flex-col justify-center text-left items-start"
+          style={{ y: yTranslate1 }}
+        >
           <p className="font-semibold uppercase text-xl 2xl:text-2xl">
             HUMANKIND studios
           </p>
@@ -24,12 +37,13 @@ export default function Studios() {
             We’re building the journey in an enchanting world that lets people
             recapture their sense of wonder.
           </p>
-        </div>
+        </motion.div>
         <div className="col-span-11 md:col-span-6 relative">
-          <img
+          <motion.img
             src={studios1Img}
             alt="studios1Img"
             className="w-full max-h-full absolute"
+            style={{ y: yTranslate2, scale: decreaseScale1 }}
           />
           <img
             src={studios2Img}
@@ -39,10 +53,11 @@ export default function Studios() {
         </div>
       </div>
       <div className="relative overflow-hidden flex items-center h-[50rem] md:h-[65rem] lg:h-[70rem] xl:h-[75rem] 2xl:h-[80rem]">
-        <img
+        <motion.img
           src={sleepyTimeImg}
           alt="sleepyTimeImg"
           className="h-full absolute sm:w-full sm:h-auto"
+          style={{ scale: decreaseScale2 }}
         />
         <div className="w-11/12 m-auto z-10 relative flex justify-center">
           <div className="bg-black p-9 text-white rounded-3xl my-12 max-w-3xl sm:p-14">
@@ -60,18 +75,22 @@ export default function Studios() {
           </div>
         </div>
       </div>
-      <div className="my-14 lg:my-28">
+      <div className="my-14 overflow-hidden lg:my-28">
         <p className="text-center font-semibold text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl">
           Behind every brushstroke, there’s a story.
         </p>
-        <img src={mayaImg} alt="mayaImg" className="w-full max-h-full mt-5" />
+        <motion.div className="flex" style={{ x: xTranslate1 }}>
+          <img src={mayaImg} alt="mayaImg" className="w-full max-h-full mt-5" />
+          <img src={mayaImg} alt="mayaImg" className="w-full max-h-full mt-5" />
+        </motion.div>
       </div>
       <div className="w-11/12 m-auto my-20 lg:max-w-6xl xl:max-w-7xl">
         <div>
-          <img
+          <motion.img
             src={beKindImg}
             alt="beKindImg"
             className="w-full max-h-full mt-5"
+            style={{ scale: increaseScale1 }}
           />
         </div>
         <div className="flex flex-col mt-8 gap-4 sm:flex-row ">
@@ -93,7 +112,12 @@ export default function Studios() {
       </div>
       <div className="grid grid-cols-12">
         <div className="col-span-12 relative md:col-span-6">
-          <img src={tunTunImg} alt="tunTunImg" className="w-full" />
+          <motion.img
+            src={tunTunImg}
+            alt="tunTunImg"
+            className="w-full"
+            style={{ scale: decreaseScale3 }}
+          />
         </div>
         <div className="col-span-12 bg-black  text-white py-10  flex items-center md:col-span-6 ">
           <div className="w-10/12 m-auto md:w-9/12 2xl:w-6/12 ">
