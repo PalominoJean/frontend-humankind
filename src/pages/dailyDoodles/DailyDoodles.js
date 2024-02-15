@@ -28,6 +28,7 @@ import doodle26Img from "../../assets/images/doodle-037.png";
 import goomieImg from "../../assets/images/gummy-doodle-p-1600.webp";
 //components
 import SubFooter from "../../components/Subfooter";
+import Button from "../../components/Button";
 
 export default function DailyDoodles() {
   const doodles = [
@@ -69,12 +70,8 @@ export default function DailyDoodles() {
           and the Humankind team.
         </p>
         <div className="flex flex-col mt-5 gap-3 sm:flex-row">
-          <button className="py-2 px-5 rounded-full font-bold border-4 transition bg-black text-white border-black hover:bg-red-500 hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg xl:py-3 xl:px-7">
-            Download All Doodles
-          </button>
-          <button className="text-black border-black py-2 px-5 rounded-full font-bold border-4 transition hover:shadow-md hover:translate-x-0.5 hover:-translate-y-0.5 lg:text-lg">
-            Visit Old Version
-          </button>
+          <Button text="Download All Doodles" type="secondary"></Button>
+          <Button text="Visit Old Version"></Button>
         </div>
         <div className="grid grid-cols-12 mt-6 gap-10 lg:mt-8 2xl:grid-cols-10">
           {doodles.map(({ img, day }) => {
