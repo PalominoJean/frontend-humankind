@@ -37,7 +37,7 @@ function Header() {
   return (
     <div className="grid grid-cols-12 px-4 py-3 top-0 bg-white fixed z-20 w-full shadow-xl md:px-4 md:py-2 md:shadow-none">
       <div className="col-span-3">
-        <div className="flex items-start gap-1" onClick={() => navigateTo()}>
+        <div className="flex items-start gap-1 cursor-pointer" onClick={() => navigateTo()}>
           <img src={logo} className="w-11" alt="logo" />
           <p className="text-xl font-bold lg:text-2xl">humankind</p>
         </div>
