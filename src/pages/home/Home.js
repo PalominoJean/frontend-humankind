@@ -41,7 +41,6 @@ const sectionChildrenData = {
     },
   ],
 };
-
 const humankindImages = [
   hk1Img,
   hk2Img,
@@ -98,7 +97,7 @@ function Home() {
         <Section data={sectionData.lunchbox} key={"lunchbox"} />
       </div>
       <div className="pb-24 pt-48 section-collectibles">
-        <div className="w-11/12 m-auto md:w-10/12 lg:w-9/12 xl:w-8/12 ">
+        <div className="w-11/12 m-auto md:w-10/12 lg:w-9/12 xl:w-8/12">
           <div className="border-black rounded-3xl transition bg-black text-white">
             <div className="w-11/12 m-auto text-center pb-10 md:w-10/12 lg:w-9/12 xl:pb-16">
               <motion.div

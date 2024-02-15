@@ -15,6 +15,15 @@ import utilityImg from "./../../assets/images/icons-utility.svg";
 import voteImg from "./../../assets/images/icons-vote.svg";
 import mapImg from "./../../assets/images/icons-world_map.svg";
 import mushroomImg from "./../../assets/images/mushroom-sticker.png";
+import hk1Img from "./../../assets/images/hk-1.webp";
+import hk2Img from "./../../assets/images/hk-2.webp";
+import hk3Img from "./../../assets/images/hk-3.webp";
+import hk4Img from "./../../assets/images/hk-4.webp";
+import hk5Img from "./../../assets/images/hk-5.webp";
+import hk6Img from "./../../assets/images/hk-6.webp";
+import hk7Img from "./../../assets/images/hk-7.webp";
+import hk8Img from "./../../assets/images/hk-8.webp";
+import hk9Img from "./../../assets/images/hk-9.webp";
 //components
 import SubFooter from "../../components/Subfooter";
 import Button from "../../components/Button";
@@ -31,6 +40,17 @@ const sectionChildrenData = {
     },
   ],
 };
+const humankindImages = [
+  hk1Img,
+  hk2Img,
+  hk3Img,
+  hk4Img,
+  hk5Img,
+  hk6Img,
+  hk7Img,
+  hk8Img,
+  hk9Img,
+];
 
 export default function Collectibles() {
   const { scrollYProgress } = useViewportScroll();
@@ -134,17 +154,17 @@ export default function Collectibles() {
         </div>
       </div>
       <div className="pb-24 pt-48 section-collectibles">
-        <div className="w-11/12 m-auto md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12">
+        <div className="w-11/12 m-auto md:w-10/12 lg:w-9/12 xl:w-8/12">
           <div className="border-black rounded-3xl transition bg-black text-white">
             <div className="w-11/12 m-auto text-center pb-10 md:w-10/12 lg:w-9/12 xl:pb-16">
               <motion.div
                 className="flex items-center m-auto flex-wrap justify-center w-11/12 pl-7 md:w-11/12 xl:w-10/12"
                 style={{ scale: increaseScale3, y: "-15%" }}
               >
-                {[...Array(9)].map((item, index) => (
+                {humankindImages.map((image, index) => (
                   <img
-                    src={nftImg}
-                    alt="nftImg"
+                    src={image}
+                    alt={`${image}`}
                     className="rounded-full border-4 border-black w-24 -mt-7 -ml-7 hover:scale-110 transition relative sm:w-28 md:w-32 lg:w-36 2xl:w-48"
                     key={index}
                   />
