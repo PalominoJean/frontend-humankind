@@ -1,16 +1,11 @@
-import { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 //data
 import sectionData from "../../data/section";
-
 //component
 import Section from "./components/Section";
 import SubFooter from "../../components/Subfooter";
 import Button from "../../components/Button";
 import SectionChildren from "../components/SectionChildren";
-
 //images
 import homeTopImg from "./../../assets/images/hero-top-p-1600.webp";
 import homeBottomImg from "./../../assets/images/hero-bottom-p-1600.webp";
@@ -22,21 +17,6 @@ import artFundImg from "./../../assets/images/Fund.webp";
 import buildingImg from "./../../assets/images/teamwork.png";
 import joinImg from "./../../assets/images/your-back 1.webp";
 import subfooterImg from "./../../assets/images/maya-sitting 1.webp";
-
-const variants = {
-  visible: { scale: 1, transition: { duration: 0.5 } },
-  hidden: { scale: 0.9 },
-};
-
-const variants2 = {
-  visible: { scale: 1.1, transition: { duration: 0.5 } },
-  hidden: { scale: 1 },
-};
-
-const variantsReverse = {
-  visible: { scale: 1, transition: { duration: 0.5 } },
-  hidden: { scale: 1.1 },
-};
 
 const sectionChildrenData = {
   title: "stayhuman",
@@ -55,66 +35,33 @@ const sectionChildrenData = {
 };
 
 function Home() {
-  const controls1 = useAnimation();
-  const controls2 = useAnimation();
-  const controls3 = useAnimation();
-  const controls4 = useAnimation();
-  const controls5 = useAnimation();
-  const controls7 = useAnimation();
-  const controls8 = useAnimation();
+  const { scrollYProgress } = useViewportScroll();
 
-  const [ref1, inView1] = useInView();
-  const [ref2, inView2] = useInView();
-  const [ref3, inView3] = useInView();
-  const [ref4, inView4] = useInView();
-  const [ref5, inView5] = useInView();
-  const [ref7, inView7] = useInView();
-  const [ref8, inView8] = useInView();
-
-  useEffect(() => {
-    controls1.start(inView1 ? "visible" : "hidden");
-    controls2.start(inView2 ? "visible" : "hidden");
-    controls3.start(inView3 ? "visible" : "hidden");
-    controls4.start(inView4 ? "visible" : "hidden");
-    controls5.start(inView5 ? "visible" : "hidden");
-    controls7.start(inView7 ? "visible" : "hidden");
-    controls8.start(inView8 ? "visible" : "hidden");
-  }, [
-    controls1,
-    controls2,
-    controls3,
-    controls4,
-    controls5,
-    controls7,
-    controls8,
-    inView1,
-    inView2,
-    inView3,
-    inView4,
-    inView5,
-    inView7,
-    inView8,
-  ]);
+  const decreaseScale1 = useTransform(scrollYProgress, [0, 0.5], [1, 0.5]);
+  const decreaseScale2 = useTransform(scrollYProgress, [0.6, 0.9], [1.5, 1]);
+  const increaseScale1 = useTransform(scrollYProgress, [0, 0.5], [1, 1.5]);
+  const increaseScale2 = useTransform(scrollYProgress, [0.3, 0.6], [0.9, 1.3]);
+  const increaseScale3 = useTransform(scrollYProgress, [0.4, 0.8], [0.7, 1.3]);
+  const increaseScale4 = useTransform(scrollYProgress, [0.8, 1], [0.7, 1.2]);
+  const yTranslate1 = useTransform(
+    scrollYProgress,
+    [0.3, 0.6],
+    ["30%", "-30%"]
+  );
 
   return (
     <>
       <div className="m-auto pt-24 pb-3 flex flex-col md:w-11/12 lg:w-10/12 xl:w-9/12">
         <motion.img
-          ref={ref1}
-          animate={controls1}
-          initial="hidden"
-          variants={variants}
-          src={homeTopImg}
           alt="homeTopImg"
-          className="-mb-20 sm:-mb-32 md:-mb-36 lg:-mb-44 xl:-mb-52 2xl:-mb-72 transition-transform"
+          className="-mb-16 sm:-mb-36 md:-mb-40 lg:-mb-48 xl:-mb-52 2xl:-mb-72 transition-transform"
+          src={homeTopImg}
+          style={{ scale: decreaseScale1 }}
         />
         <motion.img
-          ref={ref2}
-          animate={controls2}
-          initial="hidden"
-          variants={variantsReverse}
-          src={homeBottomImg}
           alt="homeBottomImg"
+          src={homeBottomImg}
+          style={{ scale: increaseScale1 }}
         />
         <p className="mt-4 font-lora text-center sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl">
           Creating a magical world for the kid in all of us.
@@ -135,11 +82,8 @@ function Home() {
           <div className="border-black rounded-3xl transition bg-black text-white">
             <div className="w-11/12 m-auto text-center pb-10 md:w-10/12 lg:w-9/12 xl:pb-16">
               <motion.div
-                ref={ref3}
-                animate={controls3}
-                initial="hidden"
-                variants={variants}
                 className="flex items-center m-auto flex-wrap justify-center w-11/12 pl-7 md:w-11/12 xl:w-10/12"
+                style={{ scale: increaseScale2, y: "-15%" }}
               >
                 {[...Array(9)].map((item, index) => (
                   <img
@@ -150,7 +94,7 @@ function Home() {
                   />
                 ))}
               </motion.div>
-              <p className="text-3xl font-bold mt-5 md:text-4xl lg:text-5xl xl:text-6xl">
+              <p className="text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl">
                 Humankind Collectibles
               </p>
               <p className="mt-6 font-lora lg:text-lg xl:text-2xl">
@@ -159,8 +103,8 @@ function Home() {
                 in The Land of Kinds.
               </p>
               <div className="flex justify-center flex-col gap-5 mt-8 sm:flex-row">
-                <Button text="Learn More" type="btn-primary-dark" />
-                <Button text="Get one from Opensea" type="secondary-dark" />
+                <Button text="Learn More" type="primaryDark" />
+                <Button text="Get one from Opensea" type="secondaryDark" />
               </div>
             </div>
           </div>
@@ -185,13 +129,10 @@ function Home() {
             </div>
             <div className="w-full md:w-7/12">
               <motion.img
-                ref={ref4}
-                animate={controls4}
-                initial="hidden"
-                variants={variants}
-                src={mechaImg}
                 alt="mechaImg"
                 className="w-full"
+                src={mechaImg}
+                style={{ y: yTranslate1 }}
               />
             </div>
           </div>
@@ -202,13 +143,10 @@ function Home() {
           <div className="w-11/12 lg:w-9/12 2xl:w-7/12">
             <div>
               <motion.img
-                ref={ref5}
-                animate={controls5}
-                initial="hidden"
-                variants={variants}
-                src={designingImg}
                 alt="designingImg"
                 className="w-full"
+                src={designingImg}
+                style={{ scale: increaseScale3 }}
               />
             </div>
             <div className="flex flex-col md:flex-row justify-center text-left gap-5 md:gap-10 mt-16">
@@ -237,13 +175,10 @@ function Home() {
       <div className="grid grid-cols-10 min-heigth-851px ">
         <div className="col-span-10 overflow-hidden flex items-center md:col-span-7 ">
           <motion.img
-            ref={ref7}
-            animate={controls7}
-            initial="hidden"
-            variants={variants2}
-            src={buildingImg}
             alt="buildingImg"
             className="w-full max-h-full"
+            src={buildingImg}
+            style={{ scale: decreaseScale2 }}
           />
         </div>
         <div className="col-span-10 flex items-end text-left px-6 pb-10 md:col-span-3 md:px-12">
@@ -264,13 +199,10 @@ function Home() {
       <div className="flex justify-center py-28">
         <div className="w-11/12 text-center md:w-1/3">
           <motion.img
-            ref={ref8}
-            animate={controls8}
-            initial="hidden"
-            variants={variants}
-            src={joinImg}
             alt="joinImg"
             className="w-full max-h-full"
+            src={joinImg}
+            style={{ scale: increaseScale4 }}
           />
           <p className="font-bold text-2xl mt-10 sm:text-4xl md:text-5xl 2xl:text-6xl ">
             Join our adventure

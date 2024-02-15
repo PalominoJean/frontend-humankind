@@ -35,8 +35,8 @@ export default function About() {
 
   const { scrollYProgress } = useViewportScroll();
 
-  const reduceScaleAnim = useTransform(scrollYProgress, [0, 0.5], [1.5, 1]);
-  const reduceScaleAnim2 = useTransform(scrollYProgress, [0, 0.3], [1.1, 1]);
+  const decreaseScaleAnim = useTransform(scrollYProgress, [0, 0.5], [1.5, 1]);
+  const decreaseScaleAnim2 = useTransform(scrollYProgress, [0, 0.3], [1.1, 1]);
   const increaseScaleAnim = useTransform(scrollYProgress, [0, 0.5], [1, 1.5]);
   const yPosAnim = useTransform(scrollYProgress, [0.3, 0.6], ["0%", "-30%"]);
   const yPosAnim2 = useTransform(scrollYProgress, [0, 0.3], ["0%", "-30%"]);
@@ -58,7 +58,7 @@ export default function About() {
             src={uCool1Img}
             alt="uCool1Img"
             className="w-full"
-            style={{ scale: reduceScaleAnim2, y: yPosAnim2 }}
+            style={{ scale: decreaseScaleAnim2, y: yPosAnim2 }}
           />
           <motion.img
             src={uCool2Img}
@@ -87,7 +87,7 @@ export default function About() {
             src={cityBgImg}
             alt="cityBgImg"
             className="w-full"
-            style={{ scale: reduceScaleAnim }}
+            style={{ scale: decreaseScaleAnim }}
           />
           <motion.img
             src={cityTopImg}
