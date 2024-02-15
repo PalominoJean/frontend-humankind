@@ -1,6 +1,4 @@
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 //images
 import believeImg from "./../../assets/images/believe-p-800.webp";
 import changeOfPlansImg from "./../../assets/images/change-of-plans.png";
@@ -14,14 +12,10 @@ import designImg from "./../../assets/images/design.svg";
 import communityImg from "./../../assets/images/community.svg";
 import fillColorImg from "./../../assets/images/fill-color.svg";
 import girlsImg from "./../../assets/images/girls.png";
+import ankaImg from "./../../assets/images/ankka-vaccum.webp";
 //components
 import SubFooter from "../../components/Subfooter";
 import Button from "../../components/Button";
-
-const variants = {
-  visible: { scale: 1, transition: { duration: 0.5 } },
-  hidden: { scale: 0.9 },
-};
 
 const courses = [
   { img: blockchainImg, title: "Web3 Strategist", description: "Product" },
@@ -40,24 +34,23 @@ const courses = [
 ];
 
 export default function Careers() {
-  const controls1 = useAnimation();
-  const controls2 = useAnimation();
-  const controls3 = useAnimation();
+  const { scrollYProgress } = useViewportScroll();
 
-  const [ref1, inView1] = useInView();
-  const [ref2, inView2] = useInView();
-  const [ref3, inView3] = useInView();
+  const yTranslate1 = useTransform(scrollYProgress, [0, 0.3], ["0%", "-30%"]);
+  const yTranslate2 = useTransform(scrollYProgress, [0, 0.3], ["0%", "-10%"]);
+  const yTranslate3 = useTransform(scrollYProgress, [0.1, 0.5], ["0%", "-10%"]);
 
-  useEffect(() => {
-    controls1.start(inView1 ? "visible" : "hidden");
-    controls2.start(inView2 ? "visible" : "hidden");
-    controls3.start(inView3 ? "visible" : "hidden");
-  }, [controls1, controls2, controls3, inView1, inView2, inView3]);
+  const decreaseScale1 = useTransform(scrollYProgress, [0, 0.3], [1, 0.8]);
+  const increaseScale1 = useTransform(scrollYProgress, [0.3, 0.6], [0.9, 1.2]);
+  const increaseScale2 = useTransform(scrollYProgress, [0.5, 0.9], [0.9, 1.2]);
 
   return (
     <>
       <div className="w-11/12 m-auto grid grid-cols-11 py-24 lg:w-11/12 xl:w-10/12 2xl:w-8/12">
-        <div className="col-span-11 md:col-span-5 flex flex-col gap-y-10 justify-center text-left items-start">
+        <motion.div
+          className="col-span-11 md:col-span-5 flex flex-col gap-y-10 justify-center text-left items-start"
+          style={{ y: yTranslate1 }}
+        >
           <div className="flex flex-col gap-1">
             <p className="font-semibold uppercase text-xl 2xl:text-2xl">
               Careers
@@ -72,21 +65,21 @@ export default function Careers() {
             industry with new, innovative storytelling.
           </p>
           <Button text="Explore Careers" type="secondary"></Button>
-        </div>
+        </motion.div>
         <div className="col-span-11 md:col-span-6">
           <motion.img
-            ref={ref1}
-            animate={controls1}
-            initial="hidden"
-            variants={variants}
-            src={believeImg}
             alt="believeImg"
             className="w-full max-h-full"
+            src={believeImg}
+            style={{ scale: decreaseScale1, y: yTranslate2 }}
           />
         </div>
       </div>
       <div className="section-section text-white py-20 md:py-32 xl:py-40 2xl:py-52">
-        <div className="w-10/12 m-auto md:w-9/12 lg:w-6/12 xl:w-4/12 2xl:w-3/12">
+        <motion.div
+          className="w-10/12 m-auto md:w-9/12 lg:w-6/12 xl:w-4/12 2xl:w-3/12"
+          style={{ y: yTranslate3 }}
+        >
           <p className="text-5xl font-bold md:text-6xl lg:text-7xl 2xl:text-8xl">
             Small team. <br />
             Global mission.
@@ -100,18 +93,15 @@ export default function Careers() {
             designing unforgettable experiences, this is your opportunity to
             start the next chapter of your career story.
           </p>
-        </div>
+        </motion.div>
       </div>
       <div className="w-11/12 grid grid-cols-12 m-auto gap-y-8 py-24 lg:w-10/12 xl:w-8/12 2xl:w-7/12">
         <div className="col-span-12 ">
           <motion.img
-            ref={ref2}
-            animate={controls2}
-            initial="hidden"
-            variants={variants}
-            src={changeOfPlansImg}
             alt="changeOfPlansImg"
             className="w-11/12 m-auto md:w-10/12 lg:w-9/12 xl:w-7/12 2xl:w-6/12"
+            src={changeOfPlansImg}
+            style={{ scale: increaseScale1 }}
           />
         </div>
         <div className="col-span-12 text-center">
@@ -165,13 +155,10 @@ export default function Careers() {
       </div>
       <div className="w-11/12 m-auto flex flex-col items-center gap-y-5 md:gap-y-10 py-24 lg:w-10/12 2xl:w-8/12">
         <motion.img
-          ref={ref3}
-          animate={controls3}
-          initial="hidden"
-          variants={variants}
-          src={girlsImg}
           alt="girlsImg"
           className="w-full max-h-full max-w-4xl"
+          src={girlsImg}
+          style={{ scale: increaseScale2 }}
         />
         <p className="text-3xl text-center font-semibold md:text-4xl lg:text-5xl 2xl:text-6xl">
           Where will your story begin?
@@ -201,7 +188,7 @@ export default function Careers() {
           })}
         </div>
       </div>
-      <SubFooter />
+      <SubFooter image={ankaImg} />
     </>
   );
 }
