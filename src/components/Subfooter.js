@@ -12,7 +12,7 @@ import Button from "./Button";
 export default function SubFooter({ image = fireImg }) {
   const { scrollYProgress } = useViewportScroll();
 
-  const increaseScaleAnim = useTransform(scrollYProgress, [0.6, 1], [0.1, 1]);
+  const increaseScale = useTransform(scrollYProgress, [0.6, 1], [0.1, 1]);
 
   return (
     <>
@@ -23,7 +23,7 @@ export default function SubFooter({ image = fireImg }) {
               src={image}
               alt="subfooterImg"
               className="w-full max-h-full"
-              style={{ scale: increaseScaleAnim }}
+              style={{ scale: increaseScale }}
             />
           </div>
           <div className="col-span-7 md:col-span-3 text-left flex items-center justify-center">

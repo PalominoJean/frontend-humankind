@@ -35,16 +35,16 @@ export default function About() {
 
   const { scrollYProgress } = useViewportScroll();
 
-  const decreaseScaleAnim = useTransform(scrollYProgress, [0, 0.5], [1.5, 1]);
-  const decreaseScaleAnim2 = useTransform(scrollYProgress, [0, 0.3], [1.1, 1]);
-  const increaseScaleAnim = useTransform(scrollYProgress, [0, 0.5], [1, 1.5]);
-  const yPosAnim = useTransform(scrollYProgress, [0.3, 0.6], ["0%", "-30%"]);
-  const yPosAnim2 = useTransform(scrollYProgress, [0, 0.3], ["0%", "-30%"]);
-  const yPosAnim3 = useTransform(scrollYProgress, [0.6, 1], ["40%", "-10%"]);
-  const yPosAnim4 = useTransform(scrollYProgress, [0.6, 1], ["80%", "-10%"]);
-  const yPosAnim5 = useTransform(scrollYProgress, [0.6, 1], ["120%", "-10%"]);
-  const yPosAnim6 = useTransform(scrollYProgress, [0.6, 1], ["160%", "-10%"]);
-  const yPosAnim7 = useTransform(scrollYProgress, [0.6, 1], ["200%", "-10%"]);
+  const decreaseScale1 = useTransform(scrollYProgress, [0, 0.5], [1.5, 1]);
+  const decreaseScale2 = useTransform(scrollYProgress, [0, 0.3], [1.1, 1]);
+  const increaseScale1 = useTransform(scrollYProgress, [0, 0.5], [1, 1.5]);
+  const yTranslate1 = useTransform(scrollYProgress, [0.3, 0.6], ["0%", "-30%"]);
+  const yTranslate2 = useTransform(scrollYProgress, [0, 0.3], ["0%", "-30%"]);
+  const yTranslate3 = useTransform(scrollYProgress, [0.6, 1], ["40%", "-10%"]);
+  const yTranslate4 = useTransform(scrollYProgress, [0.6, 1], ["80%", "-10%"]);
+  const yTranslate5 = useTransform(scrollYProgress, [0.6, 1], ["120%", "-10%"]);
+  const yTranslate6 = useTransform(scrollYProgress, [0.6, 1], ["160%", "-10%"]);
+  const yTranslate7 = useTransform(scrollYProgress, [0.6, 1], ["200%", "-10%"]);
 
   const handleSetShowMenu = () => {
     setShowResume(!showResume);
@@ -58,7 +58,7 @@ export default function About() {
             src={uCool1Img}
             alt="uCool1Img"
             className="w-full"
-            style={{ scale: decreaseScaleAnim2, y: yPosAnim2 }}
+            style={{ scale: decreaseScale2, y: yTranslate2 }}
           />
           <motion.img
             src={uCool2Img}
@@ -67,7 +67,7 @@ export default function About() {
           />
         </div>
         <motion.div
-          style={{ y: yPosAnim2 }}
+          style={{ y: yTranslate2 }}
           className="col-span-11 md:col-span-5 flex flex-col justify-center text-left items-start"
         >
           <p className="font-semibold uppercase text-xl 2xl:text-2xl">About</p>
@@ -87,13 +87,13 @@ export default function About() {
             src={cityBgImg}
             alt="cityBgImg"
             className="w-full"
-            style={{ scale: decreaseScaleAnim }}
+            style={{ scale: decreaseScale1 }}
           />
           <motion.img
             src={cityTopImg}
             alt="cityTopImg"
             className="w-full absolute top-0"
-            style={{ scale: increaseScaleAnim }}
+            style={{ scale: increaseScale1 }}
           />
         </div>
         <div className="col-span-12 bg-black  text-white py-10  flex items-center md:col-span-6 ">
@@ -111,9 +111,9 @@ export default function About() {
         </div>
       </div>
       <div className="section-teamkind relative overflow-hidden">
-        <motion.div style={{ scale: increaseScaleAnim }}></motion.div>
+        <motion.div style={{ scale: increaseScale1 }}></motion.div>
         <motion.p
-          style={{ y: yPosAnim }}
+          style={{ y: yTranslate1 }}
           className="uppercase font-black	text-white absolute bottom-0"
         >
           TEAMKIND BESTKIND
@@ -221,31 +221,31 @@ export default function About() {
                 src={vector2Img}
                 alt="vector2Img"
                 className="w-1/5"
-                style={{ y: yPosAnim7, scale: 2.3 }}
+                style={{ y: yTranslate7, scale: 2.3 }}
               />
               <motion.img
                 src={vector1Img}
                 alt="vector1Img"
                 className="w-1/5"
-                style={{ y: yPosAnim6, scale: 2.3 }}
+                style={{ y: yTranslate6, scale: 2.3 }}
               />
               <motion.img
                 src={vector3Img}
                 alt="vector3Img"
                 className="w-1/5"
-                style={{ y: yPosAnim5, scale: 2.3 }}
+                style={{ y: yTranslate5, scale: 2.3 }}
               />
               <motion.img
                 src={vector4Img}
                 alt="vector4Img"
                 className="w-1/5"
-                style={{ y: yPosAnim4, scale: 2.3 }}
+                style={{ y: yTranslate4, scale: 2.3 }}
               />
               <motion.img
                 src={vector5Img}
                 alt="vector5Img"
                 className="w-1/5"
-                style={{ y: yPosAnim3, scale: 2.3 }}
+                style={{ y: yTranslate3, scale: 2.3 }}
               />
             </div>
             <div className="flex justify-center bg-white rounded-3xl border-4 border-black p-8 relative mt-20 lg:p-16">
