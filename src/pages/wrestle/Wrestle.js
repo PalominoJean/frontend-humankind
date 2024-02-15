@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 //images
 import wrestleImg from "./../../assets/images/Logo.svg";
 import heroImg from "./../../assets/images/hero-image-p-2600.webp";
@@ -11,11 +9,6 @@ import avatarImg from "./../../assets/images/avatar.gif";
 import SubFooter from "../../components/Subfooter";
 import Button from "../../components/Button";
 import SectionChildren from "../components/SectionChildren";
-
-const variants = {
-  visible: { scale: 1, transition: { duration: 0.5 } },
-  hidden: { scale: 0.9 },
-};
 
 const sectionChildrenData = {
   title: "wrestle!",
@@ -34,28 +27,20 @@ const sectionChildrenData = {
 };
 
 export default function Wrestle() {
-  const controls1 = useAnimation();
-  const controls2 = useAnimation();
+  const { scrollYProgress } = useViewportScroll();
 
-  const [ref1, inView1] = useInView();
-  const [ref2, inView2] = useInView();
-
-  useEffect(() => {
-    controls1.start(inView1 ? "visible" : "hidden");
-    controls2.start(inView2 ? "visible" : "hidden");
-  }, [controls1, controls2, inView1, inView2]);
+  const increaseScale1 = useTransform(scrollYProgress, [0, 0.3], [1, 1.8]);
+  const increaseScale2 = useTransform(scrollYProgress, [0, 0.3], [1, 1.1]);
 
   return (
     <>
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-20 md:mt-32">
         <div className="w-5/6 flex flex-col justify-center items-center">
           <motion.img
-            ref={ref1}
-            animate={controls1}
-            initial="hidden"
-            variants={variants}
-            src={wrestleImg}
             alt="wrestleImg"
+            src={wrestleImg}
+            className="w-60 md:w-80"
+            style={{ scale: increaseScale1 }}
           />
           <div className="max-w-3xl text-center ">
             <p className="text-5xl font-bold mt-5 leading-10 md:text-6xl xl:text-7xl">
@@ -69,12 +54,9 @@ export default function Wrestle() {
             <Button text="🤼🤼 Go Play Now! 🤼🤼" type="secondary" />
           </div>
           <motion.img
-            ref={ref2}
-            animate={controls2}
-            initial="hidden"
-            variants={variants}
-            src={heroImg}
             alt="heroImg"
+            src={heroImg}
+            style={{ scale: increaseScale2 }}
           />
         </div>
       </div>
