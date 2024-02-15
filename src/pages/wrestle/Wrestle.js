@@ -38,8 +38,8 @@ export default function Wrestle() {
         <div className="w-5/6 flex flex-col justify-center items-center">
           <motion.img
             alt="wrestleImg"
-            src={wrestleImg}
             className="w-60 md:w-80"
+            src={wrestleImg}
             style={{ scale: increaseScale1 }}
           />
           <div className="max-w-3xl text-center ">

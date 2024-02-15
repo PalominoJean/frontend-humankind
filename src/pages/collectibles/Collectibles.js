@@ -1,6 +1,4 @@
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 //images
 import runLeftImg from "./../../assets/images/run-run-left.png";
 import runRightImg from "./../../assets/images/run-run-right.png";
@@ -22,16 +20,6 @@ import SubFooter from "../../components/Subfooter";
 import Button from "../../components/Button";
 import SectionChildren from "../components/SectionChildren";
 
-const variants = {
-  visible: { scale: 1, transition: { duration: 0.5 } },
-  hidden: { scale: 0.9 },
-};
-
-const variants2 = {
-  visible: { scale: 1, transition: { duration: 0.5 } },
-  hidden: { scale: 1.1 },
-};
-
 const sectionChildrenData = {
   title: "stayhuman",
   cards: [
@@ -45,51 +33,18 @@ const sectionChildrenData = {
 };
 
 export default function Collectibles() {
-  const controls1 = useAnimation();
-  const controls2 = useAnimation();
-  const controls3 = useAnimation();
-  const controls4 = useAnimation();
-  const controls5 = useAnimation();
-  const controls6 = useAnimation();
-  const controls7 = useAnimation();
-  const controls8 = useAnimation();
+  const { scrollYProgress } = useViewportScroll();
 
-  const [ref1, inView1] = useInView();
-  const [ref2, inView2] = useInView();
-  const [ref3, inView3] = useInView();
-  const [ref4, inView4] = useInView();
-  const [ref5, inView5] = useInView();
-  const [ref6, inView6] = useInView();
-  const [ref7, inView7] = useInView();
-  const [ref8, inView8] = useInView();
+  const yTranslate1 = useTransform(scrollYProgress, [0, 0.3], ["0%", "30%"]);
+  const yTranslate2 = useTransform(
+    scrollYProgress,
+    [0.3, 0.6],
+    ["-10%", "30%"]
+  );
 
-  useEffect(() => {
-    controls1.start(inView1 ? "visible" : "hidden");
-    controls2.start(inView2 ? "visible" : "hidden");
-    controls3.start(inView3 ? "visible" : "hidden");
-    controls4.start(inView4 ? "visible" : "hidden");
-    controls5.start(inView5 ? "visible" : "hidden");
-    controls6.start(inView6 ? "visible" : "hidden");
-    controls7.start(inView7 ? "visible" : "hidden");
-    controls8.start(inView8 ? "visible" : "hidden");
-  }, [
-    controls1,
-    controls2,
-    controls3,
-    controls4,
-    controls5,
-    controls6,
-    controls7,
-    controls8,
-    inView1,
-    inView2,
-    inView3,
-    inView4,
-    inView5,
-    inView6,
-    inView7,
-    inView8,
-  ]);
+  const increaseScale1 = useTransform(scrollYProgress, [0, 0.5], [1, 1.4]);
+  const increaseScale2 = useTransform(scrollYProgress, [0.1, 0.5], [0.9, 1.3]);
+  const increaseScale3 = useTransform(scrollYProgress, [0, 1], [0.9, 1.3]);
 
   return (
     <>
@@ -110,46 +65,33 @@ export default function Collectibles() {
         </div>
         <div className="col-span-11 md:col-span-6 relative">
           <motion.img
-            ref={ref1}
-            animate={controls1}
-            initial="hidden"
-            variants={variants}
-            src={runLeftImg}
             alt="runLeftImg"
             className="w-full max-h-full absolute"
+            src={runLeftImg}
+            style={{ y: yTranslate1 }}
           />
-          <motion.img
-            ref={ref2}
-            animate={controls2}
-            initial="hidden"
-            variants={variants2}
-            src={runRightImg}
+          <img
             alt="runRightImg"
             className="w-full max-h-full"
+            src={runRightImg}
           />
         </div>
       </div>
       <div>
         <motion.img
-          ref={ref3}
-          animate={controls3}
-          initial="hidden"
-          variants={variants}
-          src={stickersImg}
           alt="stickersImg"
           className="h-20 object-cover md:h-24 lg:h-32 xl:h-44"
+          src={stickersImg}
+          style={{ scale: increaseScale1 }}
         />
       </div>
       <div className="w-11/12 m-auto grid grid-cols-11 gap-5 py-28 lg:w-9/12 xl:w-7/12  xl:gap-8 2xl:w-6/12">
         <div className="col-span-11">
           <motion.img
-            ref={ref4}
-            animate={controls4}
-            initial="hidden"
-            variants={variants}
-            src={lunchboxesImg}
             alt="lunchboxesImg"
             className="w-10/12 m-auto max-h-full xl:w-8/12"
+            src={lunchboxesImg}
+            style={{ scale: increaseScale2 }}
           />
         </div>
         <div className="col-span-11 md:col-span-5">
@@ -167,14 +109,10 @@ export default function Collectibles() {
       </div>
       <div className="w-11/12 m-auto grid grid-cols-11 gap-5 py-28 lg:py-36 lg:w-9/12 xl:w-7/12 xl:gap-8 2xl:py-40 2xl:w-6/12">
         <div className="col-span-11 flex flex-col justify-center items-start gap-8  md:col-span-5 2xl:gap-10">
-          <motion.img
-            ref={ref5}
-            animate={controls5}
-            initial="hidden"
-            variants={variants}
-            src={lunchboxImg}
+          <img
             alt="lunchboxImg"
             className="w-20 max-h-full md:w-28 lg:w-32 2xl:w-40"
+            src={lunchboxImg}
           />
           <p className="text-3xl font-semibold sm:text-4xl md:text-5xl 2xl:text-6xl">
             Yum! Feed your kind!
@@ -187,23 +125,12 @@ export default function Collectibles() {
         </div>
         <div className="col-span-11 flex items-center relative h-96 md:h-auto md:col-span-6">
           <motion.img
-            ref={ref6}
-            animate={controls6}
-            initial="hidden"
-            variants={variants}
-            src={treeBackgroundImg}
             alt="treeBackgroundImg"
             className="w-full absolute"
+            src={treeBackgroundImg}
+            style={{ y: yTranslate2 }}
           />
-          <motion.img
-            ref={ref7}
-            animate={controls7}
-            initial="hidden"
-            variants={variants2}
-            src={treeImg}
-            alt="treeImg"
-            className="w-full absolute"
-          />
+          <img alt="treeImg" className="w-full absolute" src={treeImg} />
         </div>
       </div>
       <div className="pb-24 pt-48 section-collectibles">
@@ -211,11 +138,8 @@ export default function Collectibles() {
           <div className="border-black rounded-3xl transition bg-black text-white">
             <div className="w-11/12 m-auto text-center pb-10 md:w-10/12 lg:w-9/12 xl:pb-16">
               <motion.div
-                ref={ref8}
-                animate={controls8}
-                initial="hidden"
-                variants={variants}
                 className="flex items-center m-auto flex-wrap justify-center w-11/12 pl-7 md:w-11/12 xl:w-10/12"
+                style={{ scale: increaseScale3, y: "-15%" }}
               >
                 {[...Array(9)].map((item, index) => (
                   <img
@@ -226,7 +150,7 @@ export default function Collectibles() {
                   />
                 ))}
               </motion.div>
-              <p className="text-3xl font-semibold mt-5 md:text-4xl lg:text-5xl 2xl:text-6xl">
+              <p className="text-3xl font-semibold md:text-4xl lg:text-5xl 2xl:text-6xl">
                 Humankind Collectibles
               </p>
               <p className="mt-6 font-lora lg:text-lg xl:text-xl 2xl:text-2xl">
