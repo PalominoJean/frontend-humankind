@@ -7,7 +7,6 @@ import lunchboxesImg from "./../../assets/images/Lunchboxes.gif";
 import treeImg from "./../../assets/images/tree.webp";
 import treeBackgroundImg from "./../../assets/images/tree-background.webp";
 import lunchboxImg from "./../../assets/images/Lunchbox.webp";
-import nftImg from "./../../assets/images/hk-8.webp";
 import membershipImg from "./../../assets/images/icons-membership.svg";
 import diamondImg from "./../../assets/images/icons-diamond.svg";
 import ipfsImg from "./../../assets/images/icons-ipfs.svg";
