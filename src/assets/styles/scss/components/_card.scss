@@ -6,6 +6,9 @@
   &:hover {
     transform: translate(4px, -4px);
     box-shadow: -3px 3px black;
+    .card-img {
+      scale: 1.2;
+    }
   }
 }
 

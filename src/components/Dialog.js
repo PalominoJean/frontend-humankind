@@ -1,11 +1,14 @@
-import { useForm } from "react-hook-form";
-import cuteImg from "./../assets/images/Cute Monster with Pencil & Paper.webp";
-import closeImg from "./../assets/images/close.png";
-import Button from "./Button";
 import axios from "axios";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+//schemas
 import subscribeSchema from "./../schemas/subscribe";
+//images
+import cuteImg from "./../assets/images/Cute Monster with Pencil & Paper.webp";
+import closeImg from "./../assets/images/close.png";
+//components
+import Button from "./Button";
 
 const bodyToSend = {
   name: "Email Form",
