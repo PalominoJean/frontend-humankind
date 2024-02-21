@@ -1,10 +1,11 @@
 export default function Button({
   text = "",
-  type = "primary",
+  level = "primary",
   size = "normal",
   onClick,
+  type = "submit",
 }) {
-  const btnType = {
+  const btnLevel = {
     primary: "btn-primary",
     primaryDark: "btn-primary-dark",
     secondary: "btn-secondary",
@@ -17,8 +18,9 @@ export default function Button({
   };
   return (
     <button
-      className={`rounded-full text-sm font-semibold btn transition hover:translate-x-0.5 hover:-translate-y-0.5 md:text-md xl:text-lg 2xl:text-xl ${btnType[type]} ${btnSize[size]}`}
+      className={`rounded-full text-sm font-semibold btn transition hover:translate-x-0.5 hover:-translate-y-0.5 md:text-md xl:text-lg 2xl:text-xl ${btnLevel[level]} ${btnSize[size]}`}
       onClick={onClick}
+      type={type}
     >
       {text}
     </button>

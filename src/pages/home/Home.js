@@ -87,7 +87,7 @@ function Home() {
         </p>
         <div className="flex flex-col justify-center gap-3 mt-8 px-5 sm:flex-row 2xl:mt-12">
           <Button text="🎁 Get a Lunchbox" />
-          <Button text="⚔️ Play Now!" type="secondary" />
+          <Button text="⚔️ Play Now!" level="secondary" />
         </div>
       </div>
       <div className="my-16">
@@ -122,8 +122,8 @@ function Home() {
                 in The Land of Kinds.
               </p>
               <div className="flex justify-center flex-col gap-5 mt-8 sm:flex-row">
-                <Button text="Learn More" type="primaryDark" />
-                <Button text="Get one from Opensea" type="secondaryDark" />
+                <Button text="Learn More" level="primaryDark" />
+                <Button text="Get one from Opensea" level="secondaryDark" />
               </div>
             </div>
           </div>
@@ -233,7 +233,7 @@ function Home() {
             the power of storytelling to be a part of our quest.
           </p>
           <br />
-          <Button text="👾 Join our Discord" type="secondary" />
+          <Button text="👾 Join our Discord" level="secondary" />
         </div>
       </div>
       <SubFooter image={subfooterImg}></SubFooter>

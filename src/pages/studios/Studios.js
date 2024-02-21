@@ -105,7 +105,7 @@ export default function Studios() {
               that always find a way, a former captain gone rogue, creatures and
               spirits joining forces, and many more.
             </p>
-            <Button text="Explore Careers" type="secondary"></Button>
+            <Button text="Explore Careers" level="secondary"></Button>
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@ export default function Studios() {
               obtain a license for one of the characters, or begin a
               partnership, let’s chat!
             </p>
-            <Button text="Apply to Humankind" type="secondaryDark"></Button>
+            <Button text="Apply to Humankind" level="secondaryDark"></Button>
           </div>
         </div>
       </div>

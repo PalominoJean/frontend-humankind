@@ -51,7 +51,7 @@ export default function Wrestle() {
               the Land of Kinds. Can you defeat them all?
             </p>
             <br />
-            <Button text="🤼🤼 Go Play Now! 🤼🤼" type="secondary" />
+            <Button text="🤼🤼 Go Play Now! 🤼🤼" level="secondary" />
           </div>
           <motion.img
             alt="heroImg"
@@ -79,7 +79,7 @@ export default function Wrestle() {
                 old-school games we loved as kids, and we think you’ll enjoy it.
               </p>
               <br />
-              <Button text="Wrestle Wrestle Wrestle!" type="tertiary" />
+              <Button text="Wrestle Wrestle Wrestle!" level="tertiary" />
             </div>
           </div>
         </div>

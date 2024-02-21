@@ -64,7 +64,7 @@ export default function Careers() {
             believes in the power of imagination and collaboration to lead the
             industry with new, innovative storytelling.
           </p>
-          <Button text="Explore Careers" type="secondary"></Button>
+          <Button text="Explore Careers" level="secondary"></Button>
         </motion.div>
         <div className="col-span-11 md:col-span-6">
           <motion.img

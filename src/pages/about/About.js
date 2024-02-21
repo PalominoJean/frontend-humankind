@@ -184,7 +184,7 @@ export default function About() {
           >
             Read {showResume ? "Less ↑" : "More ↓"}
           </button>
-          <Button text="Say hi on Twitter" type="primaryDark" />
+          <Button text="Say hi on Twitter" level="primaryDark" />
         </div>
       </div>
       <div className="bg-black py-10 md:py-24 xl:py-36">
@@ -260,7 +260,7 @@ export default function About() {
                 </p>
                 <div className="flex flex-col gap-3 md:flex-row md:justify-center">
                   <Button text="Join as an Investor" />
-                  <Button text="Explore Careers" type="secondary" />
+                  <Button text="Explore Careers" level="secondary" />
                 </div>
               </div>
             </div>

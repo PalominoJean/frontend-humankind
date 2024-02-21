@@ -70,7 +70,7 @@ export default function DailyDoodles() {
           and the Humankind team.
         </p>
         <div className="flex flex-col mt-5 gap-3 sm:flex-row">
-          <Button text="Download All Doodles" type="secondary"></Button>
+          <Button text="Download All Doodles" level="secondary"></Button>
           <Button text="Visit Old Version"></Button>
         </div>
         <div className="grid grid-cols-12 mt-6 gap-10 lg:mt-8 2xl:grid-cols-10">

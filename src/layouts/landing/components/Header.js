@@ -12,6 +12,7 @@ function Header() {
 
   const [isMenuHidden, setIsMenuHidden] = useState(true);
   const [isSubmenuHidden, setIsSubmenuHidden] = useState(true);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleSetIsMenuHidden = () => {
     setIsMenuHidden(!isMenuHidden);
@@ -37,6 +38,10 @@ function Header() {
 
   const openInNewTab = (url) => {
     window.open(url, "_blank");
+  };
+
+  const handleOpenDialog = () => {
+    setIsDialogOpen(!isDialogOpen);
   };
 
   return (
@@ -103,15 +108,6 @@ function Header() {
                   isSubmenuHidden ? "hidden" : "flex"
                 }`}
               >
-                {/* <li
-                className={` cursor-pointer hover:text-gray-500 ${getClassActive(
-                  "conference",
-                  false
-                )}`}
-                onClick={() => navigateTo("conference")}
-              >
-                Conference
-              </li> */}
                 <li
                   className={` cursor-pointer hover:text-gray-500 ${getClassActive(
                     "careers",
@@ -139,15 +135,6 @@ function Header() {
                 >
                   <p>Daily Doodles</p>
                 </li>
-                {/* <li
-                className={` cursor-pointer hover:text-gray-500 ${getClassActive(
-                  "photos",
-                  false
-                )}`}
-                onClick={() => navigateTo("photos")}
-              >
-                Photos
-              </li> */}
                 <li
                   className={` cursor-pointer hover:text-gray-500 ${getClassActive(
                     "discord",
@@ -174,20 +161,20 @@ function Header() {
               className={`font-semibold text-sm text-left transition cursor-pointer hover:text-gray-500 md:text-md lg:text-lg ${getClassActive(
                 "subscribe"
               )}`}
-              onClick={() => navigateTo("subscribe")}
+              onClick={handleOpenDialog}
             >
               Subscribe
             </li>
           </ul>
           <Button
             text="Play Now! 💀"
-            type="secondary"
+            level="secondary"
             size="small"
             onClick={() => navigateTo("play")}
           ></Button>
         </div>
       </div>
-      <Dialog></Dialog>
+      <Dialog isOpen={isDialogOpen} onClose={handleOpenDialog}></Dialog>
     </>
   );
 }

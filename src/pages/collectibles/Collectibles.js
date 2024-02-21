@@ -35,7 +35,7 @@ const sectionChildrenData = {
       image: mushroomImg,
       title: "Let's hangout!",
       text: "Stop by and say hello; we're looking to make some new friends.",
-      button: <Button text="Join our Discord" type="secondary" />,
+      button: <Button text="Join our Discord" level="secondary" />,
     },
   ],
 };
@@ -80,7 +80,7 @@ export default function Collectibles() {
           <p className="font-lora text-lg md:text-xl lg:text-2xl 2xl:text-3xl">
             After a long time of doodling we're launching our first collection.
           </p>
-          <Button text="Mint Now" type="secondary"></Button>
+          <Button text="Mint Now" level="secondary"></Button>
         </div>
         <div className="col-span-11 md:col-span-6 relative">
           <motion.img
@@ -140,7 +140,7 @@ export default function Collectibles() {
             Since your Kind will take the lunchbox with them, you will have to
             do an exchange. Soon we will announce more details of this.
           </p>
-          <Button text="Mint Now" type="secondary"></Button>
+          <Button text="Mint Now" level="secondary"></Button>
         </div>
         <div className="col-span-11 flex items-center relative h-96 md:h-auto md:col-span-6">
           <motion.img
@@ -236,7 +236,7 @@ export default function Collectibles() {
                 </div>
               </div>
               <div className="flex flex-col justify-center items-center mt-8 xl:mt-12">
-                <Button text="Mint Now" type="secondaryDark"></Button>
+                <Button text="Mint Now" level="secondaryDark"></Button>
                 <button className="mt-5 font-lora block border-b-2 text-lg">
                   View on Etherscan
                 </button>
